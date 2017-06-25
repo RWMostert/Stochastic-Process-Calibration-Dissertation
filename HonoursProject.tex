@@ -1,0 +1,353 @@
+\documentclass[11pt,oneside,openany,a4paper,english, report, goldenblock
+]{usthesis}
+\usepackage{enumerate}
+\usepackage[hmargin={25mm,20mm},vmargin={20mm,20mm}]{geometry}
+\usepackage{helvet}
+\usepackage{titlesec}
+\usepackage{lipsum}
+\usepackage{fancyhdr}
+\usepackage{varioref}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}%.. Recognizes ê, ë, etc
+\usepackage{amsmath} %.. Advanced maths (before fonts)
+\usepackage{mathtools}
+\usepackage[T1]{fontenc} %.. Type 1 fonts for proper hyphenation
+\usepackage{textcomp} %.. Additional text characters
+\usepackage{fourier} %.. Utopia (if you want a different font)
+\usepackage{bm} 
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{usbib}
+\usepackage{natbib}
+\usepackage[onehalfspacing]{setspace}
+
+\titleformat
+{\chapter} % command
+[display] % shape
+{\bfseries\Large\centering} % format
+{CHAPTER \ \thechapter} % label
+{-2ex} % sep
+{
+	\vspace{1.5ex}
+	\centering
+	\uppercase
+} % before-code
+[
+\vspace{-2ex}%
+] % after-code
+
+\titlespacing*{\chapter}{0pt}{-15pt}{40pt}
+
+\titleformat{\section}
+{\normalfont\bfseries\uppercase}
+{\thesection.}{0.5em}{}
+
+\fancyhf{}
+\fancyhead[C]{\thepage}
+\pagestyle{fancy}
+\renewcommand\headrulewidth{0pt}
+\setlength{\headheight}{20pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\fancyhead[C]{\thepage}
+	\pagestyle{fancy}
+	\renewcommand\headrulewidth{0pt}
+	\setlength{\headheight}{20pt}
+}
+
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+
+%opening
+\title{A Universal Calibration Scheme for Stochastic Processes using Artificial Neural Networks}
+\author{R.W. Mostert}{Rayno Willem Mostert}
+\faculty{Faculty of Economic and Management Sciences}
+\degree{BCommHons (Actuarial Science)}
+
+\begin{document}
+	\pagenumbering{roman}
+	\supervisor{Mr. Stuart Reid \and Mr. Stephen Burgess}
+	\ReportDescript{Thesis presented in partial fulfilment of the requirements for the degree of BCommHons(Actuarial Science) in the Faculty of Economic and Management Sciences at Stellenbosch University}
+	
+	\TitlePage%
+	
+	\DeclarationDate{July 2017}
+	\DeclarationPage
+	
+\begin{abstract}
+	
+\end{abstract}
+
+\tableofcontents
+	
+\chapter{Introduction}
+\pagenumbering{arabic}
+\section{Introduction}
+
+\begin{quote}
+	Stochastic processes are becoming more important to actuaries: they underlie much of modern finance, mortality analysis and general insurance. They are immensely useful because they form the common language of workers in many areas that overlap in actuarial science.  It is precisely because most financial and insurance risks involve events unfolding as time passes that models based on processes turn out to be most natural.
+	\\ --- Submission to the Faculty of Actuaries students' society in 1998 \citep{cairns1998stochastic}
+\end{quote}
+
+Stochastic processes are simply a collection of random variables, usually indexed by time \citep{Barone-Adesi}. They are typically used during the modelling process, in order to describe the evolution of an underlying real-world process. To allow for it to be used within the modelling context, a stochastic process is often expressed by its stochastic differential equation (SDE). 
+Using the SDE, the simulated stochastic process can then be adjusted to best represent the real-world process at hand - whether that be the evolution of the price of a certain stock, the claims on an insurance policy or the mortality rate of a group of policyholders. 
+\citet{Oreskes} refer to this procedure of "[manipulating] the independent variables to obtain a match between the observed and simulated distribution or distributions of a dependent variable or variables", as model calibration.
+
+
+Effectively modelling a real-world process involves two major challenges. Firstly, choosing an appropriate stochastic process with properties that mimic those of the real-world process; and, secondly, finding the most suitable parameters for the relevant SDE. In practice, however, the selection of an appropriate stochastic process is often influenced by the ease with which its parameters can be calibrated. Thus complex stochastic processes, with more complex SDEs, are often substituted for simpler, easily calibrated models. This can lead to the use of models that are subject to simplifying assumptions or possess properties that may not be the best possible representation of reality.
+
+
+The difficulty associated with model calibration depends on the method of calibration applied. \citet{Mongwe} and \citet{Honore} describe how common calibration methods, including Maximum Likelihood Estimation (MLE) and the Generalized Method of Moments (MME), can break down under more complex SDEs. MLE, for example, requires the derivation of the likelihood function, which is often difficult in the case of complex SDEs as they can yield unbounded likelihood functions.
+
+
+Another calibration method that has seen a renaissance in the last decade is that of backpropagation, which has proven to be a powerful gradient descent-based algorithm for calibrating Artificial Neural Networks (ANNs). 
+This paper will explore the ways in which these statistical learning techniques - namely ANNs, calibrated by backpropagation - could, in turn, be applied to the calibration of stochastic processes.
+
+
+
+\section{Problem Statement}
+Every stochastic process contains a set of parameters, $ Z $, which controls the dynamics of the paths produced by the model. The calibration problem can be framed as a mapping from the observed data, $ D $, or some transformation thereof, to these parameter values, $ Z $. Let C denote the calibration method, then $C$ is necessarily of the form,
+
+\begin{equation}
+C:f \left( D \right) \rightarrow Z
+\end{equation}
+
+An ANN is a collection of interconnected processing units \citep{Teugels}, which realises a nonlinear mapping from inputs, $ R^X $ to outputs, $ R^Y $.
+
+\begin{equation}
+NN: R^X \rightarrow R^Y
+\end{equation}
+
+This mapping is achieved by chaining a sequence of nonlinear multiple regression functions, f, (called activation functions) together in layers (see 1.5.1 below).
+
+
+From equations (1.1) and (1.2), we can see that an ANN has the ability to estimate the calibration function, $ C $. 
+This assertion is justified by the Universal Approximation Theorem, which states that "standard multilayer feedforward networks are capable of approximating any measurable function to any desired degree of accuracy" \citep{Hornik}.
+
+
+The question, however, remains as to what such a network might look like and how it would compare to traditional calibration techniques.
+
+\section{Research Objectives}
+This paper has the primary objective of researching and testing the viability of ANNs as a universal method of parameter estimation for any stochastic process. As to be seen in the literature review, ANNs have been used extensively in the world of financial modelling, and to some extent in the calibration of simple stochastic processes.
+
+
+Conceivably, ANNs have the potential to act as a universal calibration method for any stochastic process. This paper aims to investigate whether and how that might function in practice.
+
+
+This study will consist of two phases. In the first, an ANN will be implemented for a sufficiently complex SDE, for which a likelihood function does exist (for comparative purposes). In the second phase, the accuracy of the network?s approximation of the calibration function will be measured and compared against that of other calibration techniques, and an empirical study will attempt to ascertain whether the resulting calibration scheme is robust on real financial data.
+
+\section{Importance of the Study}
+
+An ANN-based approach to parameter estimation could likely provide numerous benefits above the popular MLE and MME approaches.
+The technique could potentially provide a universal solution to approximate the calibration function, $C$, for any arbitrarily complex SDE.
+It does not require the derivation of the likelihood function, which can be difficult.
+The model drops some of the strong assumptions made by MLE and MME. 
+
+
+Another possible advantage could lie in the scheme's ability to combine the predictive power of ANNs with the descriptive properties of certain stochastic processes. \citet{Olden} explain that "although in many studies ANNs have been shown to exhibit superior predictive power compared to traditional approaches, they have also been labelled a 'black box' because they provide little explanatory insight into the relative influence of the independent variables in the prediction process". The approach, whereby the ANN is used only to calibrate a more expressive and widely understood model - a stochastic process - might help to remedy this.
+
+
+\citet{Mongwe} presents the example of the Merton jump diffusion process with SDE,
+
+\begin{equation}
+	d \ln{S_t}= \left( \mu - \frac{1}{2} \sigma^2 \right )dt+\sigma dB +d \left( \sum_{i=1}^{N_t} Y_i \right )
+\end{equation}
+
+where $ \mu $  is referred to as the drift coefficient and $ \sigma $ as the diffusion coefficient. $ B_{t}, t\geq 0$ is a standard Brownian motion process. $Y_i$ represents the random size of the $i$th jump, and has distribution, $Y_i \sim N \left( \mu_{jump}, \sigma_{jump}^2 \right )$. $N_t, t \geq 0$ is a Poisson process with intensity $\lambda$.
+
+
+Note that these parameters provide insight into the characteristics of the stochastic process being modelled. Hence, it could arguably be more enlightening to fit the observed data to an expressive stochastic process which yields explanatory parameters, than simply using a "non-parametric" ANN to model the real-world process entirely. This helps avoid the black-box pitfall commonly associated with ANNs, while still making use of their "superior predictive power". This is of importance, as prudent financial management involves using modelling techniques that are well understood, clearly defined and well documented. ANNs - despite their powerful properties - are often not an acceptable means of modelling in actuarial applications. By using them simply to calibrate complex stochastic processes (which are a suitable and widely acceptable modelling tool), the strengths of ANNs are retained, without the risk associated with a black-box technique.
+
+\section{Research Design and Methodology}
+The research design and methodology will give an overview of the model construction process. Firstly, a more thorough description of one of the core components of the scheme - an ANN - is presented. This is followed by an explanation as to how an ANN architecture could be applied to estimating the model calibration function. Lastly, an overview of how the model is to be evaluated follows.
+
+\subsection{Neural Networks}
+An Artificial Neural Network is a mathematical model consisting of an interconnected collection of processing units, which realises a nonlinear mapping from inputs $R^X$ to outputs $R^Y$,
+
+\begin{equation}
+	ANN: R^X \rightarrow R^Y
+\end{equation}
+
+This mapping is achieved by chaining a sequence of nonlinear multiple regression functions, $f$, (called activation functions) together in layers.  Each input into every activation function is weighted by some value $w$.
+
+
+The most common ANN architecture, a multilayer Perceptron, is illustrated in figure 1.1.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{NeuralNetwork}
+	\caption[Multilayer Perceptron]{Multilayer Perceptron}
+	\label{fig:neuralnetwork}
+\end{figure}
+
+For a given input, $x$, and (expected) output, $y$, the error of the ANN, $ \epsilon $, is equal to the distance between the ANN's outputs, $o$, and the expected outputs. The power of ANNs lies in the fact that they can be trained to minimize this error. 
+
+
+Training the network involves firstly initialising the network with a random set of weights, $W$. A large set of training data (sets of inputs, $X$, and desired outputs, $Y$) is then presented to the network. The optimisation process (often referred to as backpropagation) proceeds by calculating the prediction error, $ \epsilon $, for each of these data sets, and then "propagating" this error value backwards through the network so that each weight can be adjusted accordingly. This is achieved by means of automatic differentiation. Automatic differentiation allows us to compute the partial derivative of the error with respect to the weights in the ANN, $W$ \citep{Werbos}.
+
+
+This process is repeated iteratively over the training data, until the error of the ANN converges or some other stopping criteria is satisfied. At this point, the ANN will have approximated the relation, $\mathbf{X}\rightarrow \mathbf{Y}$.
+
+
+A number of technical details - such as what inputs are fed into the ANN, what activation function is used, the number of activation functions used, the number of layers used, and the exact function used to estimate the error - have been omitted from this discussion for the sake of brevity. 
+
+\subsection{Approximating the Calibration Function, $\mathbf{C}$}
+From the previous section, it follows that an ANN should - theoretically - be able to approximate the calibration function defined earlier, $C: f \left( D \right) \rightarrow Z$. That is, $NN \approx C$.
+This can be achieved by:
+\begin{enumerate}[i)]
+	\itemsep0em 
+	
+	\item generating a set of random calibrations, $\mathbf{Z}$
+	
+	\item simulating a set of paths,  $\mathbf{Z}$, using the given SDE for every  $Z_i \in \mathbf{Z}$
+	
+	\item extracting a set of "inputs", $\mathbf{X}$, from the data $\mathbf{X} = f\left(\mathbf{D}\right)$
+	
+	\item training the ANN to predict the original calibrations, $\mathbf{Z}$, given the data $\mathbf{X}=f \left( \mathbf{D} \right)$ as input. This is done by setting the ANN to minimise the error $\epsilon$ of its output, $\mathbf{O}$ (which corresponds to an estimate of $Z_i$) and the true known values of $Z_i$.
+	
+	
+\end{enumerate}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{CalibrationSchemeDiagram}
+	\caption[The Proposed Calibration Scheme]{The Proposed Calibration Scheme}
+	\label{fig:calibrationschemediagram}
+\end{figure}
+
+If a large enough set of calibrations is chosen and enough data is simulated from the SDE using each calibration, the ANN will approximate the desired calibration function, $C$, for the given SDE.
+
+
+This trained ANN can then be applied to real-world observations to calibrate the relevant SDE for the observed process.  This is done by inputting the data observed from the real-word stochastic process into the trained ANN. The ANN output, $\mathbf{o'}$, will then be an estimate of the parameters (i.e. a calibration) for the SDE that the ANN was trained on.
+
+
+In this paper, the ANN will be built and trained in Python, using the open source Tensorflow and Keras libraries.
+
+\subsection{Model Evaluation}
+
+The proposed model will be evaluated in terms of the accuracy with which it can predict the true parameters of the stochastic process. This is done by generating sets of parameter values, which are used to simulate sets of corresponding sample paths. These sample paths would then be fed into the calibration function and the results (the parameter estimates) compared to the originally generated parameter set, to obtain a measure of accuracy. The accuracy measure could then be compared against that of other estimation techniques. 
+\par
+Accuracy, however, is not the only evaluation metric. The calibration technique itself (using an ANN to calibrate the stochastic process at hand) will be evaluated by its ability to generalise. This is indicated by the ease with which the technique might deal with different types of stochastic processes (without too many structural changes to the technique itself). 
+
+
+The main focus of this paper remains the definition of a robust methodology that can be followed to approximate the parameters for any stochastic process. A thorough conclusion must report on the potential of the proposed technique to be considered a universal approximation method.
+
+
+\chapter{Literature Review}
+The literature discussed throughout this research will fall into mainly two broad categories. Firstly, a review of the common methods proposed for the calibration of stochastic processes, focusing on their limitations, ease of use, universality and accuracy. Secondly, an overview of past applications of ANNs to modelling and model calibration. 
+
+\section{Calibration of Stochastic Processes}
+The main argument for a universal neural network approach to model calibration is that traditional methods are often unpractical. Numerous academic works substantiate this observation.
+
+
+\citet{Nielsen} reviewed the progress made on SDE parameter estimation over the 80s and 90s. They note that the MLE approach does not generalise and, having studied the generalised method of moments and the efficient method of moments, they explain that both of these methods will result in tests of low power due to the efficiency loss.
+
+
+More recently, \citet{Mongwe} did a study on jump diffusion processes applied to the South African equity and interest rate markets. He reported on the application and accuracy of multiple calibration methods, including the likelihood profiling approach \citep{Honore}, the standard MLE approach, the MME approach and expectation maximisation (EM). He concluded that both MLE and MME fell short of expectations, and that the likelihood profiling and EM techniques worked best on parameter estimation for jump diffusion processes (each under different restrictions on the parameters) (Mongwe, 2015). These recommendations will be applied when evaluating and comparing the performance of the neural-network calibration approach in this paper to that of existing methods.
+
+
+\section{Neural Networks in Modelling and Model Calibration}
+Except for the case of \citet{Xie}, the task of calibrating stochastic processes using ANNs has not been thoroughly attempted or documented in the major academic journals examined for this research. Numerous works do however highlight the potential of ANNs in this field.
+Multiple studies have been done on the use of ANNs in pricing options, and - in particular - to outperform the Black-Scholes model \citealp{Yao}. The results seem to indicate that ANNs outperform the Black-Scholes model in volatile markets, and are particularly useful in these when the "constant ?" assumption underlying the Black-Scholes model is violated.
+
+
+Tackling the issue of model calibration; \citet{Samad} investigated the application of ANNs to the calibration of process systems - namely that of first-order process open-loop delay identification. They concluded that ANNs are an attractive solution, as they do not require the subject-specific expertise vital to common engineering approaches, provide high accuracy and prove robust on real-world data.
+
+
+On the topic of this paper, \citet{Xie} did an investigation into the feasibility of estimating the parameters both linear and nonlinear SDEs using multilayer perceptron (MLP) networks. Their investigation comprised only of small MLPs with 1-, 2- and 3-hidden-layer, fully connected architectures. They found that, under certain conditions limiting the parameter values of the process, a simple MLP would be able to estimate parameters with high accuracy ($R^2 > 0.93$). They report that this accuracy figure, however, does diminish under noisy conditions and SDEs with high diffusion levels. Another, often overlooked element noted by their research is the importance of the regime used to generate the simulated training data. The paper indicates to a notable increase in accuracy by using a simulation regime that makes use of the same parameters over 5 different Wiener processes, which effectively helps remove the "randomness" and noise from the dataset. They called for more research on the subject, particularly using different ANN architectures. What is notable about the paper presented, is that high accuracy was achieved using a simple network topology. This serves as evidence for the potential of ANNs to act as robust calibration estimators for SDEs.
+
+
+\citet{Giebel} proposed a novel calibration method for time series that dynamically adapts the parameters of a stochastic model by using small MLP networks (2-layer). These ANNs use data from the past n observations to inform an updated parameter value. They then used the updated stochastic process to forecast the time series one day ahead, while updating the parameters at each time step as they proceed through the time series. They argue that updating the parameters of the stochastic process at each time step is more realistic, due to investors often weighting recent observations as more relevant than aged data. Using this method, different weights can be assigned to data from different dates in the past. The calibration scheme proposed in this paper could potentially add great value to the technique described by Giebel and Rainer, as it would allow the periodic recalibration of more complex processes, and the incorporation of many additional parameters. 
+
+\chapter{Methodology}
+
+\section{Convolutional Layer}
+
+Convolutional Neural Networks (CNNs) are a variation of the traditional multilayer perceptron architecture. Like ordinary feedforward networks, they consist of neurons with trainable weights and biases. Unlike feedforward networks, these neurons are grouped into sets of small filters. With every forward pass, the filters are sequentially convolved across the extend of the input volume. This produces an activation map containing the result of the "filtration" at every point of the input volume.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{1D_Convolution}
+	\caption[1D Convolutional Layer]{A One-Dimensional Convolution Layer}
+	\label{fig:1dconvolution}
+\end{figure}
+
+In an image-recognition setting, the network will typically train filters that activate on the detection of visual features such as edges or a blotch of colour \citep{cs231n}. However, in this study, there is no certain way to ascertain what they might detect.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\linewidth]{2D_Convolution}
+	\caption[2D Convolution Layer]{A Two-Dimensional Convolution Layer}
+	\label{fig:2dconvolution}
+\end{figure}
+
+
+\section{Performance Measurement}
+\subsection{Coefficient of Determination}
+In measuring the performance of the ANN, we will use the the coefficient of multiple determinations, $ R^2 $, between the actual parameter values, $ \mathbf{y} $, and the ANN-predicted parameter values $ \mathbf{\hat{y}}$. $ R^2 $ is defined as
+
+\begin{equation}
+R^2 = 1 - \frac{\sum_{i=1}^{m}\left(y_i-\hat{y}_i\right)^2}{\sum_{i=1}^{m}\left(y_i-\overline{y}\right)^2}
+\end{equation}.
+
+where $y$ is the actual parameter value, $\hat{y}$ is the predicted parameter value, $\overline{y}$ is the mean parameter value, and $m$ is the size of the sample. Any estimate that is more accurate than the sample mean would result in an $ R^2 $ value of greater than zero. An $ R^2 $ value of 1 would indicate a perfect fit.
+
+\subsection{Average Absolute Percentage Error}
+Another model evaluation metric is the average absolute percentage error (AAPE).
+\begin{equation}
+AAPE = 100 \cdot \frac{1}{m} \sum_{i=1}^{m} \frac{\left| y_i - \hat{y}_i \right|}{y_i}
+\end{equation}
+where $y$ is the actual parameter value, $\hat{y}$ is the predicted parameter value, and $m$ is the size of the sample.
+
+\chapter{Empirical Study}
+
+It is important to note that when building a neural network for a specific modelling exercise, one has little prior knowledge of what the model should look like. Rough guidlines do exist, for example that Recurrent Neural Network architectures are often used for time series problems (SOURCE?) or that Convolutional Neural Networks are well suited to image recognition tasks (SOURCE?). Beyond these vague guidelines however, little evidence exists to inform the potential properties that a network might need.
+
+\section{The Merton Jump Diffusion Stochastic Process}
+
+The Merton Jump Diffusion Stochastic process, presented in the seminal work of \citet{Merton}, aimed to address the limitations of the Geometric Brownian Motion process. It has the stochastic differential equation,
+
+\begin{equation}
+d S_t =  \mu S_t dt  +\sigma S_t dW_t + S_t dJ_t 
+\end{equation}
+where
+\begin{equation}
+J_t = \sum_{j=1}^{N_t}(V_j - 1)
+\end{equation}
+
+is a compound Poisson process. $V_j$ are independent, identically distributed positive random variables representing the jump sizes. $N_t, t \geq 0$ is a Poisson process with intensity $\lambda$, which is independent of $J_t$ and $W_t$.
+
+To obtain the log returns, we can derive the function $f(t, S_t) = \ln{S_t}$ using It\^{o}'s formula:
+
+\begin{equation}
+d\ln{S_t} = \frac{1}{S_t}dS_t - \frac{1}{2{S_t}^2}\left(dS_t\right)^2 = \left( \mu - \frac{\sigma^2}{2} \right)dt +\sigma dW_t + dJ_t 
+\end{equation}
+
+In this dissertation we will have $V_j$ follow a log-normal distribution.
+
+\section{Convolutional Neural Network}
+
+
+
+\begin{tabular}{|c|c|c|c|}[h]
+	
+	Architecture & No. Parameters & Activation Function & Accuracy \\ 
+	\hline
+	&  &  &  \\ 
+	 
+	&  &  &  \\ 
+	 
+	&  &  &  \\ 
+	 
+	&  &  &  \\ 
+	\hline 
+\end{tabular} 
+
+\bibliographystyle{ussagus}
+\bibliography{export}
+
+\end{document}
+
+

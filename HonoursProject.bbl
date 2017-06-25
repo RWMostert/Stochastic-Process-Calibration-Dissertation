@@ -1,0 +1,149 @@
+\begin{thebibliography}{16}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\providecommand{\selectlanguage}[1]{\relax}
+\edef\AFRstr{\string afrikaans}
+\ifx\AFRstr\languagename
+   \input{usbib.afr}%
+ \else
+   \input{usbib.eng}%
+\fi
+\newcommand{\Capitalize}[1]{\uppercase{#1}}
+\newcommand{\capitalize}[1]{\expandafter\Capitalize#1}
+
+\bibitem[{cs2()}]{cs231n}
+
+\newblock Cs231n convolutional neural networks for visual recognition.
+\newline\bblurlpre\url{http://cs231n.github.io/convolutional-networks/}
+
+\bibitem[{\citenamefont{Barone-Adesi}(2015)}]{Barone-Adesi}
+\bibnamefont{Barone-Adesi}, \bibfnamefont{G.} 2015.
+\newblock \textit{Stochastic Processes}.
+\newblock Wiley Encyclopedia of Management. John Wiley and Sons, Ltd.
+\newblock ISBN 9781118785317.
+\newline\bblurlpre\url{http://dx.doi.org/10.1002/9781118785317.weom040071}
+
+\bibitem[{\citenamefont{Cairns} \textit{\bbletal{}}(1998)\citenamefont{Cairns},
+  \citenamefont{Dickson}, \citenamefont{Macdonald}, \citenamefont{Waters}
+  \protect\BIBand{} \citenamefont{Willder}}]{cairns1998stochastic}
+\bibnamefont{Cairns}, \bibfnamefont{A.}, \bibnamefont{Dickson},
+  \bibfnamefont{D.}, \bibnamefont{Macdonald}, \bibfnamefont{A.},
+  \bibnamefont{Waters}, \bibfnamefont{H.} \protect\BIBand{}
+  \bibnamefont{Willder}, \bibfnamefont{M.} 1998.
+\newblock Stochastic processes: learning the language.
+\newblock \textit{Faculty of Actuaries students' society}.
+
+\bibitem[{\citenamefont{Giebel} \protect\BIBand{}
+  \citenamefont{Rainer}(2013)}]{Giebel}
+\bibnamefont{Giebel}, \bibfnamefont{S.} \protect\BIBand{} \bibnamefont{Rainer},
+  \bibfnamefont{M.} 2013.
+\newblock Neural network calibrated stochastic processes: forecasting financial
+  assets.
+\newblock \textit{Central European Journal of Operations Research},
+  21(2):277--293.
+
+\bibitem[{\citenamefont{Honore}(1998)}]{Honore}
+\bibnamefont{Honore}, \bibfnamefont{P.} 1998.
+\newblock Pitfalls in estimating jump-diffusion models.
+
+\bibitem[{\citenamefont{Hornik} \textit{\bbletal{}}(1989)\citenamefont{Hornik},
+  \citenamefont{Stinchcombe} \protect\BIBand{} \citenamefont{White}}]{Hornik}
+\bibnamefont{Hornik}, \bibfnamefont{K.}, \bibnamefont{Stinchcombe},
+  \bibfnamefont{M.} \protect\BIBand{} \bibnamefont{White}, \bibfnamefont{H.}
+  1989.
+\newblock Multilayer feedforward networks are universal approximators.
+\newblock \textit{Neural Networks}, 2(5):359--366.
+\newline\bblurlpre\url{//www.sciencedirect.com/science/article/pii/0893608089900208}
+
+\bibitem[{\citenamefont{Merton}(1976)}]{Merton}
+\bibnamefont{Merton}, \bibfnamefont{R.C.} 1976.
+\newblock Option pricing when underlying stock returns are discontinuous.
+\newblock ID: 271671271671.
+\newline\bblurlpre\url{http://www.sciencedirect.com.ez.sun.ac.za/science/article/pii/0304405X76900222}
+
+\bibitem[{\citenamefont{Mongwe}(2015)}]{Mongwe}
+\bibnamefont{Mongwe}, \bibfnamefont{W.T.} 2015.
+\newblock No title.
+\newblock \textit{Analysis of equity and interest rate returns in South Africa
+  under the context of jump diffusion processes}.
+
+\bibitem[{\citenamefont{Nielsen}
+  \textit{\bbletal{}}(2000)\citenamefont{Nielsen}, \citenamefont{Madsen}
+  \protect\BIBand{} \citenamefont{Young}}]{Nielsen}
+\bibnamefont{Nielsen}, \bibfnamefont{J.N.}, \bibnamefont{Madsen},
+  \bibfnamefont{H.} \protect\BIBand{} \bibnamefont{Young}, \bibfnamefont{P.C.}
+  2000.
+\newblock Parameter estimation in stochastic differential equations: An
+  overview.
+\newblock ID: 271897271897.
+\newline\bblurlpre\url{http://www.sciencedirect.com/science/article/pii/S1367578800900178}
+
+\bibitem[{\citenamefont{Olden} \protect\BIBand{}
+  \citenamefont{Jackson}(2002)}]{Olden}
+\bibnamefont{Olden}, \bibfnamefont{J.D.} \protect\BIBand{}
+  \bibnamefont{Jackson}, \bibfnamefont{D.A.} 2002.
+\newblock Illuminating the "black box": a randomization approach for
+  understanding variable contributions in artificial neural networks.
+\newblock \textit{Ecological Modelling}, 154(1-2):135--150.
+\newline\bblurlpre\url{//www.sciencedirect.com/science/article/pii/S0304380002000649}
+
+\bibitem[{\citenamefont{Oreskes}
+  \textit{\bbletal{}}(1994)\citenamefont{Oreskes},
+  \citenamefont{Shrader-Frechette} \protect\BIBand{}
+  \citenamefont{Belitz}}]{Oreskes}
+\bibnamefont{Oreskes}, \bibfnamefont{N.}, \bibnamefont{Shrader-Frechette},
+  \bibfnamefont{K.} \protect\BIBand{} \bibnamefont{Belitz}, \bibfnamefont{K.}
+  1994.
+\newblock Verification, validation, and confirmation of numerical models in the
+  earth sciences.
+\newblock \textit{Science}, 263(5147):641--646.
+\newline\bblurlpre\url{http://www.jstor.org/stable/2883078}
+
+\bibitem[{\citenamefont{Samad} \protect\BIBand{}
+  \citenamefont{Mathur}(1992)}]{Samad}
+\bibnamefont{Samad}, \bibfnamefont{T.} \protect\BIBand{} \bibnamefont{Mathur},
+  \bibfnamefont{A.} 1992.
+\newblock Parameter estimation for process control with neural networks.
+\newblock ID: 271876271876.
+\newline\bblurlpre\url{http://www.sciencedirect.com/science/article/pii/0888613X9290008N}
+
+\bibitem[{\citenamefont{Teugels} \protect\BIBand{}
+  \citenamefont{Sundt}(2004)}]{Teugels}
+\bibnamefont{Teugels}, \bibfnamefont{J.L.} \protect\BIBand{}
+  \bibnamefont{Sundt}, \bibfnamefont{B.} 2004.
+\newblock \textit{Encyclopedia of actuarial science}.
+\newblock Hoboken, NJ: Hoboken, NJ : John Wiley and Sons.
+
+\bibitem[{\citenamefont{Werbos}(1990)}]{Werbos}
+\bibnamefont{Werbos}, \bibfnamefont{P.J.} 1990.
+\newblock Backpropagation through time: what it does and how to do it.
+\newblock \textit{Proceedings of the IEEE}, 78(10):1550--1560.
+
+\bibitem[{\citenamefont{Xie} \textit{\bbletal{}}(2007)\citenamefont{Xie},
+  \citenamefont{Kulasiri}, \citenamefont{Samarasinghe} \protect\BIBand{}
+  \citenamefont{Rajanayaka}}]{Xie}
+\bibnamefont{Xie}, \bibfnamefont{Z.}, \bibnamefont{Kulasiri},
+  \bibfnamefont{D.}, \bibnamefont{Samarasinghe}, \bibfnamefont{S.}
+  \protect\BIBand{} \bibnamefont{Rajanayaka}, \bibfnamefont{C.} 2007.
+\newblock The estimation of parameters for stochastic differential equations
+  using neural networks.
+\newblock \textit{Inverse Problems in Science and Engineering}, 15(6):629--641.
+\newblock Doi: 10.1080/17415970600907429.
+\newline\bblurlpre\url{http://dx.doi.org.ez.sun.ac.za/10.1080/17415970600907429}
+
+\bibitem[{\citenamefont{Yao} \textit{\bbletal{}}(2000)\citenamefont{Yao},
+  \citenamefont{Li} \protect\BIBand{} \citenamefont{Tan}}]{Yao}
+\bibnamefont{Yao}, \bibfnamefont{J.}, \bibnamefont{Li}, \bibfnamefont{Y.}
+  \protect\BIBand{} \bibnamefont{Tan}, \bibfnamefont{C.L.} 2000.
+\newblock Option price forecasting using neural networks.
+\newblock \textit{Omega}, 28(4):455--466.
+\newline\bblurlpre\url{//www.sciencedirect.com/science/article/pii/S0305048399000663}
+
+\end{thebibliography}
