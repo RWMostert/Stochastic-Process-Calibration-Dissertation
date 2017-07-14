@@ -19,7 +19,12 @@
 \usepackage{color}
 \usepackage{usbib}
 \usepackage{natbib}
+\usepackage{floatrow}%
 \usepackage[onehalfspacing]{setspace}
+\usepackage{subfig}
+\usepackage{hyperref}
+\usepackage[labelfont=bf]{caption}
+\usepackage[shortlabels]{enumitem}
 
 \titleformat
 {\chapter} % command
@@ -88,12 +93,12 @@
 
 \begin{quote}
 	Stochastic processes are becoming more important to actuaries: they underlie much of modern finance, mortality analysis and general insurance. They are immensely useful because they form the common language of workers in many areas that overlap in actuarial science.  It is precisely because most financial and insurance risks involve events unfolding as time passes that models based on processes turn out to be most natural.
-	\\ --- Submission to the Faculty of Actuaries students' society in 1998 \citep{cairns1998stochastic}
+	\\ --- Submission to the Faculty of Actuaries students' society in 1998 (\citefullauthor{cairns1998stochastic}; \citeyear{cairns1998stochastic})
 \end{quote}
 
 Stochastic processes are simply a collection of random variables, usually indexed by time \citep{Barone-Adesi}. They are typically used during the modelling process, in order to describe the evolution of an underlying real-world process. To allow for it to be used within the modelling context, a stochastic process is often expressed by its stochastic differential equation (SDE). 
 Using the SDE, the simulated stochastic process can then be adjusted to best represent the real-world process at hand - whether that be the evolution of the price of a certain stock, the claims on an insurance policy or the mortality rate of a group of policyholders. 
-\citet{Oreskes} refer to this procedure of "[manipulating] the independent variables to obtain a match between the observed and simulated distribution or distributions of a dependent variable or variables", as model calibration.
+\citefullauthor{Oreskes} (\citeyear{Oreskes}) refer to this procedure of "[manipulating] the independent variables to obtain a match between the observed and simulated distribution or distributions of a dependent variable or variables", as model calibration.
 
 
 Effectively modelling a real-world process involves two major challenges. Firstly, choosing an appropriate stochastic process with properties that mimic those of the real-world process; and, secondly, finding the most suitable parameters for the relevant SDE. In practice, however, the selection of an appropriate stochastic process is often influenced by the ease with which its parameters can be calibrated. Thus complex stochastic processes, with more complex SDEs, are often substituted for simpler, easily calibrated models. This can lead to the use of models that are subject to simplifying assumptions or possess properties that may not be the best possible representation of reality.
@@ -124,7 +129,7 @@ This mapping is achieved by chaining a sequence of nonlinear multiple regression
 
 
 From equations (1.1) and (1.2), we can see that an ANN has the ability to estimate the calibration function, $ C $. 
-This assertion is justified by the Universal Approximation Theorem, which states that "standard multilayer feedforward networks are capable of approximating any measurable function to any desired degree of accuracy" \citep{Hornik}.
+This assertion is justified by the Universal Approximation Theorem, which states that "standard multilayer feedforward networks are capable of approximating any measurable function to any desired degree of accuracy" (\citefullauthor{Hornik},\citeyear{Hornik}).
 
 
 The question, however, remains as to what such a network might look like and how it would compare to traditional calibration techniques.
@@ -242,15 +247,15 @@ The literature discussed throughout this research will fall into mainly two broa
 The main argument for a universal neural network approach to model calibration is that traditional methods are often unpractical. Numerous academic works substantiate this observation.
 
 
-\citet{Nielsen} reviewed the progress made on SDE parameter estimation over the 80s and 90s. They note that the MLE approach does not generalise and, having studied the generalised method of moments and the efficient method of moments, they explain that both of these methods will result in tests of low power due to the efficiency loss.
+\citefullauthor{Nielsen} (\citeyear{Nielsen}) reviewed the progress made on SDE parameter estimation over the 80s and 90s. They note that the MLE approach does not generalise and, having studied the generalised method of moments and the efficient method of moments, they explain that both of these methods will result in tests of low power due to the efficiency loss.
 
 
 More recently, \citet{Mongwe} did a study on jump diffusion processes applied to the South African equity and interest rate markets. He reported on the application and accuracy of multiple calibration methods, including the likelihood profiling approach \citep{Honore}, the standard MLE approach, the MME approach and expectation maximisation (EM). He concluded that both MLE and MME fell short of expectations, and that the likelihood profiling and EM techniques worked best on parameter estimation for jump diffusion processes (each under different restrictions on the parameters) (Mongwe, 2015). These recommendations will be applied when evaluating and comparing the performance of the neural-network calibration approach in this paper to that of existing methods.
 
 
 \section{Neural Networks in Modelling and Model Calibration}
-Except for the case of \citet{Xie}, the task of calibrating stochastic processes using ANNs has not been thoroughly attempted or documented in the major academic journals examined for this research. Numerous works do however highlight the potential of ANNs in this field.
-Multiple studies have been done on the use of ANNs in pricing options, and - in particular - to outperform the Black-Scholes model \citealp{Yao}. The results seem to indicate that ANNs outperform the Black-Scholes model in volatile markets, and are particularly useful in these when the "constant ?" assumption underlying the Black-Scholes model is violated.
+Except for the case of \citefullauthor{Xie} (\citeyear{Xie}), the task of calibrating stochastic processes using ANNs has not been thoroughly attempted or documented in the major academic journals examined for this research. Numerous works do however highlight the potential of ANNs in this field.
+Multiple studies have been done on the use of ANNs in pricing options, and - in particular - to outperform the Black-Scholes model (\citefullauthor{Yao}; \citeyear{Yao}). The results seem to indicate that ANNs outperform the Black-Scholes model in volatile markets, and are particularly useful in these when the "constant $\sigma$" assumption underlying the Black-Scholes model is violated.
 
 
 Tackling the issue of model calibration; \citet{Samad} investigated the application of ANNs to the calibration of process systems - namely that of first-order process open-loop delay identification. They concluded that ANNs are an attractive solution, as they do not require the subject-specific expertise vital to common engineering approaches, provide high accuracy and prove robust on real-world data.
@@ -263,9 +268,43 @@ On the topic of this paper, \citet{Xie} did an investigation into the feasibilit
 
 \chapter{Methodology}
 
+\section{Artificial Neurons}
+
+In Chapter 1, ANNs were introduced. Figure~\ref{fig:neuralnetwork} introduces 3 types of trainable neurons: weights (denoted by $w$), biases ($u$), and activation functions ($f$). Hence, every individual neuron multiplies the set of inputs, $x_i$ by their corresponding weights $w_i$ and adds some bias, $u$ - the sum of which is then fed through an activation function $f$. The result is propagated forward in the network to the next set of neurons. Mathematically, the output of the $k$th neuron is given by:
+\begin{equation}
+\mathbf{o}_k = f\left(\sum_i \left[ \mathbf{w}_{ki} \mathbf{x}_i \right] + \mathbf{u}_k\right)
+\end{equation}
+
+\subsection{Activation Functions}
+The activation function $f$ is used to add non-linearity to the architecture. Without it the model would be little more than a multivariate linear model. There are a number of choices for this activation function. The most popular being rectified linear units (ReLUs), Exponential Linear Units (ELUs), logistic sigmoid- and hyperbolic tangent functions.
+
+Prior to the work of \citefullauthor{glorot2011deep} (\citeyear{glorot2011deep}), logistic sigmoid and hyperbolic tangent functions were the commonest activation functions in neural network architectures. \citet{glorot2011deep} however showed that ReLUs yield better performance. ReLUs employ the activation function $f\left(x\right) = max\left(0, x\right)$.
+
+\citefullauthor{DBLP:journals/corr/ClevertUH15} (\citeyear{DBLP:journals/corr/ClevertUH15}) introduced the "exponential linear unit", which provided even better performance than ReLUs, both in terms of learning speed as well as generalisation potential. An ELU with parameter $\alpha > 0$ has activation function.
+
+\begin{equation}
+f\left(x\right)=\left\{\begin{matrix}
+x & if\ \ x > 0\\ 
+\alpha \left( \exp\left(x \right ) -1\right ) & if\ \ x \leq 0
+\end{matrix}\right.
+\end{equation}
+
+\begin{figure}[h]
+	\begin{floatrow}
+		
+		 \ffigbox{\includegraphics[width=1\linewidth]{Results/relu}}{\caption[Rectifier Activation Function, f(x)]{Rectifier Activation Function, $f(x)$.}\label{fig:relu}}
+		 
+		\ffigbox{\includegraphics[width=1\linewidth]{Results/elu}}{	\caption[Exponential Linear Unit (ELU)]{Exponential Linear Unit (ELU) Activation Function, with $\alpha = 0.5$.}
+			\label{fig:elu}}
+
+	\end{floatrow}
+\end{figure}
+
 \section{Convolutional Layer}
 
-Convolutional Neural Networks (CNNs) are a variation of the traditional multilayer perceptron architecture. Like ordinary feedforward networks, they consist of neurons with trainable weights and biases. Unlike feedforward networks, these neurons are grouped into sets of small filters. With every forward pass, the filters are sequentially convolved across the extend of the input volume. This produces an activation map containing the result of the "filtration" at every point of the input volume.
+Convolutional Neural Networks (CNN's) are a variation of the traditional multi-layer perceptron architecture. Like ordinary feed-forward networks, they consist of neurons with trainable weights and biases. Unlike feed-forward networks, these neurons are grouped into sets of small filters. With every forward pass, the filters are sequentially convolved across the extend of the input volume. This produces an activation map containing the result of the "filtration" at every point of the input volume.
+
+In an image-recognition setting, the network will typically train filters that activate on the detection of visual features such as edges or a blotch of colour \citep{cs231n}. However, in this study, there is no certain way to ascertain what they might detect.
 
 \begin{figure}[h]
 	\centering
@@ -274,13 +313,21 @@ Convolutional Neural Networks (CNNs) are a variation of the traditional multilay
 	\label{fig:1dconvolution}
 \end{figure}
 
-In an image-recognition setting, the network will typically train filters that activate on the detection of visual features such as edges or a blotch of colour \citep{cs231n}. However, in this study, there is no certain way to ascertain what they might detect.
-
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.4\linewidth]{2D_Convolution}
 	\caption[2D Convolution Layer]{A Two-Dimensional Convolution Layer}
 	\label{fig:2dconvolution}
+\end{figure}
+
+\subsection{Pooling}
+Convolutional Network architectures often feature pooling layers, which aggregate the outputs of multiple preceding neurons into a single feature, which is then propagated forward through the network. Two prevalent pooling operations are subsampling (where the mean of the preceding neuron outputs are transmitted to the subsequent layer), as well as maximum pooling - which propagates the maximum output from a set of preceding neuron outputs, to the next layer. The empirical results of \citefullauthor{Scherer2010} (\citeyear{Scherer2010}) show that "a maximum pooling operation significantly outperforms subsampling operations". In the convolutional network implementations from this dissertation, extensive use was made of maximum pooling operations. Note that - unlike the filters of a convolutional layer - the weights of an average- or maximum pooling operation cannot be adjusted during training, and hence the pooling layers do not form part of the set of trainable network layers.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\linewidth]{Max-Pooling_Operation}
+	\caption[A $2x2$ maximum pooling operation.]{A $2x2$ maximum pooling operation.}
+	\label{fig:max-poolingoperation}
 \end{figure}
 
 
@@ -301,7 +348,14 @@ AAPE = 100 \cdot \frac{1}{m} \sum_{i=1}^{m} \frac{\left| y_i - \hat{y}_i \right|
 \end{equation}
 where $y$ is the actual parameter value, $\hat{y}$ is the predicted parameter value, and $m$ is the size of the sample.
 
-\chapter{Empirical Study}
+\subsection{Mean Squared Error}
+A natural loss function to consider in the optimisation procedure concerned in this dissertation is that of \textit{mean squared error} (MSE). MSE measures the squared mean deviation of the predicted values (yielded by the model under consideration) from the actual observed values.
+\begin{equation}
+MSE = \sum_{i=1}^{m}\left(y_i-\hat{y}_i\right)^2
+\end{equation}
+where $y$ is the actual observed parameter (output) value, $\hat{y}$ is the predicted parameter (output) value, and $m$ is the size of the sample.
+
+\chapter{Simulation Study}
 
 It is important to note that when building a neural network for a specific modelling exercise, one has little prior knowledge of what the model should look like. Rough guidlines do exist, for example that Recurrent Neural Network architectures are often used for time series problems (SOURCE?) or that Convolutional Neural Networks are well suited to image recognition tasks (SOURCE?). Beyond these vague guidelines however, little evidence exists to inform the potential properties that a network might need.
 
@@ -325,14 +379,455 @@ To obtain the log returns, we can derive the function $f(t, S_t) = \ln{S_t}$ usi
 d\ln{S_t} = \frac{1}{S_t}dS_t - \frac{1}{2{S_t}^2}\left(dS_t\right)^2 = \left( \mu - \frac{\sigma^2}{2} \right)dt +\sigma dW_t + dJ_t 
 \end{equation}
 
-In this dissertation we will have $V_j$ follow a log-normal distribution.
+In this dissertation we will have $V_j$ follow a log-normal distribution with parameters $\mu_{jumps}$ and $\sigma_{jumps}$.
+
+\subsection{Simulation}
+The neural network models will be trained on the log-returns of the simulated processes. These processes will be simulated using a random set of parameters (within certain bounds).
+
+The simulated parameters, $\mu$, $\sigma$, $\lambda$, $\mu_{jumps}$ and $\sigma_{jumps}$ will be constrained to the following bounds: $\mu \in [-1, 1]$, $\sigma \in [0.001, 0.2]$, $\lambda\in [0.0001, 0.025]$, $\sigma_{jumps} \in [0.001, 0.2]$, and $\mu_{jumps}\in [-0.5, 0.5]$.
 
 \section{Convolutional Neural Network}
 
+\subsection{Multiple Parameter Prediction Architecture}
+\label{chap:ConvolutionalNeuralNetwork-section:MultipleParameterPredictionArchitecture}
+The first study was done on a fairly standard 8-layer convolutional architecture, which produced estimates for all five parameters.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.72\linewidth]{MultipleOutputCNN}
+	\caption[Multiple Output Prediction CNN]{8-Layer Convolutional Neural Network}
+	\label{fig:multipleoutputcnn}
+\end{figure}
+
+Experiments were performed with both ReLU and ELU activation functions. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Results/Training/COVNET_MO_MSE}
+	\caption[MSE values over the training process for the 8-Layer Convolutional Neural Network]{MSE values over the training process for the multiple parameter prediction convolutional architecture. Each epoch involves 10 iterations of a simulated batch of 150 randomly selected process parameters.}
+	\label{fig:covnetmomse}
+\end{figure}
+
+The reasons for the large difference in MSE values are related to the nature of the parameters. For example Mu ($\mu$) - the drift of the Geometric Brownian Motion component of the process - can take on values between $-0.5$ and $0.5$, while Lambda ($\lambda_{jumps}$) - the probability of a jump occurring at any given point, can only take on values between $0$ and $0.003$.
+
+\begin{figure}[h]
+	\ffigbox{
+		\begin{subfloatrow}
+			
+			\ffigbox{\includegraphics[width=1\linewidth]{Results/Training/COVNET_MO_R2_}}{
+				\caption[]{$\sigma,  \mu$}
+				\label{fig:covnetmor2}}
+			
+			\ffigbox{\includegraphics[width=1\linewidth]{Results/Training/COVNET_MO_R2_2}}{
+				\caption[]{$\lambda, \sigma_{jumps}, \mu_{jumps}$}
+				\label{fig:covnetmor22}}
+			
+		\end{subfloatrow}
+		}{
+		
+		\caption{R-Squared values over the training process for the multiple parameter prediction convolutional architecture (ELU activation units).}}
+\end{figure}
+
+\subsection{Dedicated Single Parameter Prediction Architecture}
+\label{chap:ConvolutionalNeuralNetwork-section:SingleParameterPredictionArchitecture}
+In training the multiple output model, one might notice a slight oscillation in the accuracy of the parameters. At higher levels of accuracy, as the network becomes more accurate at predicting one output, it might become less accurate for another. There seems to exist a payoff, whereby the accuracy reduces as the prediction accuracy for another increases.
+
+This raises the question of a dedicated network architecture for every parameter.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.54\linewidth]{SingleParameterDedicatedCNN}
+	\caption[Dedicated Single Parameter Prediction CNN]{6-Layer Convolutional Neural Network}
+	\label{fig:singleparameterdedicatedcnn}
+\end{figure}
+
+The most obvious parameter issue exists with $\lambda$, which - as clearly visible in figure \ref{fig:covnetmor22} - exhibits a reluctance to converge to a desired level of accuracy. The dedicated single architecture defined in figure \ref{fig:singleparameterdedicatedcnn} was implemented and trained to predict only the single parameter value $\lambda$ per sample path. The result is a much quicker and smoother convergence to an acceptable level of accuracy, as visible in figure \ref{fig:lambda-rsquared}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Images/Prediction-Convergence/ConvolutionalNN-SingleOutput/Lambda-RSquared}
+	\caption[R-Squared values for the predictions of $\lambda$ over the training process for the single parameter prediction convolutional architecture (ELU activation units).]{R-Squared values for the estimates of $\lambda$ over the training process for the single parameter prediction convolutional architecture (ELU activation units).}
+	\label{fig:lambda-rsquared}
+\end{figure}
+
+\subsection{Parameter Interactions}
+Due to the nature of the parameters involved in the Merton Jump Diffusion process, one could expect interactions between parameter estimates. For example, increasing the $\mu_{jumps}$ parameter might cause "confusion", since a model could "interpret" larger jumps as a higher rate of volatility from the Geometric Brownian Motion $\sigma$ component, and hence produce higher values of $\sigma$. What follows is an investigation into how sensitive the individual parameter estimates are with respect to changes in the magnitudes of the other parameters. 
+
+\subsubsection{Variations in $\mu$}
+Of all the parameters involved in the Merton Jump Diffusion process, $\mu$ arguably has the least interaction with the estimates of the other parameters. There is a slight interaction between the value of $\sigma$ and $\mu$, as visible in figure \ref{fig:sensitivity_test:multiple_output:varying_mu:sigma}. As the absolute value of $\mu$ decreases towards zero, the model seems to "mistake" this for a reduction in the volatility of the Geometric Brownian Motion process, and thus yields a lower $\sigma$ estimate as well.
+
+It is rather strange that the model exhibits a tendency to consistently underestimate the value of $\lambda$ (Figure \ref{fig:sensitivity_test:multiple_output:varying_mu:lambda}). This is clear throughout the investigation - $\lambda$ is almost always underestimated. This isn't something to be expected, since ANN's have the property of easily being able to correct for bias.
+Similarly, all other parameters (besides $\mu$) kept constant, the model seems to consistently overestimate the value of $\mu_{jump}$ (Figure \ref{fig:sensitivity_test:multiple_output:varying_mu:jumps_mu}). As with the estimate of $\lambda$, one would expect and ANN to be able to easily correct for this clear bias.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Mu/Mu}
+	\caption{The deviation (with $68\%$ confidence interval) of the $\hat{\mu}$ parameter estimate from the actual parameter value, $\mu$, for different values of $\mu$. All the other parameters are kept constant as $\sigma = 0.1, \lambda = 0.02, \mu_{jumps} = 0.05$ and $\sigma_{jumps} = 0.07$}
+	\label{fig:sensitivity_test:multiple_output:varying_mu:mu}
+\end{figure}
+
+\begin{figure}[h]
+	\ffigbox{
+		\begin{subfloatrow}
+			
+			\ffigbox{
+				\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Mu/sigma}
+			}{
+				\caption{The $\hat{\sigma}$ parameter estimate plotted against the actual parameter value, $\sigma = 0.1$, for different values of $\mu$.}
+				\label{fig:sensitivity_test:multiple_output:varying_mu:sigma}
+			}
+			
+			\ffigbox{	\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Mu/Lambda}
+			}{
+				\caption{The $\lambda$ parameter estimate plotted against the actual parameter value, $\lambda = 0.02$, for different values of $\mu$.}
+				\label{fig:sensitivity_test:multiple_output:varying_mu:lambda}
+			}
+		
+		\end{subfloatrow}
+		\begin{subfloatrow}
+			
+			\ffigbox{
+				\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Mu/Jumps_Sigma}
+			}{
+				\caption{The $\hat{\sigma}_{jumps}$ parameter estimate plotted against the actual parameter value, $\sigma_{jumps} = 0.07$, for different values of $\mu$.}
+				\label{fig:sensitivity_test:multiple_output:varying_mu:jumps_sigma}
+				}
+			
+			\ffigbox{
+				\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Mu/Jumps_Mu}
+			}{
+				\caption{The $\hat{\mu}_{jumps}$ parameter estimate plotted against the actual parameter value, $\mu_{jumps} = 0.05$, for different values of $\mu$.}
+				\label{fig:sensitivity_test:multiple_output:varying_mu:jumps_mu}
+			}
+	\end{subfloatrow}}{
+		\caption{The parameter estimates (with $68\%$ confidence interval) of $\hat{\sigma}$, $\hat{\lambda}$, $\hat{\mu}_{jumps}$ and $\hat{\sigma}_{jumps}$, plotted against their actual values ($\sigma = 0.1$, $\lambda = 0.02$, $\mu_{jumps} = 0.05$ and $\sigma_{jumps} = 0.07$), while varying the $\mu$ parameter in the range $\left(-1.0, 1.0\right)$.}
+		\label{fig:sensitivity_test:multiple_output:varying_mu}}
+\end{figure}
+
+\subsubsection{Variations in $\sigma$}
+As to be expected, larger volatility tends to widen the confidence interval around a particular parameter estimate. This is particularly clear in figure \ref{fig:sensitivity_test:multiple_output:varying_sigma:sigma}, where the confidence regarding the estimate of $\hat{\sigma}$ falls, as $\sigma$ increases.
+The most clear-cut illustration of this can be seen in the estimates of $\hat{\mu}$ in figure \ref{fig:sensitivity_test:multiple_output:varying_sigma:mu}.
+
+The effect of larger volatility in the Geometric Brownian Motion process also has a slight upward push on the estimate of $\mu_{jumps}$ (Figure \ref{fig:sensitivity_test:multiple_output:varying_sigma:jumps_mu}). This is to be expected, as larger volatility could conceivably be interpreted as larger jumps. 
+
+The ANN seems to exhibit the ability to distinguish between the volatility of the Geometric Brownian Motion process ($\sigma$) and that of the jumps process ($\sigma_{jumps}$). This is clear from figure \ref{fig:sensitivity_test:multiple_output:varying_sigma:jumps_sigma}, as the value of $\sigma$ seems to put little pressure on the estimate of $\sigma_{jumps}$.
+
+As before, the models seems to produce a consistent underestimate for the value of $\lambda$, and a consistent overestimate for the value of $\mu_{jumps}$.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Sigma/Sigma}
+	\caption{The deviation (with $68\%$ confidence interval) of the $\hat{\sigma}$ parameter estimate from the actual parameter value, $\sigma$, for different values of $\sigma$. All the other parameters are kept constant as $\mu = 0.05, \lambda = 0.02, \mu_{jumps} = 0.05$ and $\sigma_{jumps} = 0.07$.}
+	\label{fig:sensitivity_test:multiple_output:varying_sigma:sigma}
+\end{figure}
+
+\begin{figure}[h]
+	\ffigbox{
+		\begin{subfloatrow}
+			
+			\ffigbox{
+				\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Sigma/Mu}
+			}{
+				\caption{The $\hat{\mu}$ parameter estimate plotted against the actual parameter value, $\mu = 0.05$, for different values of $\sigma$.}
+				\label{fig:sensitivity_test:multiple_output:varying_sigma:mu}
+			}
+			
+			\ffigbox{	\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Sigma/Lambda}
+			}{
+				\caption{The $\lambda$ parameter estimate plotted against the actual parameter value, $\lambda = 0.02$, for different values of $\sigma$.}
+				\label{fig:sensitivity_test:multiple_output:varying_sigma:lambda}
+			}
+			
+		\end{subfloatrow}
+		\begin{subfloatrow}
+			
+			\ffigbox{
+				\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Sigma/Jumps_Sigma}
+			}{
+				\caption{The $\hat{\sigma}_{jumps}$ parameter estimate plotted against the actual parameter value, $\sigma_{jumps} = 0.07$, for different values of $\sigma$.}
+				\label{fig:sensitivity_test:multiple_output:varying_sigma:jumps_sigma}
+			}
+			
+			\ffigbox{
+				\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Sigma/Jumps_Mu}
+			}{
+				\caption{The $\hat{\mu}_{jumps}$ parameter estimate plotted against the actual parameter value, $\mu_{jumps} = 0.05$, for different values of $\sigma$.}
+				\label{fig:sensitivity_test:multiple_output:varying_sigma:jumps_mu}
+			}
+	\end{subfloatrow}}{
+		\caption{The parameter estimates (with $68\%$ confidence interval) of $\hat{\mu}$, $\hat{\lambda}$, $\hat{\mu}_{jumps}$ and $\hat{\sigma}_{jumps}$, plotted against their actual values ($\mu = 0.05$, $\lambda = 0.02$, $\mu_{jumps} = 0.05$ and $\sigma_{jumps} = 0.07$), while varying the $\sigma$ parameter in the range $\left(0, 0.2\right)$.}
+		\label{fig:sensitivity_test:multiple_output:varying_sigma}}
+\end{figure}
 
 
-\begin{tabular}{|c|c|c|c|}[h]
+\subsubsection{Variations in $\lambda$}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Lambda/Lambda}
+	\caption{The deviation (with $68\%$ confidence interval) of the $\hat{\lambda}$ parameter estimate from the actual parameter value, $\lambda$, for different values of $\lambda$. All the other parameters are kept constant as $\mu = 0.05, \sigma = 0.1, \mu_{jumps} = 0.05$ and $\sigma_{jumps} = 0.07$.}
+	\label{fig:sensitivity_test:multiple_output:varying_lambda:lambda}
+\end{figure}
+
+\begin{figure}[h]
+	\ffigbox{
+		\begin{subfloatrow}
+			
+			\ffigbox{
+				\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Lambda/Mu}
+			}{
+				\caption{The $\hat{\mu}$ parameter estimate plotted against the actual parameter value, $\mu = 0.05$, for different values of $\lambda$.}
+				\label{fig:sensitivity_test:multiple_output:varying_lambda:mu}
+			}
+			
+			\ffigbox{	\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Lambda/Sigma}
+			}{
+				\caption{The $\sigma$ parameter estimate plotted against the actual parameter value, $\sigma = 0.1$, for different values of $\lambda$.}
+				\label{fig:sensitivity_test:multiple_output:varying_lambda:sigma}
+			}
+			
+		\end{subfloatrow}
+		\begin{subfloatrow}
+			
+			\ffigbox{
+				\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Lambda/Jumps_Sigma}
+			}{
+				\caption{The $\hat{\sigma}_{jumps}$ parameter estimate plotted against the actual parameter value, $\sigma_{jumps} = 0.07$, for different values of $\lambda$.}
+				\label{fig:sensitivity_test:multiple_output:varying_lambda:jumps_sigma}
+			}
+			
+			\ffigbox{
+				\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Lambda/Jumps_Mu}
+			}{
+				\caption{The $\hat{\mu}_{jumps}$ parameter estimate plotted against the actual parameter value, $\mu_{jumps} = 0.05$, for different values of $\lambda$.}
+				\label{fig:sensitivity_test:multiple_output:varying_lambda:jumps_mu}
+			}
+	\end{subfloatrow}}{
+		\caption{The parameter estimates (with $68\%$ confidence interval) of $\hat{\mu}$, $\hat{\sigma}$, $\hat{\mu}_{jumps}$ and $\hat{\sigma}_{jumps}$, plotted against their actual values ($\mu = 0.05$, $\sigma = 0.1$, $\mu_{jumps} = 0.05$ and $\sigma_{jumps} = 0.07$), while varying the $\lambda$ parameter in the range $\left(0, 0.025\right)$.}
+		\label{fig:sensitivity_test:multiple_output:varying_lambda}}
+\end{figure}
+
+
+\subsubsection{Variations in $\sigma_{jumps}$}
+
+\begin{figure}[h]
+\centering
+	\includegraphics[width=0.7\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_sigma/Jumps_Sigma}
+	\caption{The deviation (with $68\%$ confidence interval) of the $\hat{\sigma}_{jumps}$ parameter estimate from the actual parameter value, $\sigma_{jumps}$, for different values of $\sigma_{jumps}$. All the other parameters are kept constant as $\mu = 0.05, \sigma = 0.1, \lambda = 0.02$ and $\mu_{jumps} = 0.05$.}
+	\label{fig:sensitivity_test:multiple_output:varying_jumps_sigma:jumps_sigma}
+	\end{figure}
+
+\begin{figure}[h]
+\ffigbox{
+	\begin{subfloatrow}
+		
+			\ffigbox{
+			\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_sigma/Mu}
+				}{
+			\caption{The $\hat{\mu}$ parameter estimate plotted against the actual parameter value, $\mu = 0.05$, for different values of $\sigma_{jumps}$.}
+				\label{fig:sensitivity_test:multiple_output:varying_jumps_sigma:mu}
+				}
+			
+			\ffigbox{	\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_sigma/Sigma}
+			}{
+			\caption{The $\sigma$ parameter estimate plotted against the actual parameter value, $\sigma = 0.1$, for different values of $\sigma_{jumps}$.}
+				\label{fig:sensitivity_test:multiple_output:varying_jumps_sigma:sigma}
+				}
+			
+			\end{subfloatrow}
+		\begin{subfloatrow}
+		
+			\ffigbox{
+			\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_sigma/Jumps_Mu}
+				}{
+			\caption{The $\hat{\mu}_{jumps}$ parameter estimate plotted against the actual parameter value, $\mu_{jumps} = 0.05$, for different values of $\mu_{jumps}$.}
+				\label{fig:sensitivity_test:multiple_output:varying_jumps_sigma:jumps_mu}
+				}
+			
+			\ffigbox{
+			\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_sigma/Lambda}
+				}{
+			\caption{The $\lambda$ parameter estimate plotted against the actual parameter value, $\lambda = 0.2$, for different values of $\sigma_{jumps}$.}
+				\label{fig:sensitivity_test:multiple_output:varying_jumps_sigma:lambda}
+				}
+			\end{subfloatrow}}{
+	\caption{The parameter estimates (with $68\%$ confidence interval) of $\hat{\mu}$, $\hat{\sigma}$, $\hat{\mu}_{jumps}$ and $\lambda$, plotted against their actual values ($\mu = 0.05$, $\sigma = 0.1$, $\mu_{jumps} = 0.05$ and $\lambda = 0.02$), while varying the $\sigma_{jumps}$ parameter in the range $\left(0, 0.2\right)$.}
+		\label{fig:sensitivity_test:multiple_output:varying_jumps_sigma}}
+		\end{figure}
+
+\subsubsection{Variations in $\mu_{jumps}$}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_mu/Jumps_Mu}
+	\caption{The deviation (with $68\%$ confidence interval) of the $\hat{\mu}_{jumps}$ parameter estimate from the actual parameter value, $\mu_{jumps}$, for different values of $\mu_{jumps}$. All the other parameters are kept constant as $\mu = 0.05, \sigma = 0.1, \lambda = 0.02$ and $\sigma_{jumps} = 0.07$.}
+	\label{fig:sensitivity_test:multiple_output:varying_jumps_mu:jumps_mu}
+\end{figure}
+
+\begin{figure}[h]
+	\ffigbox{
+		\begin{subfloatrow}
+			
+			\ffigbox{
+				\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_mu/Mu}
+			}{
+				\caption{The $\hat{\mu}$ parameter estimate plotted against the actual parameter value, $\mu = 0.05$, for different values of $\mu_{jumps}$.}
+				\label{fig:sensitivity_test:multiple_output:varying_jumps_mu:mu}
+			}
+			
+			\ffigbox{	\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_mu/Sigma}
+			}{
+				\caption{The $\sigma$ parameter estimate plotted against the actual parameter value, $\sigma = 0.1$, for different values of $\mu_{jumps}$.}
+				\label{fig:sensitivity_test:multiple_output:varying_jumps_mu:sigma}
+			}
+			
+		\end{subfloatrow}
+		\begin{subfloatrow}
+			
+			\ffigbox{
+				\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_mu/Jumps_Sigma}
+			}{
+				\caption{The $\hat{\sigma}_{jumps}$ parameter estimate plotted against the actual parameter value, $\sigma_{jumps} = 0.07$, for different values of $\mu_{jumps}$.}
+				\label{fig:sensitivity_test:multiple_output:varying_jumps_mu:jumps_sigma}
+			}
+			
+			\ffigbox{
+				\includegraphics[width=1\linewidth]{Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_mu/Lambda}
+			}{
+				\caption{The $\lambda$ parameter estimate plotted against the actual parameter value, $\lambda = 0.2$, for different values of $\mu_{jumps}$.}
+				\label{fig:sensitivity_test:multiple_output:varying_jumps_mu:lambda}
+			}
+	\end{subfloatrow}}{
+		\caption{The parameter estimates (with $68\%$ confidence interval) of $\hat{\mu}$, $\hat{\sigma}$, $\hat{\sigma}_{jumps}$ and $\lambda$, plotted against their actual values ($\mu = 0.05$, $\sigma = 0.1$, $\lambda= 0.02$ and $\sigma_{jumps} = 0.07$), while varying the $\mu_{jumps}$ parameter in the range $\left(-0.5, 0.5\right)$.}
+		\label{fig:sensitivity_test:multiple_output:varying_jumps_mu}}
+\end{figure}
+
+\subsection{Results}
+
+First, the individual accuracy of the selected architectures were investigated. $1000$ simulated sample paths from a Merton Jump Diffusion process with parameters, $\mu = 0.05$, $\sigma = 0.1$, $\lambda = 0.02$, $\mu_{jumps} = 0.05$ and $\sigma_{jumps} = 0.07$ were used. The (already trained) NN models were then used to predict these original parameters, given the set of $1000$ sample paths. Figures \ref{fig:individual-parameter-estimation-results--mu}, \ref{fig:individual-parameter-estimation-results--sigma}, \ref{fig:individual-parameter-estimation-results--lambda}, \ref{fig:individual-parameter-estimation-results--mu_jumps}, and \ref{fig:individual-parameter-estimation-results--sigma_jumps} show the parameter estimation results for $\mu, \sigma, \lambda, \mu_{jumps}$ and $\sigma_{jumps}$ using: 
+
+\setlist{nolistsep}
+\begin{enumerate}[a)]
+	\itemsep0em 
+	\item  a multiple output convolutional ANN model as defined in section \ref{chap:ConvolutionalNeuralNetwork-section:MultipleParameterPredictionArchitecture} above,
+	\item  a fully connected NN as DEFINED IN SECTION INSERT HERE, and
+	\item  a dedicated single output convolutional ANN model as defined in section \ref{chap:ConvolutionalNeuralNetwork-section:SingleParameterPredictionArchitecture} above.
+\end{enumerate}
+
+\begin{figure}[h]
+	\ffigbox{
+		\begin{subfloatrow}
+			
+			\ffigbox{\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Mu"}}{
+				\caption[Convolutional Architecture - Multiple Output - ELU]{Convolutional Architecture - Multiple Output - ELU}
+				\label{fig:convolutional-architecture---multiple-output---elumu}}
+			
+			\ffigbox{	\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Mu"}}{
+				\caption[Fully Connected Architecture - Multiple Output - EL]{Fully Connected Architecture - Multiple Output - ELU}
+				\label{fig:fully-connected-architecture---multiple-output---elumu}}
+			
+		\end{subfloatrow}}{
 	
+	\caption{Various model distributions of the predicted values of $\mu$ with true value $0,05$.}
+	\label{fig:individual-parameter-estimation-results--mu}}
+\end{figure}
+
+\begin{figure}[h]
+	\ffigbox{
+		\begin{subfloatrow}
+			
+			\ffigbox{\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Sigma"}}{
+				\caption[Convolutional Architecture - Multiple Output - ELU]{Convolutional Architecture - Multiple Output - ELU}
+				\label{fig:convolutional-architecture---multiple-output---elusigma}}
+			
+			\ffigbox{	\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Sigma"}}{
+				\caption[Fully Connected Architecture - Multiple Output - EL]{Fully Connected Architecture - Multiple Output - ELU}
+				\label{fig:fully-connected-architecture---multiple-output---elusigma}}
+			
+			
+	\end{subfloatrow}}{
+		
+		\caption{Various model distributions of the predicted values of $\sigma$ with true value $0,1$.}
+		\label{fig:individual-parameter-estimation-results--sigma}}
+\end{figure}
+
+\begin{figure}[h]
+	\ffigbox{
+		\begin{subfloatrow}
+			
+			\ffigbox{\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Lambda"}}{
+				\caption[Convolutional Architecture - Multiple Output - ELU]{Convolutional Architecture - Multiple Output - ELU}
+				\label{fig:convolutional-architecture---multiple-output---elulambda}}
+			
+			\ffigbox{	\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Lambda"}}{
+				\caption[Fully Connected Architecture - Multiple Output - EL]{Fully Connected Architecture - Multiple Output - ELU}
+				\label{fig:fully-connected-architecture---multiple-output---elulambda}}
+			
+			
+	\end{subfloatrow}
+	\begin{subfloatrow}
+	
+	\ffigbox{
+		\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/ConvolutionalNN-SingleOutput/Convolutional Architecture - Single Output - ELU_Lambda"}
+	}{
+		\caption[Convolutional Architecture - Single Output - ELU]{Convolutional Architecture - Single Output - ELU}
+		\label{fig:convolutional-architecture---single-output---elulambda}}
+	
+	
+	\end{subfloatrow}}{
+		
+		\caption{Various model distributions of the predicted values of $\lambda$ with true value $0,02$.}
+		\label{fig:individual-parameter-estimation-results--lambda}}
+\end{figure}
+
+\begin{figure}[h]
+	\ffigbox{
+		\begin{subfloatrow}
+			\ffigbox{
+				\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Jumps Mu"}
+			}{
+				\caption[Convolutional Architecture - Multiple Output - ELU]{Convolutional Architecture - Multiple Output - ELU}
+				\label{fig:convolutional-architecture---multiple-output---elujumps-mu}}
+			
+			\ffigbox{	\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Mu"}
+			}{
+				\caption[Fully Connected Architecture - Multiple Output - EL]{Fully Connected Architecture - Multiple Output - ELU}
+				\label{fig:fully-connected-architecture---multiple-output---elujumps-mu}}
+	\end{subfloatrow}}{
+		\caption{Various model distributions of the predicted values of $\mu_{jumps}$ with true value $0,05$.}
+		\label{fig:individual-parameter-estimation-results--mu_jumps}}
+\end{figure}
+
+\begin{figure}[h]
+	\ffigbox{
+		\begin{subfloatrow}
+			
+			\ffigbox{
+				\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Jumps Sigma"}
+			}{
+				\caption[Convolutional Architecture - Multiple Output - ELU]{Convolutional Architecture - Multiple Output - ELU}
+				\label{fig:convolutional-architecture---multiple-output---elujumps-sigma}}
+			
+			\ffigbox{
+				\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Sigma"}
+			}{
+				\caption[Fully Connected Architecture - Multiple Output - EL]{Fully Connected Architecture - Multiple Output - ELU}
+				\label{fig:fully-connected-architecture---multiple-output---elujumps-sigma}}
+			
+			
+	\end{subfloatrow}}{
+		
+		\caption{Various model distributions of the predicted values of $\sigma_{jumps}$ with true value $0,07$.}
+		\label{fig:individual-parameter-estimation-results--sigma_jumps}}
+\end{figure}
+
+
+
+
+
+
+\begin{tabular}[h]{|c|c|c|c|}
+
 	Architecture & No. Parameters & Activation Function & Accuracy \\ 
 	\hline
 	&  &  &  \\ 

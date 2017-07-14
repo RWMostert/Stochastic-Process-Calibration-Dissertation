@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{19}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -40,6 +40,17 @@
 \newblock Stochastic processes: learning the language.
 \newblock \textit{Faculty of Actuaries students' society}.
 
+\bibitem[{\citenamefont{Clevert}
+  \textit{\bbletal{}}(2015)\citenamefont{Clevert}, \citenamefont{Unterthiner}
+  \protect\BIBand{} \citenamefont{Hochreiter}}]{DBLP:journals/corr/ClevertUH15}
+\bibnamefont{Clevert}, \bibfnamefont{D.}, \bibnamefont{Unterthiner},
+  \bibfnamefont{T.} \protect\BIBand{} \bibnamefont{Hochreiter},
+  \bibfnamefont{S.} 2015.
+\newblock Fast and accurate deep network learning by exponential linear units
+  (elus).
+\newblock \textit{CoRR}, abs/1511.07289.
+\newline\bblurlpre\url{http://arxiv.org/abs/1511.07289}
+
 \bibitem[{\citenamefont{Giebel} \protect\BIBand{}
   \citenamefont{Rainer}(2013)}]{Giebel}
 \bibnamefont{Giebel}, \bibfnamefont{S.} \protect\BIBand{} \bibnamefont{Rainer},
@@ -48,6 +59,17 @@
   assets.
 \newblock \textit{Central European Journal of Operations Research},
   21(2):277--293.
+
+\bibitem[{\citenamefont{Glorot} \textit{\bbletal{}}(2011)\citenamefont{Glorot},
+  \citenamefont{Bordes} \protect\BIBand{}
+  \citenamefont{Bengio}}]{glorot2011deep}
+\bibnamefont{Glorot}, \bibfnamefont{X.}, \bibnamefont{Bordes},
+  \bibfnamefont{A.} \protect\BIBand{} \bibnamefont{Bengio}, \bibfnamefont{Y.}
+  2011.
+\newblock Deep sparse rectifier neural networks.
+\newblock \capitalize\bblin{} \textit{Proceedings of the Fourteenth
+  International Conference on Artificial Intelligence and Statistics},
+  \bblpages{} 315--323.
 
 \bibitem[{\citenamefont{Honore}(1998)}]{Honore}
 \bibnamefont{Honore}, \bibfnamefont{P.} 1998.
@@ -114,12 +136,24 @@
 \newblock ID: 271876271876.
 \newline\bblurlpre\url{http://www.sciencedirect.com/science/article/pii/0888613X9290008N}
 
+\bibitem[{\citenamefont{Scherer}
+  \textit{\bbletal{}}(2010)\citenamefont{Scherer}, \citenamefont{M{\"u}ller}
+  \protect\BIBand{} \citenamefont{Behnke}}]{Scherer2010}
+\bibnamefont{Scherer}, \bibfnamefont{D.}, \bibnamefont{M{\"u}ller},
+  \bibfnamefont{A.} \protect\BIBand{} \bibnamefont{Behnke}, \bibfnamefont{S.}
+  2010.
+\newblock \textit{Evaluation of Pooling Operations in Convolutional
+  Architectures for Object Recognition}, \bblpages{} 92--101.
+\newblock Berlin, Heidelberg: Springer Berlin Heidelberg.
+\newblock ISBN 978-3-642-15825-4.
+
 \bibitem[{\citenamefont{Teugels} \protect\BIBand{}
   \citenamefont{Sundt}(2004)}]{Teugels}
 \bibnamefont{Teugels}, \bibfnamefont{J.L.} \protect\BIBand{}
   \bibnamefont{Sundt}, \bibfnamefont{B.} 2004.
 \newblock \textit{Encyclopedia of actuarial science}.
 \newblock Hoboken, NJ: Hoboken, NJ : John Wiley and Sons.
+\newblock Includes bibliographical references and index.
 
 \bibitem[{\citenamefont{Werbos}(1990)}]{Werbos}
 \bibnamefont{Werbos}, \bibfnamefont{P.J.} 1990.
