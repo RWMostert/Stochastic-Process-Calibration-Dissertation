@@ -25,9 +25,12 @@
 \BOOKMARK [0][-]{chapter.4}{Simulation Study}{}% 25
 \BOOKMARK [1][-]{section.4.1}{The Merton Jump Diffusion Stochastic Process}{chapter.4}% 26
 \BOOKMARK [2][-]{subsection.4.1.1}{Simulation}{section.4.1}% 27
-\BOOKMARK [1][-]{section.4.2}{Convolutional Neural Network}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.2}{Fully Connected Feed-forward Neural Network}{chapter.4}% 28
 \BOOKMARK [2][-]{subsection.4.2.1}{Multiple Parameter Prediction Architecture}{section.4.2}% 29
-\BOOKMARK [2][-]{subsection.4.2.2}{Dedicated Single Parameter Prediction Architecture}{section.4.2}% 30
-\BOOKMARK [2][-]{subsection.4.2.3}{Parameter Interactions}{section.4.2}% 31
-\BOOKMARK [2][-]{subsection.4.2.4}{Results}{section.4.2}% 32
-\BOOKMARK [0][-]{section*.73}{Bibliography}{}% 33
+\BOOKMARK [2][-]{subsection.4.2.2}{The Dataset}{section.4.2}% 30
+\BOOKMARK [1][-]{section.4.3}{Convolutional Neural Network}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.3.1}{Multiple Parameter Prediction Architecture}{section.4.3}% 32
+\BOOKMARK [2][-]{subsection.4.3.2}{Dedicated Single Parameter Prediction Architecture}{section.4.3}% 33
+\BOOKMARK [1][-]{section.4.4}{Parameter Interactions}{chapter.4}% 34
+\BOOKMARK [0][-]{chapter.5}{Results}{}% 35
+\BOOKMARK [0][-]{section*.65}{Bibliography}{}% 36

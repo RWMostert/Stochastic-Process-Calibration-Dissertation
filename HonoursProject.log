@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.3)  14 JUL 2017 17:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.3)  15 JUL 2017 15:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -689,7 +689,11 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box34
 \enitdp@description=\count141
 )
-(./HonoursProject.aux)
+(./HonoursProject.aux
+
+LaTeX Warning: Label `fig:multipleoutputcnn' multiply defined.
+
+)
 \openout1 = `HonoursProject.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
@@ -706,8 +710,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
 LaTeX Font Info:    ... okay on input line 74.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 74.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 74.
@@ -839,7 +842,7 @@ LaTeX Info: Redefining \nameref on input line 74.
 
 LaTeX Info: Redefining \Ref on input line 74.
 
-<USlogo-top.pdf, id=136, 560.0925pt x 183.68625pt>
+<USlogo-top.pdf, id=148, 560.0925pt x 183.68625pt>
 File: USlogo-top.pdf Graphic file (type pdf)
  <use USlogo-top.pdf>
 Package pdftex.def Info: USlogo-top.pdf used on input line 79.
@@ -916,11 +919,13 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
 ] [2]
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
 (Font)              Font shape `T1/futs/b/n' tried instead on input line 171.
- [3] <NeuralNetwork.png, id=256, 1045.506pt x 230.3004pt>
-File: NeuralNetwork.png Graphic file (type png)
+ [3]
+<Images/Diagrams/NeuralNetwork.png, id=271, 1045.506pt x 230.3004pt>
+File: Images/Diagrams/NeuralNetwork.png Graphic file (type png)
 
-<use NeuralNetwork.png>
-Package pdftex.def Info: NeuralNetwork.png used on input line 185.
+<use Images/Diagrams/NeuralNetwork.png>
+Package pdftex.def Info: Images/Diagrams/NeuralNetwork.png used on input line 1
+85.
 (pdftex.def)             Requested size: 469.47049pt x 103.41283pt.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
 (Font)              scaled to size 11.03998pt on input line 201.
@@ -943,213 +948,216 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 201.
 
-[4 <./NeuralNetwork.png>]
-<CalibrationSchemeDiagram.png, id=269, 701.019pt x 328.5876pt>
-File: CalibrationSchemeDiagram.png Graphic file (type png)
+[4 <./Images/Diagrams/NeuralNetwork.png>]
+<Images/Diagrams/CalibrationSchemeDiagram.png, id=284, 701.019pt x 328.5876pt>
+File: Images/Diagrams/CalibrationSchemeDiagram.png Graphic file (type png)
 
-<use CalibrationSchemeDiagram.png>
-Package pdftex.def Info: CalibrationSchemeDiagram.png used on input line 220.
+<use Images/Diagrams/CalibrationSchemeDiagram.png>
+Package pdftex.def Info: Images/Diagrams/CalibrationSchemeDiagram.png used on i
+nput line 220.
 (pdftex.def)             Requested size: 469.47049pt x 220.05728pt.
- [5 <./CalibrationSchemeDiagram.png>]
-[6]
+ [5 <./Images/Diagrams/CalibrationSchemeDiagram.png>] [6]
 Chapter 2.
 [7
 
 ] [8]
 Chapter 3.
-<Results/relu.png, id=321, 381.425pt x 266.9975pt>
-File: Results/relu.png Graphic file (type png)
- <use Results/relu.png>
-Package pdftex.def Info: Results/relu.png used on input line 295.
-(pdftex.def)             Requested size: 229.73524pt x 160.8149pt.
-File: Results/relu.png Graphic file (type png)
+<Images/Results/relu.png, id=336, 381.425pt x 266.9975pt>
+File: Images/Results/relu.png Graphic file (type png)
 
-<use Results/relu.png>
-Package pdftex.def Info: Results/relu.png used on input line 295.
+<use Images/Results/relu.png>
+Package pdftex.def Info: Images/Results/relu.png used on input line 295.
 (pdftex.def)             Requested size: 229.73524pt x 160.8149pt.
- <Results/elu.png, id=322, 381.425pt x 266.9975pt>
-File: Results/elu.png Graphic file (type png)
+File: Images/Results/relu.png Graphic file (type png)
+ <use Images/Results/relu.png>
+Package pdftex.def Info: Images/Results/relu.png used on input line 295.
+(pdftex.def)             Requested size: 229.73524pt x 160.8149pt.
 
-<use Results/elu.png>
-Package pdftex.def Info: Results/elu.png used on input line 298.
+<Images/Results/elu.png, id=337, 381.425pt x 266.9975pt>
+File: Images/Results/elu.png Graphic file (type png)
+
+<use Images/Results/elu.png>
+Package pdftex.def Info: Images/Results/elu.png used on input line 298.
 (pdftex.def)             Requested size: 229.73524pt x 160.8149pt.
-File: Results/elu.png Graphic file (type png)
- <use Results/elu.png>
-Package pdftex.def Info: Results/elu.png used on input line 298.
+File: Images/Results/elu.png Graphic file (type png)
+ <use Images/Results/elu.png>
+Package pdftex.def Info: Images/Results/elu.png used on input line 298.
 (pdftex.def)             Requested size: 229.73524pt x 160.8149pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<1D_Convolution.png, id=324, 684.156pt x 227.8914pt>
-File: 1D_Convolution.png Graphic file (type png)
- <use 1D_Convolution.png>
-Package pdftex.def Info: 1D_Convolution.png used on input line 311.
+<Images/Diagrams/1D_Convolution.png, id=339, 684.156pt x 227.8914pt>
+File: Images/Diagrams/1D_Convolution.png Graphic file (type png)
+
+<use Images/Diagrams/1D_Convolution.png>
+Package pdftex.def Info: Images/Diagrams/1D_Convolution.png used on input line 
+311.
 (pdftex.def)             Requested size: 422.52057pt x 140.74525pt.
-
-[9
-
-] <2D_Convolution.png, id=334, 405.6756pt x 446.1468pt>
-File: 2D_Convolution.png Graphic file (type png)
-
-<use 2D_Convolution.png>
-Package pdftex.def Info: 2D_Convolution.png used on input line 318.
-(pdftex.def)             Requested size: 187.78532pt x 206.51666pt.
- [10 <./Results/relu.png> <./Results/elu.png> <./1D_Convolution.png> <./2D_Conv
-olution.png>]
-<Max-Pooling_Operation.png, id=348, 235.6002pt x 207.174pt>
-File: Max-Pooling_Operation.png Graphic file (type png)
-
-<use Max-Pooling_Operation.png>
-Package pdftex.def Info: Max-Pooling_Operation.png used on input line 328.
-(pdftex.def)             Requested size: 187.78532pt x 165.12929pt.
- [11 <./Max-Pooling_Operation.png>] [12]
-Chapter 4.
-<MultipleOutputCNN.png, id=365, 687.0468pt x 158.5122pt>
-File: MultipleOutputCNN.png Graphic file (type png)
-
-<use MultipleOutputCNN.png>
-Package pdftex.def Info: MultipleOutputCNN.png used on input line 397.
-(pdftex.def)             Requested size: 338.01932pt x 77.98608pt.
- [13
+ [9
 
 ]
-<Results/Training/COVNET_MO_MSE.png, id=374, 520.94624pt x 266.9975pt>
-File: Results/Training/COVNET_MO_MSE.png Graphic file (type png)
+<Images/Diagrams/2D_Convolution.png, id=349, 405.6756pt x 446.1468pt>
+File: Images/Diagrams/2D_Convolution.png Graphic file (type png)
 
-<use Results/Training/COVNET_MO_MSE.png>
-Package pdftex.def Info: Results/Training/COVNET_MO_MSE.png used on input line 
-406.
+<use Images/Diagrams/2D_Convolution.png>
+Package pdftex.def Info: Images/Diagrams/2D_Convolution.png used on input line 
+318.
+(pdftex.def)             Requested size: 187.78532pt x 206.51666pt.
+ [10 <./Images/Results/relu.png> <./Images/Results/elu.png> <./Images/Diagrams/
+1D_Convolution.png> <./Images/Diagrams/2D_Convolution.png>]
+<Images/Diagrams/Max-Pooling_Operation.png, id=363, 235.6002pt x 207.174pt>
+File: Images/Diagrams/Max-Pooling_Operation.png Graphic file (type png)
+
+<use Images/Diagrams/Max-Pooling_Operation.png>
+Package pdftex.def Info: Images/Diagrams/Max-Pooling_Operation.png used on inpu
+t line 328.
+(pdftex.def)             Requested size: 187.78532pt x 165.12929pt.
+ [11 <./Images/Diagrams/Max-Pooling_Operation.png>] [12]
+Chapter 4.
+
+<Images/Diagrams/Network-Structures/MultipleOutputFullyConnectedANN.png, id=380
+, 783.8886pt x 61.1886pt>
+File: Images/Diagrams/Network-Structures/MultipleOutputFullyConnectedANN.png Gr
+aphic file (type png)
+
+<use Images/Diagrams/Network-Structures/MultipleOutputFullyConnectedANN.png>
+Package pdftex.def Info: Images/Diagrams/Network-Structures/MultipleOutputFully
+ConnectedANN.png used on input line 396.
+(pdftex.def)             Requested size: 469.47049pt x 36.6462pt.
+
+[13
+
+]
+Overfull \hbox (4.1786pt too wide) in paragraph at lines 408--409
+[]\T1/phv/m/n/10.95 Random sets of pa-ram-e-ters, $\T1/futs/b/n/10.95 z[]$\T1/p
+hv/m/n/10.95 , with ($\FML/futmi/m/it/10.95 ^^V \FMS/futm/m/n/10.95 2 []$\T1/ph
+v/m/n/10.95 , $\FML/futmi/m/it/10.95 ^^[ \FMS/futm/m/n/10.95 2 []$\T1/phv/m/n/1
+0.95 , $\FML/futmi/m/it/10.95 ^^U \FMS/futm/m/n/10.95 2 []$\T1/phv/m/n/10.95 , 
+$\FML/futmi/m/it/10.95 ^^V[] \FMS/futm/m/n/10.95 2 []$
+ []
+
+
+<Images/Diagrams/Network-Structures/MultipleOutputCNN.png, id=392, 942.8826pt x
+ 85.2786pt>
+File: Images/Diagrams/Network-Structures/MultipleOutputCNN.png Graphic file (ty
+pe png)
+ <use Images/Diagrams/Network-Structures/MultipleOutputCNN.png>
+Package pdftex.def Info: Images/Diagrams/Network-Structures/MultipleOutputCNN.p
+ng used on input line 422.
+(pdftex.def)             Requested size: 469.47049pt x 42.4609pt.
+
+<Images/Results/Training/COVNET_MO_MSE.png, id=393, 520.94624pt x 266.9975pt>
+File: Images/Results/Training/COVNET_MO_MSE.png Graphic file (type png)
+
+<use Images/Results/Training/COVNET_MO_MSE.png>
+Package pdftex.def Info: Images/Results/Training/COVNET_MO_MSE.png used on inpu
+t line 431.
 (pdftex.def)             Requested size: 328.6279pt x 168.42929pt.
 
-<Results/Training/COVNET_MO_R2_.png, id=375, 485.815pt x 266.9975pt>
-File: Results/Training/COVNET_MO_R2_.png Graphic file (type png)
 
-<use Results/Training/COVNET_MO_R2_.png>
-Package pdftex.def Info: Results/Training/COVNET_MO_R2_.png used on input line 
-428.
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14 <./Images/Diagrams/Network-Structures/MultipleOutputFullyConnectedANN.png> 
+<./Images/Diagrams/Network-Structures/MultipleOutputCNN.png>]
+<Images/Results/Training/COVNET_MO_R2_.png, id=407, 485.815pt x 266.9975pt>
+File: Images/Results/Training/COVNET_MO_R2_.png Graphic file (type png)
+
+<use Images/Results/Training/COVNET_MO_R2_.png>
+Package pdftex.def Info: Images/Results/Training/COVNET_MO_R2_.png used on inpu
+t line 453.
 (pdftex.def)             Requested size: 229.73524pt x 126.25882pt.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 428.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 453.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 428.
+(Font)              scaled to size 6.99199pt on input line 453.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 428.
-File: Results/Training/COVNET_MO_R2_.png Graphic file (type png)
+(Font)              scaled to size 6.99199pt on input line 453.
+File: Images/Results/Training/COVNET_MO_R2_.png Graphic file (type png)
 
-<use Results/Training/COVNET_MO_R2_.png>
-Package pdftex.def Info: Results/Training/COVNET_MO_R2_.png used on input line 
-428.
+<use Images/Results/Training/COVNET_MO_R2_.png>
+Package pdftex.def Info: Images/Results/Training/COVNET_MO_R2_.png used on inpu
+t line 453.
 (pdftex.def)             Requested size: 229.73524pt x 126.25882pt.
 
-<Results/Training/COVNET_MO_R2_2.png, id=376, 519.9425pt x 266.9975pt>
-File: Results/Training/COVNET_MO_R2_2.png Graphic file (type png)
+<Images/Results/Training/COVNET_MO_R2_2.png, id=408, 519.9425pt x 266.9975pt>
+File: Images/Results/Training/COVNET_MO_R2_2.png Graphic file (type png)
 
-<use Results/Training/COVNET_MO_R2_2.png>
-Package pdftex.def Info: Results/Training/COVNET_MO_R2_2.png used on input line
- 428.
+<use Images/Results/Training/COVNET_MO_R2_2.png>
+Package pdftex.def Info: Images/Results/Training/COVNET_MO_R2_2.png used on inp
+ut line 453.
 (pdftex.def)             Requested size: 229.73524pt x 117.97221pt.
-File: Results/Training/COVNET_MO_R2_2.png Graphic file (type png)
+File: Images/Results/Training/COVNET_MO_R2_2.png Graphic file (type png)
 
-<use Results/Training/COVNET_MO_R2_2.png>
-Package pdftex.def Info: Results/Training/COVNET_MO_R2_2.png used on input line
- 428.
+<use Images/Results/Training/COVNET_MO_R2_2.png>
+Package pdftex.def Info: Images/Results/Training/COVNET_MO_R2_2.png used on inp
+ut line 453.
 (pdftex.def)             Requested size: 229.73524pt x 117.97221pt.
-File: Results/Training/COVNET_MO_R2_.png Graphic file (type png)
+File: Images/Results/Training/COVNET_MO_R2_.png Graphic file (type png)
 
-<use Results/Training/COVNET_MO_R2_.png>
-Package pdftex.def Info: Results/Training/COVNET_MO_R2_.png used on input line 
-428.
+<use Images/Results/Training/COVNET_MO_R2_.png>
+Package pdftex.def Info: Images/Results/Training/COVNET_MO_R2_.png used on inpu
+t line 453.
 (pdftex.def)             Requested size: 229.73524pt x 126.25882pt.
-File: Results/Training/COVNET_MO_R2_.png Graphic file (type png)
+File: Images/Results/Training/COVNET_MO_R2_.png Graphic file (type png)
 
-<use Results/Training/COVNET_MO_R2_.png>
-Package pdftex.def Info: Results/Training/COVNET_MO_R2_.png used on input line 
-428.
+<use Images/Results/Training/COVNET_MO_R2_.png>
+Package pdftex.def Info: Images/Results/Training/COVNET_MO_R2_.png used on inpu
+t line 453.
 (pdftex.def)             Requested size: 229.73524pt x 126.25882pt.
-File: Results/Training/COVNET_MO_R2_2.png Graphic file (type png)
+File: Images/Results/Training/COVNET_MO_R2_2.png Graphic file (type png)
 
-<use Results/Training/COVNET_MO_R2_2.png>
-Package pdftex.def Info: Results/Training/COVNET_MO_R2_2.png used on input line
- 428.
+<use Images/Results/Training/COVNET_MO_R2_2.png>
+Package pdftex.def Info: Images/Results/Training/COVNET_MO_R2_2.png used on inp
+ut line 453.
 (pdftex.def)             Requested size: 229.73524pt x 117.97221pt.
-File: Results/Training/COVNET_MO_R2_2.png Graphic file (type png)
+File: Images/Results/Training/COVNET_MO_R2_2.png Graphic file (type png)
 
-<use Results/Training/COVNET_MO_R2_2.png>
-Package pdftex.def Info: Results/Training/COVNET_MO_R2_2.png used on input line
- 428.
+<use Images/Results/Training/COVNET_MO_R2_2.png>
+Package pdftex.def Info: Images/Results/Training/COVNET_MO_R2_2.png used on inp
+ut line 453.
 (pdftex.def)             Requested size: 229.73524pt x 117.97221pt.
+
+<Images/Diagrams/Network-Structures/SingleParameterDedicatedCNN.png, id=410, 70
+9.2096pt x 85.2786pt>
+File: Images/Diagrams/Network-Structures/SingleParameterDedicatedCNN.png Graphi
+c file (type png)
+
+<use Images/Diagrams/Network-Structures/SingleParameterDedicatedCNN.png>
+Package pdftex.def Info: Images/Diagrams/Network-Structures/SingleParameterDedi
+catedCNN.png used on input line 464.
+(pdftex.def)             Requested size: 352.10286pt x 42.3386pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<SingleParameterDedicatedCNN.png, id=377, 516.4896pt x 158.994pt>
-File: SingleParameterDedicatedCNN.png Graphic file (type png)
+[15 <./Images/Results/Training/COVNET_MO_MSE.png> <./Images/Results/Training/CO
+VNET_MO_R2_.png> <./Images/Results/Training/COVNET_MO_R2_2.png>]
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 471.
 
-<use SingleParameterDedicatedCNN.png>
-Package pdftex.def Info: SingleParameterDedicatedCNN.png used on input line 439
-.
-(pdftex.def)             Requested size: 253.51091pt x 78.03874pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[14 <./MultipleOutputCNN.png> <./Results/Training/COVNET_MO_MSE.png>]
 <Images/Prediction-Convergence/ConvolutionalNN-SingleOutput/Lambda-RSquared.png
-, id=391, 578.16pt x 397.485pt>
+, id=425, 578.16pt x 397.485pt>
 File: Images/Prediction-Convergence/ConvolutionalNN-SingleOutput/Lambda-RSquare
 d.png Graphic file (type png)
 
 <use Images/Prediction-Convergence/ConvolutionalNN-SingleOutput/Lambda-RSquared
 .png>
 Package pdftex.def Info: Images/Prediction-Convergence/ConvolutionalNN-SingleOu
-tput/Lambda-RSquared.png used on input line 448.
-(pdftex.def)             Requested size: 328.6279pt x 225.93196pt.
- [15 <./Results/Training/COVNET_MO_R2_.png> <./Results/Training/COVNET_MO_R2_2.
-png> <./SingleParameterDedicatedCNN.png> <./Images/Prediction-Convergence/Convo
-lutionalNN-SingleOutput/Lambda-RSquared.png>]
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 456.
-
+tput/Lambda-RSquared.png used on input line 477.
+(pdftex.def)             Requested size: 234.73524pt x 161.38083pt.
+ [16 <./Images/Diagrams/Network-Structures/SingleParameterDedicatedCNN.png> <./
+Images/Prediction-Convergence/ConvolutionalNN-SingleOutput/Lambda-RSquared.png>
+]
 <Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-M
-u/Mu.png, id=406, 578.16pt x 397.485pt>
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Mu/Mu.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Mu/Mu.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/Mu.png used on input line 464.
-(pdftex.def)             Requested size: 328.6279pt x 225.93196pt.
-
-<Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-M
-u/sigma.png, id=407, 578.16pt x 397.485pt>
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Mu/sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Mu/sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/sigma.png used on input line 504.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Mu/sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Mu/sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/sigma.png used on input line 504.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-
-<Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-M
-u/Lambda.png, id=408, 578.16pt x 397.485pt>
+u/Lambda.png, id=438, 578.16pt x 397.485pt>
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Mu/Lambda.png Graphic file (type png)
 
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Mu/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/Lambda.png used on input line 504.
+ipleOutput-ELU/Varying-Mu/Lambda.png used on input line 532.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Mu/Lambda.png Graphic file (type png)
@@ -1157,37 +1165,18 @@ ing-Mu/Lambda.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Mu/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/Lambda.png used on input line 504.
+ipleOutput-ELU/Varying-Mu/Lambda.png used on input line 532.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 <Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-M
-u/Jumps_Sigma.png, id=409, 578.16pt x 397.485pt>
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Mu/Jumps_Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Mu/Jumps_Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/Jumps_Sigma.png used on input line 504.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Mu/Jumps_Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Mu/Jumps_Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/Jumps_Sigma.png used on input line 504.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-
-<Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-M
-u/Jumps_Mu.png, id=410, 578.16pt x 397.485pt>
+u/Jumps_Mu.png, id=439, 578.16pt x 397.485pt>
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Mu/Jumps_Mu.png Graphic file (type png)
 
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Mu/Jumps_Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/Jumps_Mu.png used on input line 504.
+ipleOutput-ELU/Varying-Mu/Jumps_Mu.png used on input line 532.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Mu/Jumps_Mu.png Graphic file (type png)
@@ -1195,23 +1184,7 @@ ing-Mu/Jumps_Mu.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Mu/Jumps_Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/Jumps_Mu.png used on input line 504.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Mu/sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Mu/sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/sigma.png used on input line 504.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Mu/sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Mu/sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/sigma.png used on input line 504.
+ipleOutput-ELU/Varying-Mu/Jumps_Mu.png used on input line 532.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Mu/Lambda.png Graphic file (type png)
@@ -1219,7 +1192,7 @@ ing-Mu/Lambda.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Mu/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/Lambda.png used on input line 504.
+ipleOutput-ELU/Varying-Mu/Lambda.png used on input line 532.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Mu/Lambda.png Graphic file (type png)
@@ -1227,23 +1200,7 @@ ing-Mu/Lambda.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Mu/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/Lambda.png used on input line 504.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Mu/Jumps_Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Mu/Jumps_Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/Jumps_Sigma.png used on input line 504.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Mu/Jumps_Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Mu/Jumps_Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/Jumps_Sigma.png used on input line 504.
+ipleOutput-ELU/Varying-Mu/Lambda.png used on input line 532.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Mu/Jumps_Mu.png Graphic file (type png)
@@ -1251,7 +1208,7 @@ ing-Mu/Jumps_Mu.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Mu/Jumps_Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/Jumps_Mu.png used on input line 504.
+ipleOutput-ELU/Varying-Mu/Jumps_Mu.png used on input line 532.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Mu/Jumps_Mu.png Graphic file (type png)
@@ -1259,38 +1216,33 @@ ing-Mu/Jumps_Mu.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Mu/Jumps_Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Mu/Jumps_Mu.png used on input line 504.
+ipleOutput-ELU/Varying-Mu/Jumps_Mu.png used on input line 532.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[16 <./Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Var
-ying-Mu/Mu.png>]
 <Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-S
-igma/Sigma.png, id=424, 578.16pt x 397.485pt>
+igma/Sigma.png, id=442, 578.16pt x 397.485pt>
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Sigma/Sigma.png Graphic file (type png)
 
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Sigma/Sigma.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Sigma.png used on input line 519.
-(pdftex.def)             Requested size: 328.6279pt x 225.93196pt.
+ipleOutput-ELU/Varying-Sigma/Sigma.png used on input line 543.
+(pdftex.def)             Requested size: 234.73524pt x 161.38083pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 <Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-S
-igma/Mu.png, id=425, 578.16pt x 397.485pt>
+igma/Mu.png, id=445, 578.16pt x 397.485pt>
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Sigma/Mu.png Graphic file (type png)
 
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Sigma/Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Mu.png used on input line 559.
+ipleOutput-ELU/Varying-Sigma/Mu.png used on input line 587.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Sigma/Mu.png Graphic file (type png)
@@ -1298,18 +1250,18 @@ ing-Sigma/Mu.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Sigma/Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Mu.png used on input line 559.
+ipleOutput-ELU/Varying-Sigma/Mu.png used on input line 587.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 <Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-S
-igma/Lambda.png, id=426, 578.16pt x 397.485pt>
+igma/Lambda.png, id=446, 578.16pt x 397.485pt>
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Sigma/Lambda.png Graphic file (type png)
 
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Sigma/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Lambda.png used on input line 559.
+ipleOutput-ELU/Varying-Sigma/Lambda.png used on input line 587.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Sigma/Lambda.png Graphic file (type png)
@@ -1317,45 +1269,7 @@ ing-Sigma/Lambda.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Sigma/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Lambda.png used on input line 559.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-
-<Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-S
-igma/Jumps_Sigma.png, id=427, 578.16pt x 397.485pt>
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Sigma/Jumps_Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Sigma/Jumps_Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Jumps_Sigma.png used on input line 559.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Sigma/Jumps_Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Sigma/Jumps_Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Jumps_Sigma.png used on input line 559.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-
-<Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-S
-igma/Jumps_Mu.png, id=428, 578.16pt x 397.485pt>
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Sigma/Jumps_Mu.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Sigma/Jumps_Mu.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Jumps_Mu.png used on input line 559.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Sigma/Jumps_Mu.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Sigma/Jumps_Mu.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Jumps_Mu.png used on input line 559.
+ipleOutput-ELU/Varying-Sigma/Lambda.png used on input line 587.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Sigma/Mu.png Graphic file (type png)
@@ -1363,7 +1277,7 @@ ing-Sigma/Mu.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Sigma/Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Mu.png used on input line 559.
+ipleOutput-ELU/Varying-Sigma/Mu.png used on input line 587.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Sigma/Mu.png Graphic file (type png)
@@ -1371,7 +1285,7 @@ ing-Sigma/Mu.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Sigma/Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Mu.png used on input line 559.
+ipleOutput-ELU/Varying-Sigma/Mu.png used on input line 587.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Sigma/Lambda.png Graphic file (type png)
@@ -1379,7 +1293,7 @@ ing-Sigma/Lambda.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Sigma/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Lambda.png used on input line 559.
+ipleOutput-ELU/Varying-Sigma/Lambda.png used on input line 587.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Sigma/Lambda.png Graphic file (type png)
@@ -1387,39 +1301,7 @@ ing-Sigma/Lambda.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Sigma/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Lambda.png used on input line 559.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Sigma/Jumps_Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Sigma/Jumps_Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Jumps_Sigma.png used on input line 559.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Sigma/Jumps_Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Sigma/Jumps_Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Jumps_Sigma.png used on input line 559.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Sigma/Jumps_Mu.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Sigma/Jumps_Mu.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Jumps_Mu.png used on input line 559.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Sigma/Jumps_Mu.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Sigma/Jumps_Mu.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Sigma/Jumps_Mu.png used on input line 559.
+ipleOutput-ELU/Varying-Sigma/Lambda.png used on input line 587.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 
@@ -1427,71 +1309,31 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 <Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-L
-ambda/Lambda.png, id=429, 578.16pt x 397.485pt>
+ambda/Lambda.png, id=447, 578.16pt x 397.485pt>
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Lambda/Lambda.png Graphic file (type png)
 
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Lambda/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Lambda.png used on input line 567.
-(pdftex.def)             Requested size: 328.6279pt x 225.93196pt.
- [17 <./Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Va
-rying-Mu/sigma.png> <./Images/Output-Sensitivity-Results/ConvolutionalNN-Multip
-leOutput-ELU/Varying-Mu/Lambda.png> <./Images/Output-Sensitivity-Results/Convol
-utionalNN-MultipleOutput-ELU/Varying-Mu/Jumps_Sigma.png> <./Images/Output-Sensi
-tivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Mu/Jumps_Mu.png>]
+ipleOutput-ELU/Varying-Lambda/Lambda.png used on input line 600.
+(pdftex.def)             Requested size: 234.73524pt x 161.38083pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
+[17 <./Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Var
+ying-Mu/Lambda.png> <./Images/Output-Sensitivity-Results/ConvolutionalNN-Multip
+leOutput-ELU/Varying-Mu/Jumps_Mu.png>]
 <Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-L
-ambda/Mu.png, id=444, 578.16pt x 397.485pt>
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Lambda/Mu.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Lambda/Mu.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Mu.png used on input line 607.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Lambda/Mu.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Lambda/Mu.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Mu.png used on input line 607.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-
-<Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-L
-ambda/Sigma.png, id=445, 578.16pt x 397.485pt>
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Lambda/Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Lambda/Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Sigma.png used on input line 607.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Lambda/Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Lambda/Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Sigma.png used on input line 607.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-
-<Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-L
-ambda/Jumps_Sigma.png, id=446, 578.16pt x 397.485pt>
+ambda/Jumps_Sigma.png, id=465, 578.16pt x 397.485pt>
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Lambda/Jumps_Sigma.png Graphic file (type png)
 
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Lambda/Jumps_Sigma.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Jumps_Sigma.png used on input line 607.
+ipleOutput-ELU/Varying-Lambda/Jumps_Sigma.png used on input line 646.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Lambda/Jumps_Sigma.png Graphic file (type png)
@@ -1499,18 +1341,18 @@ ing-Lambda/Jumps_Sigma.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Lambda/Jumps_Sigma.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Jumps_Sigma.png used on input line 607.
+ipleOutput-ELU/Varying-Lambda/Jumps_Sigma.png used on input line 646.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 <Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-L
-ambda/Jumps_Mu.png, id=447, 578.16pt x 397.485pt>
+ambda/Jumps_Mu.png, id=466, 578.16pt x 397.485pt>
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Lambda/Jumps_Mu.png Graphic file (type png)
 
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Lambda/Jumps_Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Jumps_Mu.png used on input line 607.
+ipleOutput-ELU/Varying-Lambda/Jumps_Mu.png used on input line 646.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Lambda/Jumps_Mu.png Graphic file (type png)
@@ -1518,39 +1360,7 @@ ing-Lambda/Jumps_Mu.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Lambda/Jumps_Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Jumps_Mu.png used on input line 607.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Lambda/Mu.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Lambda/Mu.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Mu.png used on input line 607.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Lambda/Mu.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Lambda/Mu.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Mu.png used on input line 607.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Lambda/Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Lambda/Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Sigma.png used on input line 607.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Lambda/Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Lambda/Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Sigma.png used on input line 607.
+ipleOutput-ELU/Varying-Lambda/Jumps_Mu.png used on input line 646.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Lambda/Jumps_Sigma.png Graphic file (type png)
@@ -1558,7 +1368,7 @@ ing-Lambda/Jumps_Sigma.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Lambda/Jumps_Sigma.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Jumps_Sigma.png used on input line 607.
+ipleOutput-ELU/Varying-Lambda/Jumps_Sigma.png used on input line 646.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Lambda/Jumps_Sigma.png Graphic file (type png)
@@ -1566,7 +1376,7 @@ ing-Lambda/Jumps_Sigma.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Lambda/Jumps_Sigma.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Jumps_Sigma.png used on input line 607.
+ipleOutput-ELU/Varying-Lambda/Jumps_Sigma.png used on input line 646.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Lambda/Jumps_Mu.png Graphic file (type png)
@@ -1574,7 +1384,7 @@ ing-Lambda/Jumps_Mu.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Lambda/Jumps_Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Jumps_Mu.png used on input line 607.
+ipleOutput-ELU/Varying-Lambda/Jumps_Mu.png used on input line 646.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Lambda/Jumps_Mu.png Graphic file (type png)
@@ -1582,7 +1392,7 @@ ing-Lambda/Jumps_Mu.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Lambda/Jumps_Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Lambda/Jumps_Mu.png used on input line 607.
+ipleOutput-ELU/Varying-Lambda/Jumps_Mu.png used on input line 646.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 
@@ -1590,67 +1400,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 <Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-J
-umps_sigma/Jumps_Sigma.png, id=448, 578.16pt x 397.485pt>
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Jumps_sigma/Jumps_Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Jumps_sigma/Jumps_Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Jumps_Sigma.png used on input line 615.
-(pdftex.def)             Requested size: 328.6279pt x 225.93196pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-<Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-J
-umps_sigma/Mu.png, id=449, 578.16pt x 397.485pt>
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Jumps_sigma/Mu.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Jumps_sigma/Mu.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Mu.png used on input line 655.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Jumps_sigma/Mu.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Jumps_sigma/Mu.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Mu.png used on input line 655.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-
-<Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-J
-umps_sigma/Sigma.png, id=450, 578.16pt x 397.485pt>
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Jumps_sigma/Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Jumps_sigma/Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Sigma.png used on input line 655.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Jumps_sigma/Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Jumps_sigma/Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Sigma.png used on input line 655.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-
-<Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-J
-umps_sigma/Jumps_Mu.png, id=451, 578.16pt x 397.485pt>
+umps_sigma/Jumps_Mu.png, id=467, 578.16pt x 397.485pt>
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_sigma/Jumps_Mu.png Graphic file (type png)
 
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_sigma/Jumps_Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Jumps_Mu.png used on input line 655.
+ipleOutput-ELU/Varying-Jumps_sigma/Jumps_Mu.png used on input line 694.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_sigma/Jumps_Mu.png Graphic file (type png)
@@ -1658,18 +1415,18 @@ ing-Jumps_sigma/Jumps_Mu.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_sigma/Jumps_Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Jumps_Mu.png used on input line 655.
+ipleOutput-ELU/Varying-Jumps_sigma/Jumps_Mu.png used on input line 694.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 <Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-J
-umps_sigma/Lambda.png, id=452, 578.16pt x 397.485pt>
+umps_sigma/Lambda.png, id=468, 578.16pt x 397.485pt>
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_sigma/Lambda.png Graphic file (type png)
 
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_sigma/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Lambda.png used on input line 655.
+ipleOutput-ELU/Varying-Jumps_sigma/Lambda.png used on input line 694.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_sigma/Lambda.png Graphic file (type png)
@@ -1677,39 +1434,7 @@ ing-Jumps_sigma/Lambda.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_sigma/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Lambda.png used on input line 655.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Jumps_sigma/Mu.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Jumps_sigma/Mu.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Mu.png used on input line 655.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Jumps_sigma/Mu.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Jumps_sigma/Mu.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Mu.png used on input line 655.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Jumps_sigma/Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Jumps_sigma/Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Sigma.png used on input line 655.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
-ing-Jumps_sigma/Sigma.png Graphic file (type png)
-
-<use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
-ng-Jumps_sigma/Sigma.png>
-Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Sigma.png used on input line 655.
+ipleOutput-ELU/Varying-Jumps_sigma/Lambda.png used on input line 694.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_sigma/Jumps_Mu.png Graphic file (type png)
@@ -1717,7 +1442,7 @@ ing-Jumps_sigma/Jumps_Mu.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_sigma/Jumps_Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Jumps_Mu.png used on input line 655.
+ipleOutput-ELU/Varying-Jumps_sigma/Jumps_Mu.png used on input line 694.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_sigma/Jumps_Mu.png Graphic file (type png)
@@ -1725,7 +1450,7 @@ ing-Jumps_sigma/Jumps_Mu.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_sigma/Jumps_Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Jumps_Mu.png used on input line 655.
+ipleOutput-ELU/Varying-Jumps_sigma/Jumps_Mu.png used on input line 694.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_sigma/Lambda.png Graphic file (type png)
@@ -1733,7 +1458,7 @@ ing-Jumps_sigma/Lambda.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_sigma/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Lambda.png used on input line 655.
+ipleOutput-ELU/Varying-Jumps_sigma/Lambda.png used on input line 694.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_sigma/Lambda.png Graphic file (type png)
@@ -1741,37 +1466,40 @@ ing-Jumps_sigma/Lambda.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_sigma/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_sigma/Lambda.png used on input line 655.
+ipleOutput-ELU/Varying-Jumps_sigma/Lambda.png used on input line 694.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
+[18 <./Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Var
+ying-Sigma/Sigma.png> <./Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
+ipleOutput-ELU/Varying-Sigma/Mu.png> <./Images/Output-Sensitivity-Results/Convo
+lutionalNN-MultipleOutput-ELU/Varying-Sigma/Lambda.png>]
 <Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-J
-umps_mu/Jumps_Mu.png, id=453, 578.16pt x 397.485pt>
+umps_mu/Jumps_Mu.png, id=482, 578.16pt x 397.485pt>
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Jumps_Mu.png Graphic file (type png)
 
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Jumps_Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Jumps_Mu.png used on input line 662.
-(pdftex.def)             Requested size: 328.6279pt x 225.93196pt.
+ipleOutput-ELU/Varying-Jumps_mu/Jumps_Mu.png used on input line 707.
+(pdftex.def)             Requested size: 234.73524pt x 161.38083pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 <Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-J
-umps_mu/Mu.png, id=454, 578.16pt x 397.485pt>
+umps_mu/Mu.png, id=483, 578.16pt x 397.485pt>
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Mu.png Graphic file (type png)
 
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Mu.png used on input line 702.
+ipleOutput-ELU/Varying-Jumps_mu/Mu.png used on input line 749.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Mu.png Graphic file (type png)
@@ -1779,18 +1507,18 @@ ing-Jumps_mu/Mu.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Mu.png used on input line 702.
+ipleOutput-ELU/Varying-Jumps_mu/Mu.png used on input line 749.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 <Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-J
-umps_mu/Sigma.png, id=455, 578.16pt x 397.485pt>
+umps_mu/Sigma.png, id=484, 578.16pt x 397.485pt>
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Sigma.png Graphic file (type png)
 
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Sigma.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Sigma.png used on input line 702.
+ipleOutput-ELU/Varying-Jumps_mu/Sigma.png used on input line 749.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Sigma.png Graphic file (type png)
@@ -1798,18 +1526,18 @@ ing-Jumps_mu/Sigma.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Sigma.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Sigma.png used on input line 702.
+ipleOutput-ELU/Varying-Jumps_mu/Sigma.png used on input line 749.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 <Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-J
-umps_mu/Jumps_Sigma.png, id=456, 578.16pt x 397.485pt>
+umps_mu/Jumps_Sigma.png, id=485, 578.16pt x 397.485pt>
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Jumps_Sigma.png Graphic file (type png)
 
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Jumps_Sigma.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Jumps_Sigma.png used on input line 702.
+ipleOutput-ELU/Varying-Jumps_mu/Jumps_Sigma.png used on input line 749.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Jumps_Sigma.png Graphic file (type png)
@@ -1817,18 +1545,18 @@ ing-Jumps_mu/Jumps_Sigma.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Jumps_Sigma.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Jumps_Sigma.png used on input line 702.
+ipleOutput-ELU/Varying-Jumps_mu/Jumps_Sigma.png used on input line 749.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 <Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-J
-umps_mu/Lambda.png, id=457, 578.16pt x 397.485pt>
+umps_mu/Lambda.png, id=486, 578.16pt x 397.485pt>
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Lambda.png Graphic file (type png)
 
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Lambda.png used on input line 702.
+ipleOutput-ELU/Varying-Jumps_mu/Lambda.png used on input line 749.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Lambda.png Graphic file (type png)
@@ -1836,7 +1564,7 @@ ing-Jumps_mu/Lambda.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Lambda.png used on input line 702.
+ipleOutput-ELU/Varying-Jumps_mu/Lambda.png used on input line 749.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Mu.png Graphic file (type png)
@@ -1844,7 +1572,7 @@ ing-Jumps_mu/Mu.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Mu.png used on input line 702.
+ipleOutput-ELU/Varying-Jumps_mu/Mu.png used on input line 749.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Mu.png Graphic file (type png)
@@ -1852,7 +1580,7 @@ ing-Jumps_mu/Mu.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Mu.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Mu.png used on input line 702.
+ipleOutput-ELU/Varying-Jumps_mu/Mu.png used on input line 749.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Sigma.png Graphic file (type png)
@@ -1860,7 +1588,7 @@ ing-Jumps_mu/Sigma.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Sigma.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Sigma.png used on input line 702.
+ipleOutput-ELU/Varying-Jumps_mu/Sigma.png used on input line 749.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Sigma.png Graphic file (type png)
@@ -1868,7 +1596,7 @@ ing-Jumps_mu/Sigma.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Sigma.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Sigma.png used on input line 702.
+ipleOutput-ELU/Varying-Jumps_mu/Sigma.png used on input line 749.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Jumps_Sigma.png Graphic file (type png)
@@ -1876,7 +1604,7 @@ ing-Jumps_mu/Jumps_Sigma.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Jumps_Sigma.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Jumps_Sigma.png used on input line 702.
+ipleOutput-ELU/Varying-Jumps_mu/Jumps_Sigma.png used on input line 749.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Jumps_Sigma.png Graphic file (type png)
@@ -1884,7 +1612,7 @@ ing-Jumps_mu/Jumps_Sigma.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Jumps_Sigma.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Jumps_Sigma.png used on input line 702.
+ipleOutput-ELU/Varying-Jumps_mu/Jumps_Sigma.png used on input line 749.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Lambda.png Graphic file (type png)
@@ -1892,7 +1620,7 @@ ing-Jumps_mu/Lambda.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Lambda.png used on input line 702.
+ipleOutput-ELU/Varying-Jumps_mu/Lambda.png used on input line 749.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Vary
 ing-Jumps_mu/Lambda.png Graphic file (type png)
@@ -1900,15 +1628,30 @@ ing-Jumps_mu/Lambda.png Graphic file (type png)
 <use Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varyi
 ng-Jumps_mu/Lambda.png>
 Package pdftex.def Info: Images/Output-Sensitivity-Results/ConvolutionalNN-Mult
-ipleOutput-ELU/Varying-Jumps_mu/Lambda.png used on input line 702.
+ipleOutput-ELU/Varying-Jumps_mu/Lambda.png used on input line 749.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[19 <./Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Var
+ying-Lambda/Lambda.png> <./Images/Output-Sensitivity-Results/ConvolutionalNN-Mu
+ltipleOutput-ELU/Varying-Lambda/Jumps_Sigma.png> <./Images/Output-Sensitivity-R
+esults/ConvolutionalNN-MultipleOutput-ELU/Varying-Lambda/Jumps_Mu.png>]
+[20 <./Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Var
+ying-Jumps_sigma/Jumps_Mu.png> <./Images/Output-Sensitivity-Results/Convolution
+alNN-MultipleOutput-ELU/Varying-Jumps_sigma/Lambda.png> <./Images/Output-Sensit
+ivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_mu/Jumps_Mu.png>
+] [21 <./Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/V
+arying-Jumps_mu/Mu.png> <./Images/Output-Sensitivity-Results/ConvolutionalNN-Mu
+ltipleOutput-ELU/Varying-Jumps_mu/Sigma.png> <./Images/Output-Sensitivity-Resul
+ts/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_mu/Jumps_Sigma.png> <./Imag
+es/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_
+mu/Lambda.png>]
+Chapter 5.
 
 <"Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convol
-utional Architecture - Multiple Output - ELU_Mu".png, id=465, 578.16pt x 397.48
+utional Architecture - Multiple Output - ELU_Mu".png, id=524, 578.16pt x 397.48
 5pt>
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Mu".png Graphic file (type pn
@@ -1918,7 +1661,7 @@ g)
 nvolutional Architecture - Multiple Output - ELU_Mu".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Mu".png us
-ed on input line 732.
+ed on input line 780.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Mu".png Graphic file (type pn
@@ -1928,11 +1671,11 @@ g)
 nvolutional Architecture - Multiple Output - ELU_Mu".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Mu".png us
-ed on input line 732.
+ed on input line 780.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 <"Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully C
-onnected Architecture - Multiple Output - ELU_Mu".png, id=466, 578.16pt x 397.4
+onnected Architecture - Multiple Output - ELU_Mu".png, id=525, 578.16pt x 397.4
 85pt>
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Mu".png Graphic file (type p
@@ -1942,7 +1685,7 @@ ng)
 ly Connected Architecture - Multiple Output - ELU_Mu".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Mu".png u
-sed on input line 732.
+sed on input line 780.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Mu".png Graphic file (type p
@@ -1952,7 +1695,7 @@ ng)
 ly Connected Architecture - Multiple Output - ELU_Mu".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Mu".png u
-sed on input line 732.
+sed on input line 780.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Mu".png Graphic file (type pn
@@ -1962,7 +1705,7 @@ g)
 nvolutional Architecture - Multiple Output - ELU_Mu".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Mu".png us
-ed on input line 732.
+ed on input line 780.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Mu".png Graphic file (type pn
@@ -1972,7 +1715,7 @@ g)
 nvolutional Architecture - Multiple Output - ELU_Mu".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Mu".png us
-ed on input line 732.
+ed on input line 780.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Mu".png Graphic file (type p
@@ -1982,7 +1725,7 @@ ng)
 ly Connected Architecture - Multiple Output - ELU_Mu".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Mu".png u
-sed on input line 732.
+sed on input line 780.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Mu".png Graphic file (type p
@@ -1992,15 +1735,11 @@ ng)
 ly Connected Architecture - Multiple Output - ELU_Mu".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Mu".png u
-sed on input line 732.
+sed on input line 780.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 <"Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convol
-utional Architecture - Multiple Output - ELU_Sigma".png, id=467, 578.16pt x 397
+utional Architecture - Multiple Output - ELU_Sigma".png, id=526, 578.16pt x 397
 .485pt>
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Sigma".png Graphic file (type
@@ -2010,7 +1749,7 @@ onvolutional Architecture - Multiple Output - ELU_Sigma".png Graphic file (type
 nvolutional Architecture - Multiple Output - ELU_Sigma".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Sigma".png
- used on input line 751.
+ used on input line 799.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Sigma".png Graphic file (type
@@ -2020,11 +1759,11 @@ onvolutional Architecture - Multiple Output - ELU_Sigma".png Graphic file (type
 nvolutional Architecture - Multiple Output - ELU_Sigma".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Sigma".png
- used on input line 751.
+ used on input line 799.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 <"Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully C
-onnected Architecture - Multiple Output - ELU_Sigma".png, id=468, 578.16pt x 39
+onnected Architecture - Multiple Output - ELU_Sigma".png, id=527, 578.16pt x 39
 7.485pt>
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Sigma".png Graphic file (typ
@@ -2034,7 +1773,7 @@ e png)
 ly Connected Architecture - Multiple Output - ELU_Sigma".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Sigma".pn
-g used on input line 751.
+g used on input line 799.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Sigma".png Graphic file (typ
@@ -2044,7 +1783,7 @@ e png)
 ly Connected Architecture - Multiple Output - ELU_Sigma".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Sigma".pn
-g used on input line 751.
+g used on input line 799.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Sigma".png Graphic file (type
@@ -2054,7 +1793,7 @@ onvolutional Architecture - Multiple Output - ELU_Sigma".png Graphic file (type
 nvolutional Architecture - Multiple Output - ELU_Sigma".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Sigma".png
- used on input line 751.
+ used on input line 799.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Sigma".png Graphic file (type
@@ -2064,7 +1803,7 @@ onvolutional Architecture - Multiple Output - ELU_Sigma".png Graphic file (type
 nvolutional Architecture - Multiple Output - ELU_Sigma".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Sigma".png
- used on input line 751.
+ used on input line 799.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Sigma".png Graphic file (typ
@@ -2074,7 +1813,7 @@ e png)
 ly Connected Architecture - Multiple Output - ELU_Sigma".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Sigma".pn
-g used on input line 751.
+g used on input line 799.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Sigma".png Graphic file (typ
@@ -2084,15 +1823,11 @@ e png)
 ly Connected Architecture - Multiple Output - ELU_Sigma".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Sigma".pn
-g used on input line 751.
+g used on input line 799.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 <"Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convol
-utional Architecture - Multiple Output - ELU_Lambda".png, id=469, 578.16pt x 39
+utional Architecture - Multiple Output - ELU_Lambda".png, id=528, 578.16pt x 39
 7.485pt>
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Lambda".png Graphic file (typ
@@ -2102,7 +1837,7 @@ e png)
 nvolutional Architecture - Multiple Output - ELU_Lambda".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Lambda".pn
-g used on input line 780.
+g used on input line 828.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Lambda".png Graphic file (typ
@@ -2112,11 +1847,11 @@ e png)
 nvolutional Architecture - Multiple Output - ELU_Lambda".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Lambda".pn
-g used on input line 780.
+g used on input line 828.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 <"Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully C
-onnected Architecture - Multiple Output - ELU_Lambda".png, id=470, 578.16pt x 3
+onnected Architecture - Multiple Output - ELU_Lambda".png, id=529, 578.16pt x 3
 97.485pt>
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Lambda".png Graphic file (ty
@@ -2126,7 +1861,7 @@ pe png)
 ly Connected Architecture - Multiple Output - ELU_Lambda".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Lambda".p
-ng used on input line 780.
+ng used on input line 828.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Lambda".png Graphic file (ty
@@ -2136,11 +1871,11 @@ pe png)
 ly Connected Architecture - Multiple Output - ELU_Lambda".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Lambda".p
-ng used on input line 780.
+ng used on input line 828.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 <"Images/Parameter-Prediction-Results/ConvolutionalNN-SingleOutput/Convolutiona
-l Architecture - Single Output - ELU_Lambda".png, id=471, 578.16pt x 397.485pt>
+l Architecture - Single Output - ELU_Lambda".png, id=530, 578.16pt x 397.485pt>
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-SingleOutput/Convolu
 tional Architecture - Single Output - ELU_Lambda".png Graphic file (type png)
 
@@ -2148,7 +1883,7 @@ tional Architecture - Single Output - ELU_Lambda".png Graphic file (type png)
 ional Architecture - Single Output - ELU_Lambda".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-S
 ingleOutput/Convolutional Architecture - Single Output - ELU_Lambda".png used o
-n input line 780.
+n input line 828.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-SingleOutput/Convolu
 tional Architecture - Single Output - ELU_Lambda".png Graphic file (type png)
@@ -2157,7 +1892,7 @@ tional Architecture - Single Output - ELU_Lambda".png Graphic file (type png)
 ional Architecture - Single Output - ELU_Lambda".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-S
 ingleOutput/Convolutional Architecture - Single Output - ELU_Lambda".png used o
-n input line 780.
+n input line 828.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Lambda".png Graphic file (typ
@@ -2167,7 +1902,7 @@ e png)
 nvolutional Architecture - Multiple Output - ELU_Lambda".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Lambda".pn
-g used on input line 780.
+g used on input line 828.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Lambda".png Graphic file (typ
@@ -2177,7 +1912,7 @@ e png)
 nvolutional Architecture - Multiple Output - ELU_Lambda".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Lambda".pn
-g used on input line 780.
+g used on input line 828.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Lambda".png Graphic file (ty
@@ -2187,7 +1922,7 @@ pe png)
 ly Connected Architecture - Multiple Output - ELU_Lambda".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Lambda".p
-ng used on input line 780.
+ng used on input line 828.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Lambda".png Graphic file (ty
@@ -2197,7 +1932,7 @@ pe png)
 ly Connected Architecture - Multiple Output - ELU_Lambda".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Lambda".p
-ng used on input line 780.
+ng used on input line 828.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-SingleOutput/Convolu
 tional Architecture - Single Output - ELU_Lambda".png Graphic file (type png)
@@ -2206,7 +1941,7 @@ tional Architecture - Single Output - ELU_Lambda".png Graphic file (type png)
 ional Architecture - Single Output - ELU_Lambda".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-S
 ingleOutput/Convolutional Architecture - Single Output - ELU_Lambda".png used o
-n input line 780.
+n input line 828.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-SingleOutput/Convolu
 tional Architecture - Single Output - ELU_Lambda".png Graphic file (type png)
@@ -2215,7 +1950,7 @@ tional Architecture - Single Output - ELU_Lambda".png Graphic file (type png)
 ional Architecture - Single Output - ELU_Lambda".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-S
 ingleOutput/Convolutional Architecture - Single Output - ELU_Lambda".png used o
-n input line 780.
+n input line 828.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 
@@ -2223,7 +1958,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 <"Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convol
-utional Architecture - Multiple Output - ELU_Jumps Mu".png, id=472, 578.16pt x 
+utional Architecture - Multiple Output - ELU_Jumps Mu".png, id=531, 578.16pt x 
 397.485pt>
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Jumps Mu".png Graphic file (t
@@ -2233,7 +1968,7 @@ ype png)
 nvolutional Architecture - Multiple Output - ELU_Jumps Mu".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Jumps Mu".
-png used on input line 798.
+png used on input line 846.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Jumps Mu".png Graphic file (t
@@ -2243,11 +1978,11 @@ ype png)
 nvolutional Architecture - Multiple Output - ELU_Jumps Mu".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Jumps Mu".
-png used on input line 798.
+png used on input line 846.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 <"Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully C
-onnected Architecture - Multiple Output - ELU_Jumps Mu".png, id=473, 578.16pt x
+onnected Architecture - Multiple Output - ELU_Jumps Mu".png, id=532, 578.16pt x
  397.485pt>
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Jumps Mu".png Graphic file (
@@ -2257,7 +1992,7 @@ type png)
 ly Connected Architecture - Multiple Output - ELU_Jumps Mu".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Mu"
-.png used on input line 798.
+.png used on input line 846.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Jumps Mu".png Graphic file (
@@ -2267,7 +2002,7 @@ type png)
 ly Connected Architecture - Multiple Output - ELU_Jumps Mu".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Mu"
-.png used on input line 798.
+.png used on input line 846.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Jumps Mu".png Graphic file (t
@@ -2277,7 +2012,7 @@ ype png)
 nvolutional Architecture - Multiple Output - ELU_Jumps Mu".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Jumps Mu".
-png used on input line 798.
+png used on input line 846.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Jumps Mu".png Graphic file (t
@@ -2287,7 +2022,7 @@ ype png)
 nvolutional Architecture - Multiple Output - ELU_Jumps Mu".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Jumps Mu".
-png used on input line 798.
+png used on input line 846.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Jumps Mu".png Graphic file (
@@ -2297,7 +2032,7 @@ type png)
 ly Connected Architecture - Multiple Output - ELU_Jumps Mu".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Mu"
-.png used on input line 798.
+.png used on input line 846.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Jumps Mu".png Graphic file (
@@ -2307,7 +2042,7 @@ type png)
 ly Connected Architecture - Multiple Output - ELU_Jumps Mu".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Mu"
-.png used on input line 798.
+.png used on input line 846.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 
@@ -2315,7 +2050,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 <"Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convol
-utional Architecture - Multiple Output - ELU_Jumps Sigma".png, id=474, 578.16pt
+utional Architecture - Multiple Output - ELU_Jumps Sigma".png, id=533, 578.16pt
  x 397.485pt>
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic file
@@ -2325,7 +2060,7 @@ onvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic file
 nvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Jumps Sigm
-a".png used on input line 821.
+a".png used on input line 869.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic file
@@ -2335,11 +2070,11 @@ onvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic file
 nvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Jumps Sigm
-a".png used on input line 821.
+a".png used on input line 869.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 <"Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully C
-onnected Architecture - Multiple Output - ELU_Jumps Sigma".png, id=475, 578.16p
+onnected Architecture - Multiple Output - ELU_Jumps Sigma".png, id=534, 578.16p
 t x 397.485pt>
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic fil
@@ -2349,7 +2084,7 @@ e (type png)
 ly Connected Architecture - Multiple Output - ELU_Jumps Sigma".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Sig
-ma".png used on input line 821.
+ma".png used on input line 869.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic fil
@@ -2359,7 +2094,7 @@ e (type png)
 ly Connected Architecture - Multiple Output - ELU_Jumps Sigma".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Sig
-ma".png used on input line 821.
+ma".png used on input line 869.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic file
@@ -2369,7 +2104,7 @@ onvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic file
 nvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Jumps Sigm
-a".png used on input line 821.
+a".png used on input line 869.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
 onvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic file
@@ -2379,7 +2114,7 @@ onvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic file
 nvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
 ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Jumps Sigm
-a".png used on input line 821.
+a".png used on input line 869.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic fil
@@ -2389,7 +2124,7 @@ e (type png)
 ly Connected Architecture - Multiple Output - ELU_Jumps Sigma".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Sig
-ma".png used on input line 821.
+ma".png used on input line 869.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
 lly Connected Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic fil
@@ -2399,58 +2134,34 @@ e (type png)
 ly Connected Architecture - Multiple Output - ELU_Jumps Sigma".png>
 Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
 ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Sig
-ma".png used on input line 821.
+ma".png used on input line 869.
 (pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-(./HonoursProject.bbl [18 <./Images/Output-Sensitivity-Results/ConvolutionalNN-
-MultipleOutput-ELU/Varying-Sigma/Sigma.png>] [19 <./Images/Output-Sensitivity-R
-esults/ConvolutionalNN-MultipleOutput-ELU/Varying-Sigma/Mu.png> <./Images/Outpu
-t-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Sigma/Lambda.p
-ng> <./Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Var
-ying-Sigma/Jumps_Sigma.png> <./Images/Output-Sensitivity-Results/ConvolutionalN
-N-MultipleOutput-ELU/Varying-Sigma/Jumps_Mu.png>] [20 <./Images/Output-Sensitiv
-ity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Lambda/Lambda.png>]
-[21 <./Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Var
-ying-Lambda/Mu.png> <./Images/Output-Sensitivity-Results/ConvolutionalNN-Multip
-leOutput-ELU/Varying-Lambda/Sigma.png> <./Images/Output-Sensitivity-Results/Con
-volutionalNN-MultipleOutput-ELU/Varying-Lambda/Jumps_Sigma.png> <./Images/Outpu
-t-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Lambda/Jumps_M
-u.png>] [22 <./Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput
--ELU/Varying-Jumps_sigma/Jumps_Sigma.png>] [23 <./Images/Output-Sensitivity-Res
-ults/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_sigma/Mu.png> <./Images/O
-utput-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_sigm
-a/Sigma.png> <./Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutpu
-t-ELU/Varying-Jumps_sigma/Jumps_Mu.png> <./Images/Output-Sensitivity-Results/Co
-nvolutionalNN-MultipleOutput-ELU/Varying-Jumps_sigma/Lambda.png>] [24 <./Images
-/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_mu
-/Jumps_Mu.png>] [25 <./Images/Output-Sensitivity-Results/ConvolutionalNN-Multip
-leOutput-ELU/Varying-Jumps_mu/Mu.png> <./Images/Output-Sensitivity-Results/Conv
-olutionalNN-MultipleOutput-ELU/Varying-Jumps_mu/Sigma.png> <./Images/Output-Sen
-sitivity-Results/ConvolutionalNN-MultipleOutput-ELU/Varying-Jumps_mu/Jumps_Sigm
-a.png> <./Images/Output-Sensitivity-Results/ConvolutionalNN-MultipleOutput-ELU/
-Varying-Jumps_mu/Lambda.png> <./Images/Parameter-Prediction-Results/Convolution
-alNN-MultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Mu.p
-ng> <./Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
-lly Connected Architecture - Multiple Output - ELU_Mu.png>] [26 <./Images/Param
-eter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convolutional Archit
-ecture - Multiple Output - ELU_Sigma.png> <./Images/Parameter-Prediction-Result
-s/FullyConnected-MultipleOutput-ELU/Fully Connected Architecture - Multiple Out
-put - ELU_Sigma.png> <./Images/Parameter-Prediction-Results/ConvolutionalNN-Mul
-tipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Lambda.png> 
-<./Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully 
-Connected Architecture - Multiple Output - ELU_Lambda.png> <./Images/Parameter-
-Prediction-Results/ConvolutionalNN-SingleOutput/Convolutional Architecture - Si
-ngle Output - ELU_Lambda.png>] [27 <./Images/Parameter-Prediction-Results/Convo
-lutionalNN-MultipleOutput-ELU/Convolutional Architecture - Multiple Output - EL
-U_Jumps Mu.png> <./Images/Parameter-Prediction-Results/FullyConnected-MultipleO
-utput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Mu.png> <.
-/Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convolu
-tional Architecture - Multiple Output - ELU_Jumps Sigma.png> <./Images/Paramete
-r-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully Connected Architec
-ture - Multiple Output - ELU_Jumps Sigma.png>]
+(./HonoursProject.bbl [22
+
+ <./Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Conv
+olutional Architecture - Multiple Output - ELU_Mu.png> <./Images/Parameter-Pred
+iction-Results/FullyConnected-MultipleOutput-ELU/Fully Connected Architecture -
+ Multiple Output - ELU_Mu.png> <./Images/Parameter-Prediction-Results/Convoluti
+onalNN-MultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Si
+gma.png> <./Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-E
+LU/Fully Connected Architecture - Multiple Output - ELU_Sigma.png>] [23 <./Imag
+es/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convolutiona
+l Architecture - Multiple Output - ELU_Lambda.png> <./Images/Parameter-Predicti
+on-Results/FullyConnected-MultipleOutput-ELU/Fully Connected Architecture - Mul
+tiple Output - ELU_Lambda.png> <./Images/Parameter-Prediction-Results/Convoluti
+onalNN-SingleOutput/Convolutional Architecture - Single Output - ELU_Lambda.png
+>] [24 <./Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-EL
+U/Convolutional Architecture - Multiple Output - ELU_Jumps Mu.png> <./Images/Pa
+rameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully Connected Ar
+chitecture - Multiple Output - ELU_Jumps Mu.png> <./Images/Parameter-Prediction
+-Results/ConvolutionalNN-MultipleOutput-ELU/Convolutional Architecture - Multip
+le Output - ELU_Jumps Sigma.png> <./Images/Parameter-Prediction-Results/FullyCo
+nnected-MultipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU
+_Jumps Sigma.png>]
 (/usr/local/texlive/2017/texmf-dist/tex/latex/stellenbosch/usbib.eng)
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 24.
 
@@ -2462,24 +2173,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--92
 irect . com . ez . sun . ac . za / science / article / pii /
  []
 
-[28
+[25
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 846.
- [29]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 846.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 894.
+ [26]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 894.
  (./HonoursProject.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 846.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 846.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 894.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 894.
 Package rerunfilecheck Info: File `HonoursProject.out' has not changed.
-(rerunfilecheck)             Checksum: F28B12139659A534941CFFF416E7126A;2273.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 846.
+(rerunfilecheck)             Checksum: 6076FF6E2A620955F49C281EF36678DF;2499.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 894.
  ) 
 Here is how much of TeX's memory you used:
- 12253 strings out of 492995
- 199830 string characters out of 6132705
- 428593 words of memory out of 5000000
- 15359 multiletter control sequences out of 15000+600000
+ 12218 strings out of 492995
+ 196549 string characters out of 6132705
+ 401444 words of memory out of 5000000
+ 15321 multiletter control sequences out of 15000+600000
  175843 words of font info for 161 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,16n,57p,1304b,782s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2495,10 +2210,10 @@ f-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/local/texlive/2017/texmf-dist
 onts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb>
-Output written on HonoursProject.pdf (34 pages, 1707325 bytes).
+Output written on HonoursProject.pdf (31 pages, 1350250 bytes).
 PDF statistics:
- 673 PDF objects out of 1000 (max. 8388607)
- 520 compressed objects within 6 object streams
+ 667 PDF objects out of 1000 (max. 8388607)
+ 535 compressed objects within 6 object streams
  157 named destinations out of 1000 (max. 500000)
- 515 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 494 words of extra memory for PDF output out of 10000 (max. 10000000)
 

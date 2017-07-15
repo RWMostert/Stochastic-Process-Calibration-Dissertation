@@ -26,14 +26,18 @@
 \contentsline {chapter}{\numberline {4}Simulation Study}{13}{chapter.4}
 \contentsline {section}{\numberline {4.1}The Merton Jump Diffusion Stochastic Process}{13}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Simulation}{13}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}Convolutional Neural Network}{14}{section.4.2}
+\contentsline {section}{\numberline {4.2}Fully Connected Feed-forward Neural Network}{14}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Multiple Parameter Prediction Architecture}{14}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Dedicated Single Parameter Prediction Architecture}{14}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Parameter Interactions}{16}{subsection.4.2.3}
-\contentsline {subsubsection}{Variations in $\mu $}{16}{subsubsection*.20}
-\contentsline {subsubsection}{Variations in $\sigma $}{17}{subsubsection*.27}
-\contentsline {subsubsection}{Variations in $\lambda $}{18}{subsubsection*.34}
-\contentsline {subsubsection}{Variations in $\sigma _{jumps}$}{18}{subsubsection*.41}
-\contentsline {subsubsection}{Variations in $\mu _{jumps}$}{18}{subsubsection*.48}
-\contentsline {subsection}{\numberline {4.2.4}Results}{18}{subsection.4.2.4}
-\contentsline {chapter}{Bibliography}{28}{section*.73}
+\contentsline {subsection}{\numberline {4.2.2}The Dataset}{14}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Convolutional Neural Network}{14}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Multiple Parameter Prediction Architecture}{14}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Dedicated Single Parameter Prediction Architecture}{15}{subsection.4.3.2}
+\contentsline {subsubsection}{Lambda}{16}{subsubsection*.20}
+\contentsline {section}{\numberline {4.4}Parameter Interactions}{16}{section.4.4}
+\contentsline {subsubsection}{Variations in $\mu $}{17}{subsubsection*.22}
+\contentsline {subsubsection}{Variations in $\sigma $}{17}{subsubsection*.26}
+\contentsline {subsubsection}{Variations in $\lambda $}{17}{subsubsection*.31}
+\contentsline {subsubsection}{Variations in $\sigma _{jumps}$}{18}{subsubsection*.36}
+\contentsline {subsubsection}{Variations in $\mu _{jumps}$}{19}{subsubsection*.40}
+\contentsline {chapter}{\numberline {5}Results}{22}{chapter.5}
+\contentsline {chapter}{Bibliography}{25}{section*.65}
