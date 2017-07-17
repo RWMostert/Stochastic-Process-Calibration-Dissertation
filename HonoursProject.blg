@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: HonoursProject.aux
+The style file: ussagus.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: export.bib
+Repeated entry---line 45 of file export.bib
+ : @misc{Samad
+ :            ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "cs231n" isn't style-file defined
+--line 309 of file export.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--to sort, need author or key in cs231n
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty year in cs231n
+Warning--empty chapter and pages in Barone-Adesi
+Warning--empty journal in Honore
+Warning--can't use both author and editor fields in Scherer2010
+You've used 19 entries,
+            3343 wiz_defined-function locations,
+            806 strings with 9077 characters,
+and the built_in function-call counts, 13476 in all, are:
+= -- 1051
+> -- 380
+< -- 11
++ -- 150
+- -- 129
+* -- 1286
+:= -- 1785
+add.period$ -- 78
+call.type$ -- 19
+change.case$ -- 140
+chr.to.int$ -- 19
+cite$ -- 26
+duplicate$ -- 1264
+empty$ -- 1215
+format.name$ -- 267
+if$ -- 2670
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 173
+newline$ -- 130
+num.names$ -- 72
+pop$ -- 388
+preamble$ -- 1
+purify$ -- 119
+quote$ -- 0
+skip$ -- 303
+stack$ -- 0
+substring$ -- 661
+swap$ -- 585
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 162
+warning$ -- 5
+while$ -- 110
+width$ -- 0
+write$ -- 273
+(There was 1 error message)

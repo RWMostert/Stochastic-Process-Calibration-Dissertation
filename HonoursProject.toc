@@ -40,4 +40,4 @@
 \contentsline {subsubsection}{Variations in $\sigma _{jumps}$}{18}{subsubsection*.36}
 \contentsline {subsubsection}{Variations in $\mu _{jumps}$}{19}{subsubsection*.40}
 \contentsline {chapter}{\numberline {5}Results}{22}{chapter.5}
-\contentsline {chapter}{Bibliography}{25}{section*.65}
+\contentsline {chapter}{Bibliography}{25}{section*.62}

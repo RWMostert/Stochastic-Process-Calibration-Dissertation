@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.3)  16 JUL 2017 22:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.7.16)  17 JUL 2017 08:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **HonoursProject.tex
 (./HonoursProject.tex
-LaTeX2e <2017-04-15>
-Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/stellenbosch/usthesis.cls
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/stellenbosch/usthesis.cls
 Document Class: usthesis 2014/11/28 v5.0 Stellenbosh Thesis class (DNJ ELS)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/calc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count79
 \calc@Bcount=\count80
@@ -21,22 +21,23 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count81
 \calc@Cskip=\skip43
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 Class usthesis Info: Input file 'usthesis.afr' loaded on input line 92.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/stellenbosch/usthesis.afr
+(/usr/share/texlive/texmf-dist/tex/latex/stellenbosch/usthesis.afr
 File: usthesis.afr 2014/11/28 v2.0 USthesis Afr defs (DNJ Els)
 )
 Class usthesis Info: Input file 'usthesis.eng' loaded on input line 95.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/stellenbosch/usthesis.eng
+(/usr/share/texlive/texmf-dist/tex/latex/stellenbosch/usthesis.eng
 File: usthesis.eng 2014/11/28 v2.0 USthesis Eng defs (DNJ Els)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/book.cls
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/bk11.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk11.clo
 File: bk11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count82
@@ -61,22 +62,22 @@ File: bk11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \US@month=\count93
 \US@year=\count94
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/enumerate.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks14
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifvtex.sty
-Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count95
@@ -92,11 +93,11 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen112
 \Gm@dimlist=\toks16
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/helvet.sty
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/titlesec/titlesec.sty
-Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2016/03/15 v2.10.1 Sectioning titles
 \ttl@box=\box28
 \beforetitleunit=\skip48
 \aftertitleunit=\skip49
@@ -107,12 +108,11 @@ Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \titlewidthlast=\dimen116
 \titlewidthfirst=\dimen117
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/lipsum/lipsum.sty
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count98
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip50
 \f@ncyO@elh=\skip51
 \f@ncyO@erh=\skip52
@@ -123,18 +123,18 @@ Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
 \f@ncyO@olf=\skip57
 \f@ncyO@orf=\skip58
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/varioref.sty
-Package: varioref 2016/02/16 v1.5c package for extended references (FMi)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/varioref.sty
+Package: varioref 2015/09/22 v1.5b package for extended references (FMi)
 \c@vrcnt=\count99
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2017/05/19 3.10 The Babel package
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/02/24 3.9q The Babel package
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/babel-english/english.ldf
-Language: english 2017/01/24 v3.3q English support from the babel system
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2017/05/19 3.10 Babel common definitions
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/02/24 3.9q Babel common definitions
 \babel@savecnt=\count100
 \U@D=\dimen118
 )
@@ -142,49 +142,49 @@ File: babel.def 2017/05/19 3.10 Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks18
 \inpenc@posthook=\toks19
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/latin1.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
 File: latin1.def 2015/03/17 v1.2c Input encoding file
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/11/05 v2.16a AMS math features
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
 \@mathmargin=\skip59
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
 \ex@=\dimen119
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen120
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count101
-LaTeX Info: Redefining \frac on input line 213.
+LaTeX Info: Redefining \frac on input line 199.
 \uproot@=\count102
 \leftroot@=\count103
-LaTeX Info: Redefining \overline on input line 375.
+LaTeX Info: Redefining \overline on input line 297.
 \classnum@=\count104
 \DOTSCASE@=\count105
-LaTeX Info: Redefining \ldots on input line 472.
-LaTeX Info: Redefining \dots on input line 475.
-LaTeX Info: Redefining \cdots on input line 596.
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box29
 \strutbox@=\box30
 \big@size=\dimen121
-LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \macc@depth=\count106
 \c@MaxMatrixCols=\count107
 \dotsspace@=\muskip10
@@ -205,13 +205,13 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \multlinegap=\skip60
 \multlinetaggap=\skip61
 \mathdisplay@stack=\toks24
-LaTeX Info: Redefining \[ on input line 2817.
-LaTeX Info: Redefining \] on input line 2818.
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/mhsetup.sty
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
@@ -228,15 +228,15 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen133
 \l_MT_below_shortintertext_sep=\dimen134
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
 (textcomp)               4 = 5 + \texteuro
@@ -250,7 +250,7 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1enc.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
 LaTeX Info: Redefining \oldstylenums on input line 334.
@@ -317,17 +317,17 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fourier.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fourier/fourier.sty
 Package: fourier 2005/01/01 1.4 fourier-GUTenberg package
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fourier-orns.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fourier/fourier-orns.sty
 Package: fourier-orns 2004/01/30 1.1 fourier-ornaments package
 )
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 50.
@@ -430,65 +430,65 @@ LaTeX Font Info:    Redeclaring math accent \dot on input line 255.
 LaTeX Font Info:    Redeclaring math accent \mathring on input line 256.
 \symUfutm=\mathgroup5
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/bm.sty
-Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
 \symboldletters=\mathgroup7
 \symboldotherletters=\mathgroup8
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 207.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 95.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count114
 ))
 \Gin@req@height=\dimen135
 \Gin@req@width=\dimen136
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 147.
+Package color Info: Driver file: pdftex.def on input line 143.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/stellenbosch/usbib.sty
+(/usr/share/texlive/texmf-dist/tex/latex/stellenbosch/usbib.sty
 Package: usbib 2009/03/07 1.0 (DNJ Els)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/natbib/natbib.sty
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip63
 \bibsep=\skip64
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count115
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/floatrow/floatrow.sty
+(/usr/share/texlive/texmf-dist/tex/latex/floatrow/floatrow.sty
 Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen137
 \captionmargin@=\dimen138
@@ -536,13 +536,13 @@ Package floatrow Info: Modified rotfloat package code loaded on input line 473.
 \LTright=\skip78
 \flrow@types=\toks27
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/setspace/setspace.sty
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/subfig/subfig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
 
@@ -571,97 +571,97 @@ Package caption Info: floatrow package is loaded.
 \c@lotdepth=\count130
 \sf@top=\skip82
 \sf@bottom=\skip83
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 Package hobsub Info: Skipping package `ifvtex' (already loaded).
-Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
 )
-Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
-Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
-Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
-Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
-Package: xcolor-patch 2016/05/16 xcolor patch
-Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
-Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
-Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
-Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/auxhook.sty
-Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen149
 \Hy@linkcounter=\count131
 \Hy@pagecounter=\count132
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count133
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4498.
-Package hyperref Info: Link nesting OFF on input line 4503.
-Package hyperref Info: Hyper index ON on input line 4506.
-Package hyperref Info: Plain pages OFF on input line 4513.
-Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4751.
+Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count134
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5104.
+LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen150
 \Fld@menulength=\count135
 \Field@Width=\dimen151
 \Fld@charsize=\dimen152
-Package hyperref Info: Hyper figures OFF on input line 6358.
-Package hyperref Info: Link nesting OFF on input line 6363.
-Package hyperref Info: Hyper index ON on input line 6366.
-Package hyperref Info: backreferencing OFF on input line 6373.
-Package hyperref Info: Link coloring OFF on input line 6378.
-Package hyperref Info: Link coloring with OCG OFF on input line 6383.
-Package hyperref Info: PDF/A mode OFF on input line 6388.
-LaTeX Info: Redefining \ref on input line 6428.
-LaTeX Info: Redefining \pageref on input line 6432.
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
 \Hy@abspage=\count136
 \c@Item=\count137
 \c@Hfootnote=\count138
@@ -669,19 +669,19 @@ LaTeX Info: Redefining \pageref on input line 6432.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count139
 \c@bookmark@seq@number=\count140
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
-Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip84
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/enumitem/enumitem.sty
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip85
 \enit@outerparindent=\dimen153
@@ -710,7 +710,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
 LaTeX Font Info:    ... okay on input line 74.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 74.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 74.
@@ -718,7 +718,7 @@ LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 74.
 LaTeX Font Info:    Try loading font information for FML+futm on input line 74.
 
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fmlfutm.fd
+(/usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutm.fd
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
 LaTeX Font Info:    ... okay on input line 74.
@@ -726,7 +726,7 @@ LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 74.
 LaTeX Font Info:    Try loading font information for FMS+futm on input line 74.
 
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fmsfutm.fd
+(/usr/share/texlive/texmf-dist/tex/latex/fourier/fmsfutm.fd
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
 LaTeX Font Info:    ... okay on input line 74.
@@ -734,7 +734,7 @@ LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 74.
 LaTeX Font Info:    Try loading font information for FMX+futm on input line 74.
 
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fmxfutm.fd
+(/usr/share/texlive/texmf-dist/tex/latex/fourier/fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
 LaTeX Font Info:    ... okay on input line 74.
@@ -742,7 +742,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
 LaTeX Font Info:    ... okay on input line 74.
 LaTeX Font Info:    Try loading font information for T1+phv on input line 74.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1phv.fd
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 *geometry* driver: auto-detecting
@@ -779,7 +779,7 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count142
 \scratchdimen=\dimen154
@@ -792,20 +792,18 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 \MPnumerator=\count146
 \makeMPintoPDFobject=\count147
 \everyMPtoPDFconversion=\toks30
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
+(grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -815,7 +813,7 @@ Package caption Info: floatrow package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/floatrow/fr-subfig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/floatrow/fr-subfig.sty
 Package: fr-subfig 2007/12/24 v0.1g (beta) floatrow: additions for subfig
 \FBsc@max=\skip86
 \FBso@max=\skip87
@@ -823,14 +821,14 @@ Package: fr-subfig 2007/12/24 v0.1g (beta) floatrow: additions for subfig
 \AtBeginShipoutBox=\box36
 Package hyperref Info: Link coloring OFF on input line 74.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count148
-LaTeX Info: Redefining \Ref on input line 515.
+LaTeX Info: Redefining \Ref on input line 513.
 )
 LaTeX Info: Redefining \ref on input line 74.
 LaTeX Info: Redefining \pageref on input line 74.
@@ -849,13 +847,13 @@ Package pdftex.def Info: USlogo-top.pdf used on input line 79.
 (pdftex.def)             Requested size: 284.52756pt x 93.31717pt.
 LaTeX Font Info:    Try loading font information for T1+futs on input line 79.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/t1futs.fd
+(/usr/share/texlive/texmf-dist/tex/latex/fourier/t1futs.fd
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
 LaTeX Font Info:    Try loading font information for FML+futmi on input line 79
 .
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fmlfutmi.fd
+(/usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
@@ -885,15 +883,15 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
  [1
 
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </usr/lo
-cal/texlive/2017/texmf-dist/tex/latex/stellenbosch/logos/USlogo-top.pdf>]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </usr/share/texlive/texmf-d
+ist/tex/latex/stellenbosch/logos/USlogo-top.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 83.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 83.
 LaTeX Font Info:    Try loading font information for TS1+phv on input line 83.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ts1phv.fd
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
  been already used, duplicate ignored
@@ -1086,15 +1084,23 @@ File: Images/Results/Training/COVNET_MO_R2_2.png Graphic file (type png)
 <use Images/Results/Training/COVNET_MO_R2_2.png>
 Package pdftex.def Info: Images/Results/Training/COVNET_MO_R2_2.png used on inp
 ut line 453.
-(pdftex.def)             Requested size: 229.73524pt x 117.97221pt.
-File: Images/Results/Training/COVNET_MO_R2_2.png Graphic file (type png)
+(pdftex.def)             Requested size: 243.51878pt x 125.04883pt.
 
+Overfull \hbox (13.78354pt too wide) in paragraph at lines 453--453
+ [][] 
+ []
+
+File: Images/Results/Training/COVNET_MO_R2_2.png Graphic file (type png)
 <use Images/Results/Training/COVNET_MO_R2_2.png>
 Package pdftex.def Info: Images/Results/Training/COVNET_MO_R2_2.png used on inp
 ut line 453.
-(pdftex.def)             Requested size: 229.73524pt x 117.97221pt.
-File: Images/Results/Training/COVNET_MO_R2_.png Graphic file (type png)
+(pdftex.def)             Requested size: 243.51878pt x 125.04883pt.
 
+Overfull \hbox (13.78354pt too wide) in paragraph at lines 453--453
+ [][] 
+ []
+
+File: Images/Results/Training/COVNET_MO_R2_.png Graphic file (type png)
 <use Images/Results/Training/COVNET_MO_R2_.png>
 Package pdftex.def Info: Images/Results/Training/COVNET_MO_R2_.png used on inpu
 t line 453.
@@ -1110,13 +1116,22 @@ File: Images/Results/Training/COVNET_MO_R2_2.png Graphic file (type png)
 <use Images/Results/Training/COVNET_MO_R2_2.png>
 Package pdftex.def Info: Images/Results/Training/COVNET_MO_R2_2.png used on inp
 ut line 453.
-(pdftex.def)             Requested size: 229.73524pt x 117.97221pt.
-File: Images/Results/Training/COVNET_MO_R2_2.png Graphic file (type png)
+(pdftex.def)             Requested size: 243.51878pt x 125.04883pt.
 
+Overfull \hbox (13.78354pt too wide) in paragraph at lines 453--453
+ [][] 
+ []
+
+File: Images/Results/Training/COVNET_MO_R2_2.png Graphic file (type png)
 <use Images/Results/Training/COVNET_MO_R2_2.png>
 Package pdftex.def Info: Images/Results/Training/COVNET_MO_R2_2.png used on inp
 ut line 453.
-(pdftex.def)             Requested size: 229.73524pt x 117.97221pt.
+(pdftex.def)             Requested size: 243.51878pt x 125.04883pt.
+
+Overfull \hbox (13.78354pt too wide) in paragraph at lines 453--453
+ [][] 
+ []
+
 
 <Images/Diagrams/Network-Structures/SingleParameterDedicatedCNN.png, id=410, 70
 9.2096pt x 85.2786pt>
@@ -2048,98 +2063,6 @@ ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Mu"
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-<"Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convol
-utional Architecture - Multiple Output - ELU_Jumps Sigma".png, id=533, 578.16pt
- x 397.485pt>
-File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
-onvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic file
- (type png)
-
-<use "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Co
-nvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png>
-Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
-ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Jumps Sigm
-a".png used on input line 869.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
-onvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic file
- (type png)
-
-<use "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Co
-nvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png>
-Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
-ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Jumps Sigm
-a".png used on input line 869.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-
-<"Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully C
-onnected Architecture - Multiple Output - ELU_Jumps Sigma".png, id=534, 578.16p
-t x 397.485pt>
-File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
-lly Connected Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic fil
-e (type png)
-
-<use "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Ful
-ly Connected Architecture - Multiple Output - ELU_Jumps Sigma".png>
-Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
-ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Sig
-ma".png used on input line 869.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
-lly Connected Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic fil
-e (type png)
-
-<use "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Ful
-ly Connected Architecture - Multiple Output - ELU_Jumps Sigma".png>
-Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
-ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Sig
-ma".png used on input line 869.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
-onvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic file
- (type png)
-
-<use "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Co
-nvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png>
-Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
-ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Jumps Sigm
-a".png used on input line 869.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/C
-onvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic file
- (type png)
-
-<use "Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Co
-nvolutional Architecture - Multiple Output - ELU_Jumps Sigma".png>
-Package pdftex.def Info: "Images/Parameter-Prediction-Results/ConvolutionalNN-M
-ultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Jumps Sigm
-a".png used on input line 869.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
-lly Connected Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic fil
-e (type png)
-
-<use "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Ful
-ly Connected Architecture - Multiple Output - ELU_Jumps Sigma".png>
-Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
-ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Sig
-ma".png used on input line 869.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-File: "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fu
-lly Connected Architecture - Multiple Output - ELU_Jumps Sigma".png Graphic fil
-e (type png)
-
-<use "Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Ful
-ly Connected Architecture - Multiple Output - ELU_Jumps Sigma".png>
-Package pdftex.def Info: "Images/Parameter-Prediction-Results/FullyConnected-Mu
-ltipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Sig
-ma".png used on input line 869.
-(pdftex.def)             Requested size: 229.73524pt x 157.94191pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 (./HonoursProject.bbl [22
 
  <./Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Conv
@@ -2157,15 +2080,11 @@ onalNN-SingleOutput/Convolutional Architecture - Single Output - ELU_Lambda.png
 >] [24 <./Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-EL
 U/Convolutional Architecture - Multiple Output - ELU_Jumps Mu.png> <./Images/Pa
 rameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully Connected Ar
-chitecture - Multiple Output - ELU_Jumps Mu.png> <./Images/Parameter-Prediction
--Results/ConvolutionalNN-MultipleOutput-ELU/Convolutional Architecture - Multip
-le Output - ELU_Jumps Sigma.png> <./Images/Parameter-Prediction-Results/FullyCo
-nnected-MultipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU
-_Jumps Sigma.png>]
-(/usr/local/texlive/2017/texmf-dist/tex/latex/stellenbosch/usbib.eng)
+chitecture - Multiple Output - ELU_Jumps Mu.png>]
+(/usr/share/texlive/texmf-dist/tex/latex/stellenbosch/usbib.eng)
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 24.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 Underfull \hbox (badness 10000) in paragraph at lines 88--92
@@ -2182,38 +2101,49 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 894.
  (./HonoursProject.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 894.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 894.
-Package rerunfilecheck Info: File `HonoursProject.out' has not changed.
-(rerunfilecheck)             Checksum: 6076FF6E2A620955F49C281EF36678DF;2499.
 
+
+Package rerunfilecheck Warning: File `HonoursProject.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `HonoursProject.out':
+(rerunfilecheck)             Before: 6076FF6E2A620955F49C281EF36678DF;2499
+(rerunfilecheck)             After:  DB3AF600713D9EAFE62F761C2D17ABD4;2499.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 894.
  ) 
 Here is how much of TeX's memory you used:
- 12218 strings out of 492995
- 196549 string characters out of 6132705
- 401444 words of memory out of 5000000
- 15321 multiletter control sequences out of 15000+600000
+ 12139 strings out of 493029
+ 193223 string characters out of 6136234
+ 398905 words of memory out of 5000000
+ 15228 multiletter control sequences out of 15000+600000
  175843 words of font info for 161 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,16n,57p,1304b,782s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2017/texm
-f-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/local/texlive/2017/texmf-dist
-/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
-pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw
-/helvetic/uhvro8a.pfb>
-Output written on HonoursProject.pdf (31 pages, 1350250 bytes).
+pdfTeX warning (dest): name{figure.caption.61} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.65} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/
+texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/typ
+e1/public/fourier/fourier-mex.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/fourier/fourier-mlit.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/fourier/fourier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia
+/putb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
+/uhvro8a.pfb>
+Output written on HonoursProject.pdf (31 pages, 2347850 bytes).
 PDF statistics:
- 667 PDF objects out of 1000 (max. 8388607)
- 535 compressed objects within 6 object streams
+ 664 PDF objects out of 1000 (max. 8388607)
+ 536 compressed objects within 6 object streams
  157 named destinations out of 1000 (max. 500000)
- 494 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 484 words of extra memory for PDF output out of 10000 (max. 10000000)
 
