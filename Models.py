@@ -42,15 +42,15 @@ def covnet_multiple_ELUs_8_layers():
     input_1 = Input(shape = (40, 50, 1))
 
     layer1 = Convolution2D(32, 12, 12, border_mode='same', activation='elu')(input_1)
-    layer2 = Convolution2D(32, 12, 12, activation='elu', border_mode='same')(layer1)
+    layer2 = Convolution2D(32, 12, 12, border_mode='same', activation='elu')(layer1)
     layer3 = MaxPooling2D(pool_size=(2,2))(layer2)
 
     layer4 = Convolution2D(64, 6, 6, border_mode='same', activation='elu')(layer3)
-    layer5 = Convolution2D(64, 6, 6, activation='elu', border_mode='same')(layer4)
+    layer5 = Convolution2D(64, 6, 6, border_mode='same', activation='elu')(layer4)
     layer6 = MaxPooling2D(pool_size=(2,2))(layer5)
 
     layer7 = Convolution2D(128, 3, 3, border_mode='same', activation='elu')(layer6)
-    layer8 = Convolution2D(128, 3, 3, activation='elu', border_mode='same')(layer7)
+    layer8 = Convolution2D(128, 3, 3, border_mode='same', activation='elu')(layer7)
     layer9 = MaxPooling2D(pool_size=(2,2))(layer8)
 
     flatten = Flatten()(layer9)
@@ -69,12 +69,12 @@ def covnet_multiple_ELUs_8_layers():
 
 def covnet_single_ReLUs_6_layers():
     convnet_lambda = Sequential()
-    convnet_lambda.add(Convolution2D(32, 12, 12, input_shape=(40, 50, 1), border_mode='same', activation='relu'))
-    convnet_lambda.add(Convolution2D(32, 12, 12, activation='relu', border_mode='same'))
+    convnet_lambda.add(Conv2D(32, (12, 12), input_shape=(40, 50, 1), padding='same', activation='relu'))
+    convnet_lambda.add(Conv2D(32, (12, 12), padding='same', activation='elu'))
     convnet_lambda.add(MaxPooling2D(pool_size=(2,2)))
 
-    convnet_lambda.add(Convolution2D(64, 6, 6, border_mode='same', activation='relu'))
-    convnet_lambda.add(Convolution2D(64, 6, 6, activation='relu', border_mode='same'))
+    convnet_lambda.add(Conv2D(64, (6, 6), padding='same', activation='elu'))
+    convnet_lambda.add(Conv2D(64, (6, 6), padding='same', activation='elu'))
     convnet_lambda.add(MaxPooling2D(pool_size=(2,2)))
 
     convnet_lambda.add(Flatten())
