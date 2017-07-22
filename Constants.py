@@ -1,4 +1,4 @@
-ROOT_DIR = "../"
+ROOT_DIR = "./"
 
 # .h5 Keras Weight File Storage Directories:
 
