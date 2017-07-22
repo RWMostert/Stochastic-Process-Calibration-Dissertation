@@ -25,6 +25,8 @@
 \usepackage{hyperref}
 \usepackage[labelfont=bf]{caption}
 \usepackage[shortlabels]{enumitem}
+\usepackage[acronym,toc]{glossaries}
+\usepackage{xspace}
 
 \titleformat
 {\chapter} % command
@@ -42,6 +44,26 @@
 ] % after-code
 
 \titlespacing*{\chapter}{0pt}{-15pt}{40pt}
+
+\newcommand\applyappendixstyling{%
+	\titleformat
+	{\chapter} % command
+	[display] % shape
+	{\bfseries\Large\centering} % format
+	{APPENDIX \ \thechapter} % label
+	{-2ex} % sep
+	{
+		\vspace{1.5ex}
+		\centering
+		\uppercase
+	} % before-code
+	[
+	\vspace{-2ex}%
+	] % after-code
+	
+	\titlespacing*{\chapter}{0pt}{-15pt}{40pt}
+}
+
 
 \titleformat{\section}
 {\normalfont\bfseries\uppercase}
@@ -61,9 +83,24 @@
 	\setlength{\headheight}{20pt}
 }
 
+\usepackage[toc,page]{appendix}
+
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parskip}{0.5em}
 \setlength{\parindent}{0pt}
+
+\makeglossaries
+
+% Acronyms:
+\newacronym{ann}{ANN}{artificial neural network}
+\newacronym{cnn}{CNN}{convolutional neural network}
+\newacronym{sde}{SDE}{stochastic differential equation}
+\newacronym{mlestimation}{MLE}{maximum likelihood estimation}
+\newacronym{mle}{MLE}{maximum likelihood estimate}
+\newacronym{mme}{MME}{generalised method of moments estimation}
+\newacronym{elu}{ELU}{exponential linear unit}
+\newacronym{relu}{ReLU}{rectified linear unit}
+\newacronym{em}{EM}{expectation maximisation}
 
 %opening
 \title{A Universal Calibration Scheme for Stochastic Processes using Artificial Neural Networks}
@@ -81,14 +118,24 @@
 	\DeclarationDate{July 2017}
 	\DeclarationPage
 	
+
+\
 \begin{abstract}
 	
 \end{abstract}
 
 \tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\printglossary[type=\acronymtype, title=List of abbreviations and/or acronyms, toctitle=List of abbreviations]
 	
-\chapter{Introduction}
+\chapter{Introduction} 
+\label{chapter:introduction}
 \pagenumbering{arabic}
+
 \section{Introduction}
 
 \begin{quote}
@@ -96,30 +143,30 @@
 	\\ --- Submission to the Faculty of Actuaries students' society in 1998 (\citefullauthor{cairns1998stochastic}; \citeyear{cairns1998stochastic})
 \end{quote}
 
-Stochastic processes are simply a collection of random variables, usually indexed by time \citep{Barone-Adesi}. They are typically used during the modelling process, in order to describe the evolution of an underlying real-world process. To allow for it to be used within the modelling context, a stochastic process is often expressed by its stochastic differential equation (SDE). 
-Using the SDE, the simulated stochastic process can then be adjusted to best represent the real-world process at hand - whether that be the evolution of the price of a certain stock, the claims on an insurance policy or the mortality rate of a group of policyholders. 
+Stochastic processes are simply a collection of random variables, usually indexed by time \citep{Barone-Adesi}. They are typically used during the modelling process, in order to describe the evolution of an underlying real-world process. To allow for it to be used within the modelling context, a stochastic process is often expressed by its \acrfull{sde}. 
+Using the \acrshort{sde}, the simulated stochastic process can then be adjusted to best represent the real-world process at hand - whether that be the evolution of the price of a certain stock, the claims on an insurance policy or the mortality rate of a group of policyholders. 
 \citefullauthor{Oreskes} (\citeyear{Oreskes}) refer to this procedure of "[manipulating] the independent variables to obtain a match between the observed and simulated distribution or distributions of a dependent variable or variables", as model calibration.
 
 
-Effectively modelling a real-world process involves two major challenges. Firstly, choosing an appropriate stochastic process with properties that mimic those of the real-world process; and, secondly, finding the most suitable parameters for the relevant SDE. In practice, however, the selection of an appropriate stochastic process is often influenced by the ease with which its parameters can be calibrated. Thus complex stochastic processes, with more complex SDEs, are often substituted for simpler, easily calibrated models. This can lead to the use of models that are subject to simplifying assumptions or possess properties that may not be the best possible representation of reality.
+Effectively modelling a real-world process involves two major challenges. Firstly, choosing an appropriate stochastic process with properties that mimic those of the real-world process; and, secondly, finding the most suitable parameters for the relevant \acrshort{sde}. In practice, however, the selection of an appropriate stochastic process is often influenced by the ease with which its parameters can be calibrated. Thus complex stochastic processes, with more complex \acrshort{sde}s, are often substituted for simpler, easily calibrated models. This can lead to the use of models that are subject to simplifying assumptions or possess properties that may not be the best possible representation of reality.
 
 
-The difficulty associated with model calibration depends on the method of calibration applied. \citet{Mongwe} and \citet{Honore} describe how common calibration methods, including Maximum Likelihood Estimation (MLE) and the Generalized Method of Moments (MME), can break down under more complex SDEs. MLE, for example, requires the derivation of the likelihood function, which is often difficult in the case of complex SDEs as they can yield unbounded likelihood functions.
+The difficulty associated with model calibration depends on the method of calibration applied. \citet{Mongwe} and \citet{Honore} describe how common calibration methods, including \acrfull{mlestimation} and the \acrfull{mme}, can break down under more complex \acrshort{sde}s. \acrshort{mlestimation}, for example, requires the derivation of the likelihood function, which is often difficult in the case of complex \acrshort{sde}s as they can yield unbounded likelihood functions.
 
 
-Another calibration method that has seen a renaissance in the last decade is that of backpropagation, which has proven to be a powerful gradient descent-based algorithm for calibrating Artificial Neural Networks (ANNs). 
-This paper will explore the ways in which these statistical learning techniques - namely ANNs, calibrated by backpropagation - could, in turn, be applied to the calibration of stochastic processes.
+Another calibration method that has seen a renaissance in the last decade is that of backpropagation, which has proven to be a powerful gradient descent-based algorithm for calibrating \acrlong{ann}s (\acrshort{ann}s). 
+This paper will explore the ways in which these statistical learning techniques - namely \acrshort{ann}s, calibrated by backpropagation - could, in turn, be applied to the calibration of stochastic processes.
 
 
 
 \section{Problem Statement}
-Every stochastic process contains a set of parameters, $ Z $, which controls the dynamics of the paths produced by the model. The calibration problem can be framed as a mapping from the observed data, $ D $, or some transformation thereof, to these parameter values, $ Z $. Let C denote the calibration method, then $C$ is necessarily of the form,
+Every stochastic process contains a set of parameters, $ Z $, which controls the dynamics of the paths produced by the model. The calibration problem can be framed as a mapping from the observed data, $ D $, or some transformation thereof, to these parameter values, $ Z $. Let $C$ denote the calibration method, then $C$ is necessarily of the form,
 
 \begin{equation}
 C:f \left( D \right) \rightarrow Z
 \end{equation}
 
-An ANN is a collection of interconnected processing units \citep{Teugels}, which realises a nonlinear mapping from inputs, $ R^X $ to outputs, $ R^Y $.
+An \acrshort{ann} is a collection of interconnected processing units \citep{Teugels}, which realises a nonlinear mapping from inputs, $ R^X $ to outputs, $ R^Y $.
 
 \begin{equation}
 NN: R^X \rightarrow R^Y
@@ -128,33 +175,33 @@ NN: R^X \rightarrow R^Y
 This mapping is achieved by chaining a sequence of nonlinear multiple regression functions, f, (called activation functions) together in layers (see 1.5.1 below).
 
 
-From equations (1.1) and (1.2), we can see that an ANN has the ability to estimate the calibration function, $ C $. 
+From equations (1.1) and (1.2), we can see that an \acrshort{ann} has the ability to estimate the calibration function, $ C $. 
 This assertion is justified by the Universal Approximation Theorem, which states that "standard multilayer feedforward networks are capable of approximating any measurable function to any desired degree of accuracy" (\citefullauthor{Hornik},\citeyear{Hornik}).
 
 
 The question, however, remains as to what such a network might look like and how it would compare to traditional calibration techniques.
 
 \section{Research Objectives}
-This paper has the primary objective of researching and testing the viability of ANNs as a universal method of parameter estimation for any stochastic process. As to be seen in the literature review, ANNs have been used extensively in the world of financial modelling, and to some extent in the calibration of simple stochastic processes.
+This paper has the primary objective of researching and testing the viability of \acrshort{ann}s as a universal method of parameter estimation for any stochastic process. As to be seen in the literature review, \acrshort{ann}s have been used extensively in the world of financial modelling, and to some extent in the calibration of simple stochastic processes.
 
 
-Conceivably, ANNs have the potential to act as a universal calibration method for any stochastic process. This paper aims to investigate whether and how that might function in practice.
+Conceivably, \acrshort{ann}s have the potential to act as a universal calibration method for any stochastic process. This paper aims to investigate whether and how that might function in practice.
 
 
-This study will consist of two phases. In the first, an ANN will be implemented for a sufficiently complex SDE, for which a likelihood function does exist (for comparative purposes). In the second phase, the accuracy of the network?s approximation of the calibration function will be measured and compared against that of other calibration techniques, and an empirical study will attempt to ascertain whether the resulting calibration scheme is robust on real financial data.
+This study will consist of two phases. In the first, an \acrshort{ann} will be implemented for a sufficiently complex \acrshort{sde}, for which a likelihood function does exist (for comparative purposes). In the second phase, the accuracy of the network's approximation of the calibration function will be measured and compared against that of other calibration techniques, and an empirical study will attempt to ascertain whether the resulting calibration scheme is robust on real financial data.
 
 \section{Importance of the Study}
 
-An ANN-based approach to parameter estimation could likely provide numerous benefits above the popular MLE and MME approaches.
-The technique could potentially provide a universal solution to approximate the calibration function, $C$, for any arbitrarily complex SDE.
+An \acrshort{ann}-based approach to parameter estimation could likely provide numerous benefits above the popular \acrshort{mlestimation} and \acrshort{mme} approaches.
+The technique could potentially provide a universal solution to approximate the calibration function, $C$, for any arbitrarily complex \acrshort{sde}.
 It does not require the derivation of the likelihood function, which can be difficult.
-The model drops some of the strong assumptions made by MLE and MME. 
+The model drops some of the strong assumptions made by \acrshort{mlestimation} and \acrshort{mme}. 
 
 
-Another possible advantage could lie in the scheme's ability to combine the predictive power of ANNs with the descriptive properties of certain stochastic processes. \citet{Olden} explain that "although in many studies ANNs have been shown to exhibit superior predictive power compared to traditional approaches, they have also been labelled a 'black box' because they provide little explanatory insight into the relative influence of the independent variables in the prediction process". The approach, whereby the ANN is used only to calibrate a more expressive and widely understood model - a stochastic process - might help to remedy this.
+Another possible advantage could lie in the scheme's ability to combine the predictive power of \acrshort{ann}s with the descriptive properties of certain stochastic processes. \citet{Olden} explain that "although in many studies \acrshort{ann}s have been shown to exhibit superior predictive power compared to traditional approaches, they have also been labelled a 'black box' because they provide little explanatory insight into the relative influence of the independent variables in the prediction process". The approach, whereby the \acrshort{ann} is used only to calibrate a more expressive and widely understood model - a stochastic process - might help to remedy this.
 
 
-\citet{Mongwe} presents the example of the Merton jump diffusion process with SDE,
+\citet{Mongwe} presents the example of the Merton jump diffusion process with \acrshort{sde},
 
 \begin{equation}
 	d \ln{S_t}= \left( \mu - \frac{1}{2} \sigma^2 \right )dt+\sigma dB +d \left( \sum_{i=1}^{N_t} Y_i \right )
@@ -163,22 +210,22 @@ Another possible advantage could lie in the scheme's ability to combine the pred
 where $ \mu $  is referred to as the drift coefficient and $ \sigma $ as the diffusion coefficient. $ B_{t}, t\geq 0$ is a standard Brownian motion process. $Y_i$ represents the random size of the $i$th jump, and has distribution, $Y_i \sim N \left( \mu_{jump}, \sigma_{jump}^2 \right )$. $N_t, t \geq 0$ is a Poisson process with intensity $\lambda$.
 
 
-Note that these parameters provide insight into the characteristics of the stochastic process being modelled. Hence, it could arguably be more enlightening to fit the observed data to an expressive stochastic process which yields explanatory parameters, than simply using a "non-parametric" ANN to model the real-world process entirely. This helps avoid the black-box pitfall commonly associated with ANNs, while still making use of their "superior predictive power". This is of importance, as prudent financial management involves using modelling techniques that are well understood, clearly defined and well documented. ANNs - despite their powerful properties - are often not an acceptable means of modelling in actuarial applications. By using them simply to calibrate complex stochastic processes (which are a suitable and widely acceptable modelling tool), the strengths of ANNs are retained, without the risk associated with a black-box technique.
+Note that these parameters provide insight into the characteristics of the stochastic process being modelled. Hence, it could arguably be more enlightening to fit the observed data to an expressive stochastic process which yields explanatory parameters, than simply using a "non-parametric" \acrshort{ann} to model the real-world process entirely. This helps avoid the black-box pitfall commonly associated with \acrshort{ann}s, while still making use of their "superior predictive power". This is of importance, as prudent financial management involves using modelling techniques that are well understood, clearly defined and well documented. \acrshort{ann}s - despite their powerful properties - are often not an acceptable means of modelling in actuarial applications. By using them simply to calibrate complex stochastic processes (which are a suitable and widely acceptable modelling tool), the strengths of \acrshort{ann}s are retained, without the risk associated with a black-box technique.
 
 \section{Research Design and Methodology}
-The research design and methodology will give an overview of the model construction process. Firstly, a more thorough description of one of the core components of the scheme - an ANN - is presented. This is followed by an explanation as to how an ANN architecture could be applied to estimating the model calibration function. Lastly, an overview of how the model is to be evaluated follows.
+The research design and methodology will give an overview of the model construction process. Firstly, a more thorough description of one of the core components of the scheme - an \acrshort{ann} - is presented. This is followed by an explanation as to how an \acrshort{ann} architecture could be applied to estimating the model calibration function. Lastly, an overview of how the model is to be evaluated follows.
 
 \subsection{Neural Networks}
 An Artificial Neural Network is a mathematical model consisting of an interconnected collection of processing units, which realises a nonlinear mapping from inputs $R^X$ to outputs $R^Y$,
 
 \begin{equation}
-	ANN: R^X \rightarrow R^Y
+	\acrshort{ann}: R^X \rightarrow R^Y
 \end{equation}
 
 This mapping is achieved by chaining a sequence of nonlinear multiple regression functions, $f$, (called activation functions) together in layers.  Each input into every activation function is weighted by some value $w$.
 
 
-The most common ANN architecture, a multilayer Perceptron, is illustrated in figure 1.1.
+The most common \acrshort{ann} architecture, a multilayer Perceptron, is illustrated in figure 1.1.
 
 \begin{figure}[h]
 	\centering
@@ -187,30 +234,30 @@ The most common ANN architecture, a multilayer Perceptron, is illustrated in fig
 	\label{fig:neuralnetwork}
 \end{figure}
 
-For a given input, $x$, and (expected) output, $y$, the error of the ANN, $ \epsilon $, is equal to the distance between the ANN's outputs, $o$, and the expected outputs. The power of ANNs lies in the fact that they can be trained to minimize this error. 
+For a given input, $x$, and (expected) output, $y$, the error of the \acrshort{ann}, $ \epsilon $, is equal to the distance between the \acrshort{ann}'s outputs, $o$, and the expected outputs. The power of \acrshort{ann}s lies in the fact that they can be trained to minimize this error. 
 
 
-Training the network involves firstly initialising the network with a random set of weights, $W$. A large set of training data (sets of inputs, $X$, and desired outputs, $Y$) is then presented to the network. The optimisation process (often referred to as backpropagation) proceeds by calculating the prediction error, $ \epsilon $, for each of these data sets, and then "propagating" this error value backwards through the network so that each weight can be adjusted accordingly. This is achieved by means of automatic differentiation. Automatic differentiation allows us to compute the partial derivative of the error with respect to the weights in the ANN, $W$ \citep{Werbos}.
+Training the network involves firstly initialising the network with a random set of weights, $W$. A large set of training data (sets of inputs, $X$, and desired outputs, $Y$) is then presented to the network. The optimisation process (often referred to as backpropagation) proceeds by calculating the prediction error, $ \epsilon $, for each of these data sets, and then "propagating" this error value backwards through the network so that each weight can be adjusted accordingly. This is achieved by means of automatic differentiation. Automatic differentiation allows us to compute the partial derivative of the error with respect to the weights in the \acrshort{ann}, $W$ \citep{Werbos}.
 
 
-This process is repeated iteratively over the training data, until the error of the ANN converges or some other stopping criteria is satisfied. At this point, the ANN will have approximated the relation, $\mathbf{X}\rightarrow \mathbf{Y}$.
+This process is repeated iteratively over the training data, until the error of the \acrshort{ann} converges or some other stopping criteria is satisfied. At this point, the \acrshort{ann} will have approximated the relation, $\mathbf{X}\rightarrow \mathbf{Y}$.
 
 
-A number of technical details - such as what inputs are fed into the ANN, what activation function is used, the number of activation functions used, the number of layers used, and the exact function used to estimate the error - have been omitted from this discussion for the sake of brevity. 
+A number of technical details - such as what inputs are fed into the \acrshort{ann}, what activation function is used, the number of activation functions used, the number of layers used, and the exact function used to estimate the error - have been omitted from this discussion for the sake of brevity. 
 
 \subsection{Approximating the Calibration Function, $\mathbf{C}$} \label{subsection:neural_networks:approximating_the_calibration_function_C}
-From the previous section, it follows that an ANN should - theoretically - be able to approximate the calibration function defined earlier, $C: f \left( D \right) \rightarrow Z$. That is, $NN \approx C$.
+From the previous section, it follows that an \acrshort{ann} should - theoretically - be able to approximate the calibration function defined earlier, $C: f \left( D \right) \rightarrow Z$. That is, $NN \approx C$.
 This can be achieved by:
 \begin{enumerate}[i)]
 	\itemsep0em 
 	
 	\item generating a set of random calibrations, $\mathbf{Z}$
 	
-	\item simulating a set of paths,  $\mathbf{Z}$, using the given SDE for every  $Z_i \in \mathbf{Z}$
+	\item simulating a set of paths,  $\mathbf{Z}$, using the given \acrshort{sde} for every  $Z_i \in \mathbf{Z}$
 	
 	\item extracting a set of "inputs", $\mathbf{X}$, from the data $\mathbf{X} = f\left(\mathbf{D}\right)$
 	
-	\item training the ANN to predict the original calibrations, $\mathbf{Z}$, given the data $\mathbf{X}=f \left( \mathbf{D} \right)$ as input. This is done by setting the ANN to minimise the error $\epsilon$ of its output, $\mathbf{O}$ (which corresponds to an estimate of $Z_i$) and the true known values of $Z_i$.
+	\item training the \acrshort{ann} to predict the original calibrations, $\mathbf{Z}$, given the data $\mathbf{X}=f \left( \mathbf{D} \right)$ as input. This is done by setting the \acrshort{ann} to minimise the error $\epsilon$ of its output, $\mathbf{O}$ (which corresponds to an estimate of $Z_i$) and the true known values of $Z_i$.
 	
 	
 \end{enumerate}
@@ -222,65 +269,59 @@ This can be achieved by:
 	\label{fig:calibrationschemediagram}
 \end{figure}
 
-If a large enough set of calibrations is chosen and enough data is simulated from the SDE using each calibration, the ANN will approximate the desired calibration function, $C$, for the given SDE.
+If a large enough set of calibrations is chosen and enough data is simulated from the \acrshort{sde} using each calibration, the \acrshort{ann} will approximate the desired calibration function, $C$, for the given \acrshort{sde}.
 
 
-This trained ANN can then be applied to real-world observations to calibrate the relevant SDE for the observed process.  This is done by inputting the data observed from the real-word stochastic process into the trained ANN. The ANN output, $\mathbf{o'}$, will then be an estimate of the parameters (i.e. a calibration) for the SDE that the ANN was trained on.
+This trained \acrshort{ann} can then be applied to real-world observations to calibrate the relevant \acrshort{sde} for the observed process.  This is done by inputting the data observed from the real-word stochastic process into the trained \acrshort{ann}. The \acrshort{ann} output, $\mathbf{o'}$, will then be an estimate of the parameters (i.e. a calibration) for the \acrshort{sde} that the \acrshort{ann} was trained on.
 
 
-In this paper, the ANN will be built and trained in Python, using the open source Tensorflow and Keras libraries.
+In this paper, the \acrshort{ann} was built and trained in Python, using Google's open source Tensorflow\texttrademark \xspace \citep{tensorflow2015-whitepaper} and Keras \citep{chollet2015keras} libraries. All model training was done using the Adam optimizer \citep{adam}.
 
-\subsection{Model Evaluation}
-
-The proposed model will be evaluated in terms of the accuracy with which it can predict the true parameters of the stochastic process. This is done by generating sets of parameter values, which are used to simulate sets of corresponding sample paths. These sample paths would then be fed into the calibration function and the results (the parameter estimates) compared to the originally generated parameter set, to obtain a measure of accuracy. The accuracy measure could then be compared against that of other estimation techniques. 
-\par
-Accuracy, however, is not the only evaluation metric. The calibration technique itself (using an ANN to calibrate the stochastic process at hand) will be evaluated by its ability to generalise. This is indicated by the ease with which the technique might deal with different types of stochastic processes (without too many structural changes to the technique itself). 
-
-
-The main focus of this paper remains the definition of a robust methodology that can be followed to approximate the parameters for any stochastic process. A thorough conclusion must report on the potential of the proposed technique to be considered a universal approximation method.
-
+A full list of software and packages used in this dissertation is available in appendix \ref{list_of_software_used}.
 
 \chapter{Literature Review}
-The literature discussed throughout this research will fall into mainly two broad categories. Firstly, a review of the common methods proposed for the calibration of stochastic processes, focusing on their limitations, ease of use, universality and accuracy. Secondly, an overview of past applications of ANNs to modelling and model calibration. 
+\label{chapter:literature_review}
+The literature discussed throughout this research will fall into mainly two broad categories. Firstly, a review of the common methods proposed for the calibration of stochastic processes, focusing on their limitations, ease of use, universality and accuracy. Secondly, an overview of past applications of \acrshort{ann}s to modelling and model calibration. 
 
 \section{Calibration of Stochastic Processes}
 The main argument for a universal neural network approach to model calibration is that traditional methods are often unpractical. Numerous academic works substantiate this observation.
 
 
-\citefullauthor{Nielsen} (\citeyear{Nielsen}) reviewed the progress made on SDE parameter estimation over the 80s and 90s. They note that the MLE approach does not generalise and, having studied the generalised method of moments and the efficient method of moments, they explain that both of these methods will result in tests of low power due to the efficiency loss.
+\citefullauthor{Nielsen} (\citeyear{Nielsen}) reviewed the progress made on \acrshort{sde} parameter estimation over the 80s and 90s. They note that the \acrshort{mlestimation} approach does not generalise and, having studied the \acrshort{mme} and the efficient method of moments, they explain that both of these methods will result in tests of low power due to the efficiency loss.
 
 
-More recently, \citet{Mongwe} did a study on jump diffusion processes applied to the South African equity and interest rate markets. He reported on the application and accuracy of multiple calibration methods, including the likelihood profiling approach \citep{Honore}, the standard MLE approach, the MME approach and expectation maximisation (EM). He concluded that both MLE and MME fell short of expectations, and that the likelihood profiling and EM techniques worked best on parameter estimation for jump diffusion processes (each under different restrictions on the parameters) (Mongwe, 2015). These recommendations will be applied when evaluating and comparing the performance of the neural-network calibration approach in this paper to that of existing methods.
+More recently, \citet{Mongwe} did a study on jump diffusion processes applied to the South African equity and interest rate markets. He reported on the application and accuracy of multiple calibration methods, including the likelihood profiling approach \citep{Honore}, the standard \acrshort{mlestimation} approach, the \acrshort{mlestimation} approach and \acrfull{em}. He concluded that both \acrshort{mlestimation} and \acrshort{mme} fell short of expectations, and that the likelihood profiling and \acrshort{em} techniques worked best on parameter estimation for jump diffusion processes (each under different restrictions on the parameters) (Mongwe, 2015). These recommendations will be applied when evaluating and comparing the performance of the neural-network calibration approach in this paper to that of existing methods.
 
 
 \section{Neural Networks in Modelling and Model Calibration}
-Except for the case of \citefullauthor{Xie} (\citeyear{Xie}), the task of calibrating stochastic processes using ANNs has not been thoroughly attempted or documented in the major academic journals examined for this research. Numerous works do however highlight the potential of ANNs in this field.
-Multiple studies have been done on the use of ANNs in pricing options, and - in particular - to outperform the Black-Scholes model (\citefullauthor{Yao}; \citeyear{Yao}). The results seem to indicate that ANNs outperform the Black-Scholes model in volatile markets, and are particularly useful in these when the "constant $\sigma$" assumption underlying the Black-Scholes model is violated.
+Except for the case of \citefullauthor{Xie} (\citeyear{Xie}), the task of calibrating stochastic processes using \acrshort{ann}s has not been thoroughly attempted or documented in the major academic journals examined for this research. Numerous works do however highlight the potential of \acrshort{ann}s in this field.
+Multiple studies have been done on the use of \acrshort{ann}s in pricing options, and - in particular - to outperform the Black-Scholes model (\citefullauthor{Yao}; \citeyear{Yao}). The results seem to indicate that \acrshort{ann}s outperform the Black-Scholes model in volatile markets, and are particularly useful in these when the "constant $\sigma$" assumption underlying the Black-Scholes model is violated.
 
 
-Tackling the issue of model calibration; \citet{Samad} investigated the application of ANNs to the calibration of process systems - namely that of first-order process open-loop delay identification. They concluded that ANNs are an attractive solution, as they do not require the subject-specific expertise vital to common engineering approaches, provide high accuracy and prove robust on real-world data.
+Tackling the issue of model calibration; \citet{Samad} investigated the application of \acrshort{ann}s to the calibration of process systems - namely that of first-order process open-loop delay identification. They concluded that \acrshort{ann}s are an attractive solution, as they do not require the subject-specific expertise vital to common engineering approaches, provide high accuracy and prove robust on real-world data.
 
 
-On the topic of this paper, \citet{Xie} did an investigation into the feasibility of estimating the parameters both linear and nonlinear SDEs using multilayer perceptron (MLP) networks. Their investigation comprised only of small MLPs with 1-, 2- and 3-hidden-layer, fully connected architectures. They found that, under certain conditions limiting the parameter values of the process, a simple MLP would be able to estimate parameters with high accuracy ($R^2 > 0.93$). They report that this accuracy figure, however, does diminish under noisy conditions and SDEs with high diffusion levels. Another, often overlooked element noted by their research is the importance of the regime used to generate the simulated training data. The paper indicates to a notable increase in accuracy by using a simulation regime that makes use of the same parameters over 5 different Wiener processes, which effectively helps remove the "randomness" and noise from the dataset. They called for more research on the subject, particularly using different ANN architectures. What is notable about the paper presented, is that high accuracy was achieved using a simple network topology. This serves as evidence for the potential of ANNs to act as robust calibration estimators for SDEs.
+On the topic of this paper, \citet{Xie} did an investigation into the feasibility of estimating the parameters both linear and nonlinear \acrshort{sde}s using multilayer perceptron (MLP) networks. Their investigation comprised only of small MLPs with 1-, 2- and 3-hidden-layer, fully connected architectures. They found that, under certain conditions limiting the parameter values of the process, a simple MLP would be able to estimate parameters with high accuracy ($R^2 > 0.93$). They report that this accuracy figure, however, does diminish under noisy conditions and \acrshort{sde}s with high diffusion levels. Another, often overlooked element noted by their research is the importance of the regime used to generate the simulated training data. The paper indicates to a notable increase in accuracy by using a simulation regime that makes use of the same parameters over 5 different Wiener processes, which effectively helps remove the "randomness" and noise from the dataset. They called for more research on the subject, particularly using different \acrshort{ann} architectures. What is notable about the paper presented, is that high accuracy was achieved using a simple network topology. This serves as evidence for the potential of \acrshort{ann}s to act as robust calibration estimators for \acrshort{sde}s.
 
 
-\citet{Giebel} proposed a novel calibration method for time series that dynamically adapts the parameters of a stochastic model by using small MLP networks (2-layer). These ANNs use data from the past n observations to inform an updated parameter value. They then used the updated stochastic process to forecast the time series one day ahead, while updating the parameters at each time step as they proceed through the time series. They argue that updating the parameters of the stochastic process at each time step is more realistic, due to investors often weighting recent observations as more relevant than aged data. Using this method, different weights can be assigned to data from different dates in the past. The calibration scheme proposed in this paper could potentially add great value to the technique described by Giebel and Rainer, as it would allow the periodic recalibration of more complex processes, and the incorporation of many additional parameters. 
+\citet{Giebel} proposed a novel calibration method for time series that dynamically adapts the parameters of a stochastic model by using small MLP networks (2-layer). These \acrshort{ann}s use data from the past n observations to inform an updated parameter value. They then used the updated stochastic process to forecast the time series one day ahead, while updating the parameters at each time step as they proceed through the time series. They argue that updating the parameters of the stochastic process at each time step is more realistic, due to investors often weighting recent observations as more relevant than aged data. Using this method, different weights can be assigned to data from different dates in the past. The calibration scheme proposed in this paper could potentially add great value to the technique described by Giebel and Rainer, as it would allow the periodic recalibration of more complex processes, and the incorporation of many additional parameters. 
 
 \chapter{Methodology}
+\label{chapter:methodology}
 
 \section{Artificial Neurons}
 
-In Chapter 1, ANNs were introduced. Figure~\ref{fig:neuralnetwork} introduces 3 types of trainable neurons: weights (denoted by $w$), biases ($u$), and activation functions ($f$). Hence, every individual neuron multiplies the set of inputs, $x_i$ by their corresponding weights $w_i$ and adds some bias, $u$ - the sum of which is then fed through an activation function $f$. The result is propagated forward in the network to the next set of neurons. Mathematically, the output of the $k$th neuron is given by:
+In Chapter 1, \acrshort{ann}s were introduced. Figure~\ref{fig:neuralnetwork} introduces 3 types of trainable neurons: weights (denoted by $w$), biases ($u$), and activation functions ($f$). Hence, every individual neuron multiplies the set of inputs, $x_i$ by their corresponding weights $w_i$ and adds some bias, $u$ - the sum of which is then fed through an activation function $f$. The result is propagated forward in the network to the next set of neurons. Mathematically, the output of the $k$th neuron is given by:
 \begin{equation}
 \mathbf{o}_k = f\left(\sum_i \left[ \mathbf{w}_{ki} \mathbf{x}_i \right] + \mathbf{u}_k\right)
 \end{equation}
 
 \subsection{Activation Functions}
-The activation function $f$ is used to add non-linearity to the architecture. Without it the model would be little more than a multivariate linear model. There are a number of choices for this activation function. The most popular being rectified linear units (ReLUs), Exponential Linear Units (ELUs), logistic sigmoid- and hyperbolic tangent functions.
+The activation function $f$ is used to add non-linearity to the architecture. Without it the model would be little more than a multivariate linear model. There are a number of choices for this activation function. The most popular being \acrlong{relu}s (\acrshort{relu}s), \acrlong{elu}s (\acrshort{elu}s), logistic sigmoid- and hyperbolic tangent functions.
 
-Prior to the work of \citefullauthor{glorot2011deep} (\citeyear{glorot2011deep}), logistic sigmoid and hyperbolic tangent functions were the commonest activation functions in neural network architectures. \citet{glorot2011deep} however showed that ReLUs yield better performance. ReLUs employ the activation function $f\left(x\right) = max\left(0, x\right)$.
+Prior to the work of \citefullauthor{glorot2011deep} (\citeyear{glorot2011deep}), logistic sigmoid and hyperbolic tangent functions were the commonest activation functions in neural network architectures. \citet{glorot2011deep} however showed that \acrshort{relu}s yield better performance. \acrshort{relu}s employ the activation function $f\left(x\right) = max\left(0, x\right)$.
 
-\citefullauthor{DBLP:journals/corr/ClevertUH15} (\citeyear{DBLP:journals/corr/ClevertUH15}) introduced the "exponential linear unit", which provided even better performance than ReLUs, both in terms of learning speed as well as generalisation potential. An ELU with parameter $\alpha > 0$ has activation function.
+\citefullauthor{DBLP:journals/corr/ClevertUH15} (\citeyear{DBLP:journals/corr/ClevertUH15}) introduced the "exponential linear unit", which provided even better performance than \acrshort{relu}s, both in terms of learning speed as well as generalisation potential. An \acrshort{elu} with parameter $\alpha > 0$ has activation function.
 
 \begin{equation}
 f\left(x\right)=\left\{\begin{matrix}
@@ -294,7 +335,7 @@ x & if\ \ x > 0\\
 		
 		 \ffigbox{\includegraphics[width=1\linewidth]{Images/Results/relu}}{\caption[Rectifier Activation Function, f(x)]{Rectifier Activation Function, $f(x)$.}\label{fig:relu}}
 		 
-		\ffigbox{\includegraphics[width=1\linewidth]{Images/Results/elu}}{	\caption[Exponential Linear Unit (ELU)]{Exponential Linear Unit (ELU) Activation Function, with $\alpha = 0.5$.}
+		\ffigbox{\includegraphics[width=1\linewidth]{Images/Results/elu}}{	\caption[Exponential Linear Unit (\acrshort{elu})]{Exponential Linear Unit (\acrshort{elu}) Activation Function, with $\alpha = 0.5$.}
 			\label{fig:elu}}
 
 	\end{floatrow}
@@ -302,7 +343,7 @@ x & if\ \ x > 0\\
 
 \section{Convolutional Layer}
 
-Convolutional Neural Networks (CNN's) are a variation of the traditional multi-layer perceptron architecture. Like ordinary feed-forward networks, they consist of neurons with trainable weights and biases. Unlike feed-forward networks, these neurons are grouped into sets of small filters. With every forward pass, the filters are sequentially convolved across the extend of the input volume. This produces an activation map containing the result of the "filtration" at every point of the input volume.
+\acrlong{cnn}s (\acrshort{cnn}'s) are a variation of the traditional multi-layer perceptron architecture. Like ordinary feed-forward networks, they consist of neurons with trainable weights and biases. Unlike feed-forward networks, these neurons are grouped into sets of small filters. With every forward pass, the filters are sequentially convolved across the extend of the input volume. This produces an activation map containing the result of the "filtration" at every point of the input volume.
 
 In an image-recognition setting, the network will typically train filters that activate on the detection of visual features such as edges or a blotch of colour \citep{cs231n}. However, in this study, there is no certain way to ascertain what they might detect.
 
@@ -321,7 +362,7 @@ In an image-recognition setting, the network will typically train filters that a
 \end{figure}
 
 \subsection{Pooling}
-Convolutional Network architectures often feature pooling layers, which aggregate the outputs of multiple preceding neurons into a single feature, which is then propagated forward through the network. Two prevalent pooling operations are subsampling (where the mean of the preceding neuron outputs are transmitted to the subsequent layer), as well as maximum pooling - which propagates the maximum output from a set of preceding neuron outputs, to the next layer. The empirical results of \citefullauthor{Scherer2010} (\citeyear{Scherer2010}) show that "a maximum pooling operation significantly outperforms subsampling operations". In the convolutional network implementations from this dissertation, extensive use was made of maximum pooling operations. Note that - unlike the filters of a convolutional layer - the weights of an average- or maximum pooling operation cannot be adjusted during training, and hence the pooling layers do not form part of the set of trainable network layers.
+\acrshort{cnn} architectures often feature pooling layers, which aggregate the outputs of multiple preceding neurons into a single feature, which is then propagated forward through the network. Two prevalent pooling operations are subsampling (where the mean of the preceding neuron outputs are transmitted to the subsequent layer), as well as maximum pooling - which propagates the maximum output from a set of preceding neuron outputs, to the next layer. The empirical results of \citefullauthor{Scherer2010} (\citeyear{Scherer2010}) show that "a maximum pooling operation significantly outperforms subsampling operations". In the convolutional network implementations from this dissertation, extensive use was made of maximum pooling operations. Note that - unlike the filters of a convolutional layer - the weights of an average- or maximum pooling operation cannot be adjusted during training, and hence the pooling layers do not form part of the set of trainable network layers.
 
 \begin{figure}[h]
 	\centering
@@ -333,7 +374,7 @@ Convolutional Network architectures often feature pooling layers, which aggregat
 
 \section{Performance Measurement}
 \subsection{Coefficient of Determination}
-In measuring the performance of the ANN, we will use the the coefficient of multiple determinations, $ R^2 $, between the actual parameter values, $ \mathbf{y} $, and the ANN-predicted parameter values $ \mathbf{\hat{y}}$. $ R^2 $ is defined as
+In measuring the performance of the \acrshort{ann}, we will use the the coefficient of multiple determinations, $ R^2 $, between the actual parameter values, $ \mathbf{y} $, and the \acrshort{ann}-predicted parameter values $ \mathbf{\hat{y}}$. $ R^2 $ is defined as
 
 \begin{equation}
 R^2 = 1 - \frac{\sum_{i=1}^{m}\left(y_i-\hat{y}_i\right)^2}{\sum_{i=1}^{m}\left(y_i-\overline{y}\right)^2}
@@ -356,8 +397,9 @@ MSE = \sum_{i=1}^{m}\left(y_i-\hat{y}_i\right)^2
 where $y$ is the actual observed parameter (output) value, $\hat{y}$ is the predicted parameter (output) value, and $m$ is the size of the sample.
 
 \chapter{Simulation Study}
+\label{chapter:simulation_study}
 
-It is important to note that when building a neural network for a specific modelling exercise, one has little prior knowledge of what the model should look like. Rough guidlines do exist, for example that Recurrent Neural Network architectures are often used for time series problems (SOURCE?) or that Convolutional Neural Networks are well suited to image recognition tasks (SOURCE?). Beyond these vague guidelines however, little evidence exists to inform the potential properties that a network might need.
+It is important to note that when building a neural network for a specific modelling exercise, one has little prior knowledge of what the model should look like. Rough guidlines do exist, for example that Recurrent Neural Network architectures are often used for time series problems (SOURCE?) or that \acrlong{cnn}s (\acrshort{cnn}s) are well suited to image recognition tasks (SOURCE?). Beyond these vague guidelines however, little evidence exists to inform the potential properties that a network might need.
 
 \section{The Merton Jump Diffusion Stochastic Process}
 
@@ -394,21 +436,21 @@ The first study was done on a standard 9-layer fully connected multi-perceptron 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{Images/Diagrams/Network-Structures/MultipleOutputFullyConnectedANN}
-	\caption[Multiple Output Prediction ANN]{9-Layer Fully Connected Feed-forward ANN}
+	\caption[Multiple Output Prediction \acrshort{ann}]{9-Layer Fully Connected Feed-forward \acrshort{ann}}
 	\label{fig:multipleoutputcnn}
 \end{figure}
 
-The experiments were performed using ELU activation functions in the network.
+The experiments were performed using \acrshort{elu} activation functions in the network. 
 
 \subsection{The Dataset}
 
-The dataset on which the Fully Connected ANN was trained, was created using the following steps:
+The dataset on which the Fully Connected \acrshort{ann} was trained, was created using the following steps:
 \begin{enumerate}[1)]
 	\itemsep0em 
 	\item  Random sets of parameters, $\mathbf{z}_i$, with ($\mu \in \left[-1, 1\right]$, $\sigma \in \left[0.001, 0.2\right]$, $\lambda \in \left(0, 0.025\right]$, $\mu_{jumps} \in \left[-0.5, 0.5\right]$ and $\sigma_{jumps} \in \left[0.001, 0.2\right])$ were uniformly generated.
 	\item  The daily log returns from a Merton Jump Diffusion stochastic process (equation \ref{equation:merton_log_returns}) were simulated using these randomly generated parameter sets, $\mathbf{z}_i$, as parameters.
 	\item  For each set of returns, the first 20 sample moments, as well as the autocorrelations up to the first 40 lags were calculated.
-	\item For every parameter set, its corresponding set of moments and autocorrelations were fed into the input layer of the ANN described in subsection \ref{subsection:fully_connected_ff_nn:architecture} above. The ANN was then trained, using the process of backpropagation, to produce an estimate, $\mathbf{o}_i$, of the original set of parameters, $\mathbf{z}_i$. This was done by minimizing the mean squared error between the vectors $\mathbf{z}_i$ and $\mathbf{o}_i$ (see the diagram in figure \ref{fig:calibrationschemediagram}).
+	\item For every parameter set, its corresponding set of moments and autocorrelations were fed into the input layer of the \acrshort{ann} described in subsection \ref{subsection:fully_connected_ff_nn:architecture} above. The \acrshort{ann} was then trained, using the process of backpropagation, to produce an estimate, $\mathbf{o}_i$, of the original set of parameters, $\mathbf{z}_i$. This was done by minimizing the mean squared error between the vectors $\mathbf{z}_i$ and $\mathbf{o}_i$ (see the diagram in figure \ref{fig:calibrationschemediagram}).
 \end{enumerate}
 
 \section{Convolutional Neural Network}
@@ -420,16 +462,16 @@ The second study was done on a fairly standard 8-layer convolutional architectur
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{Images/Diagrams/Network-Structures/MultipleOutputCNN}
-	\caption[Multiple Output Prediction CNN]{8-Layer Convolutional Neural Network}
+	\caption[Multiple Output Prediction \acrshort{cnn}]{8-Layer \acrshort{cnn}}
 	\label{fig:multipleoutputcnn}
 \end{figure}
 
-Experiments were performed using ELU activation functions. 
+Experiments were performed using \acrshort{elu} activation functions. 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Images/Results/Training/COVNET_MO_MSE}
-	\caption[MSE values over the training process for the 8-Layer Convolutional Neural Network]{MSE values over the training process for the multiple parameter prediction convolutional architecture. Each epoch involves 10 iterations of a simulated batch of 150 randomly selected process parameters.}
+	\caption[MSE values over the training process for the 8-Layer \acrshort{cnn}]{MSE values over the training process for the multiple parameter prediction convolutional architecture. Each epoch involves 10 iterations of a simulated batch of 150 randomly selected process parameters.}
 	\label{fig:covnetmomse}
 \end{figure}
 
@@ -450,7 +492,7 @@ The reasons for the large difference in MSE values are related to the nature of 
 		\end{subfloatrow}
 		}{
 		
-		\caption{R-Squared values over the training process for the multiple parameter prediction convolutional architecture (ELU activation units).}}
+		\caption{R-Squared values over the training process for the multiple parameter prediction convolutional architecture (\acrshort{elu} activation units).}}
 \end{figure}
 
 \subsection{Dedicated Single Parameter Prediction Architecture}
@@ -462,7 +504,7 @@ This raises the question of a dedicated network architecture for every parameter
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.75\linewidth]{Images/Diagrams/Network-Structures/SingleParameterDedicatedCNN}
-	\caption[Dedicated Single Parameter Prediction CNN]{6-Layer Convolutional Neural Network}
+	\caption[Dedicated Single Parameter Prediction \acrshort{cnn}]{6-Layer \acrshort{cnn}}
 	\label{fig:singleparameterdedicatedcnn}
 \end{figure}
 
@@ -475,7 +517,7 @@ The most obvious parameter estimation issue in the multiple output model of \ref
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\linewidth]{Images/Prediction-Convergence/ConvolutionalNN-SingleOutput/Lambda-RSquared}
-	\caption[R-Squared values for the predictions of $\lambda$ over the training process for the single parameter prediction convolutional architecture (ELU activation units).]{R-Squared values for the estimates of $\lambda$ over the training process for the single parameter prediction convolutional architecture (ELU activation units).}
+	\caption[R-Squared values for the predictions of $\lambda$ over the training process for the single parameter prediction convolutional architecture (\acrshort{elu} activation units).]{R-Squared values for the estimates of $\lambda$ over the training process for the single parameter prediction convolutional architecture (\acrshort{elu} activation units).}
 	\label{fig:lambda-rsquared}
 \end{figure}
 
@@ -484,7 +526,7 @@ The result is a much quicker and smoother convergence to an acceptable level of 
 \section{Parameter Interactions}
 Due to the nature of the parameters involved in the Merton Jump Diffusion process, one could expect interactions between parameter estimates. For example, increasing the $\mu_{jumps}$ parameter might cause "confusion", since a model could "interpret" larger jumps as a higher rate of volatility from the Geometric Brownian Motion $\sigma$ component, and hence produce higher values of $\sigma$. What follows is an investigation into how sensitive the individual parameter estimates are with respect to changes in the magnitudes of the other parameters. 
 
-This investigation was performed using $1000$ simulated sample paths from a Merton Jump Diffusion process with parameters $\mu, \sigma, \lambda, \mu_{jumps}$ and $\sigma_{jumps}$. With each test, a single parameter was selected to be varied during the training process. The effect of this parameter change on the ANN performance was then monitored by reading the estimates of each of the other parameters and comparing them to their actual values.
+This investigation was performed using $1000$ simulated sample paths from a Merton Jump Diffusion process with parameters $\mu, \sigma, \lambda, \mu_{jumps}$ and $\sigma_{jumps}$. With each test, a single parameter was selected to be varied during the training process. The effect of this parameter change on the \acrshort{ann} performance was then monitored by reading the estimates of each of the other parameters and comparing them to their actual values.
 
 \subsubsection{Variations in $\mu$}
 %\begin{figure}[h]
@@ -533,8 +575,8 @@ This investigation was performed using $1000$ simulated sample paths from a Mert
 \end{figure}
 Of all the parameters involved in the Merton Jump Diffusion process, $\mu$ arguably has the least interaction with the estimates of the other parameters. 
 
-It is rather strange that the model exhibits a tendency to consistently underestimate the value of $\lambda$ (Figure \ref{fig:sensitivity_test:multiple_output:varying_mu:lambda}). This is clear throughout the investigation - $\lambda$ is almost always underestimated. This isn't something to be expected, since ANN's have the property of easily being able to correct for bias.
-Similarly, all other parameters (besides $\mu$) kept constant, the model seems to consistently overestimate the value of $\mu_{jump}$ (Figure \ref{fig:sensitivity_test:multiple_output:varying_mu:jumps_mu}). As with the estimate of $\lambda$, one would expect and ANN to be able to easily correct for this clear bias.
+It is rather strange that the model exhibits a tendency to consistently underestimate the value of $\lambda$ (Figure \ref{fig:sensitivity_test:multiple_output:varying_mu:lambda}). This is clear throughout the investigation - $\lambda$ is almost always underestimated. This isn't something to be expected, since \acrshort{ann}s have the property of easily being able to correct for bias.
+Similarly, all other parameters (besides $\mu$) kept constant, the model seems to consistently overestimate the value of $\mu_{jump}$ (Figure \ref{fig:sensitivity_test:multiple_output:varying_mu:jumps_mu}). As with the estimate of $\lambda$, one would expect and \acrshort{ann} to be able to easily correct for this clear bias.
 
 \subsubsection{Variations in $\sigma$}
 
@@ -589,7 +631,7 @@ The most clear-cut illustration of this can be seen in the estimates of $\hat{\m
 
 %The effect of larger volatility in the Geometric Brownian Motion process also has a slight upward push on the estimate of $\mu_{jumps}$ (Figure \ref{fig:sensitivity_test:multiple_output:varying_sigma:jumps_mu}). This is to be expected, as larger volatility could conceivably be interpreted as larger jumps. 
 
-%The ANN seems to exhibit the ability to distinguish between the volatility of the Geometric Brownian Motion process ($\sigma$) and that of the jumps process ($\sigma_{jumps}$). This is clear from figure \ref{fig:sensitivity_test:multiple_output:varying_sigma:jumps_sigma}, as the value of $\sigma$ seems to put little pressure on the estimate of $\sigma_{jumps}$.
+%The \acrshort{ann} seems to exhibit the ability to distinguish between the volatility of the Geometric Brownian Motion process ($\sigma$) and that of the jumps process ($\sigma_{jumps}$). This is clear from figure \ref{fig:sensitivity_test:multiple_output:varying_sigma:jumps_sigma}, as the value of $\sigma$ seems to put little pressure on the estimate of $\sigma_{jumps}$.
 
 %The models seems to produce a consistent underestimate for the value of $\lambda$, and a consistent overestimate for the value of $\mu_{jumps}$.
 
@@ -709,7 +751,7 @@ Figire \ref{fig:sensitivity_test:multiple_output:varying_jumps_sigma:lambda} ill
 	\label{fig:sensitivity_test:multiple_output:varying_jumps_mu:jumps_mu}
 \end{figure}
 
-Variations in $\mu_{jumps}$ notably affect almost all of the parameter estimates produced by the CNN Multiple Output model.
+Variations in $\mu_{jumps}$ notably affect almost all of the parameter estimates produced by the \acrshort{cnn} Multiple Output model.
 
 \begin{figure}[h]
 	\ffigbox{
@@ -757,9 +799,9 @@ First, the individual accuracy of the selected architectures were investigated. 
 \setlist{nolistsep}
 \begin{enumerate}[a)]
 	\itemsep0em 
-	\item  a multiple output convolutional ANN model as defined in section \ref{chap:ConvolutionalNeuralNetwork-section:MultipleParameterPredictionArchitecture} above,
+	\item  a multiple output convolutional \acrshort{ann} model as defined in section \ref{chap:ConvolutionalNeuralNetwork-section:MultipleParameterPredictionArchitecture} above,
 	\item  a fully connected NN as DEFINED IN SECTION INSERT HERE, and
-	\item  a dedicated single output convolutional ANN model as defined in section \ref{chap:ConvolutionalNeuralNetwork-section:SingleParameterPredictionArchitecture} above.
+	\item  a dedicated single output convolutional \acrshort{ann} model as defined in section \ref{chap:ConvolutionalNeuralNetwork-section:SingleParameterPredictionArchitecture} above.
 \end{enumerate}
 
 \begin{figure}[h]
@@ -767,11 +809,11 @@ First, the individual accuracy of the selected architectures were investigated. 
 		\begin{subfloatrow}
 			
 			\ffigbox{\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Mu"}}{
-				\caption[Convolutional Architecture - Multiple Output - ELU]{Convolutional Architecture - Multiple Output - ELU}
+				\caption[\acrshort{cnn} Architecture - Multiple Output - \acrshort{elu}]{\acrshort{cnn} Architecture - Multiple Output - \acrshort{elu}}
 				\label{fig:convolutional-architecture---multiple-output---elumu}}
 			
 			\ffigbox{	\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Mu"}}{
-				\caption[Fully Connected Architecture - Multiple Output - EL]{Fully Connected Architecture - Multiple Output - ELU}
+				\caption[Fully Connected Architecture - Multiple Output - EL]{Fully Connected Architecture - Multiple Output - \acrshort{elu}}
 				\label{fig:fully-connected-architecture---multiple-output---elumu}}
 			
 		\end{subfloatrow}}{
@@ -785,11 +827,11 @@ First, the individual accuracy of the selected architectures were investigated. 
 		\begin{subfloatrow}
 			
 			\ffigbox{\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Sigma"}}{
-				\caption[Convolutional Architecture - Multiple Output - ELU]{Convolutional Architecture - Multiple Output - ELU}
+				\caption[\acrshort{cnn} Architecture - Multiple Output - \acrshort{elu}]{\acrshort{cnn} Architecture - Multiple Output - \acrshort{elu}}
 				\label{fig:convolutional-architecture---multiple-output---elusigma}}
 			
 			\ffigbox{	\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Sigma"}}{
-				\caption[Fully Connected Architecture - Multiple Output - EL]{Fully Connected Architecture - Multiple Output - ELU}
+				\caption[Fully Connected Architecture - Multiple Output - EL]{Fully Connected Architecture - Multiple Output - \acrshort{elu}}
 				\label{fig:fully-connected-architecture---multiple-output---elusigma}}
 			
 			
@@ -804,11 +846,11 @@ First, the individual accuracy of the selected architectures were investigated. 
 		\begin{subfloatrow}
 			
 			\ffigbox{\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Lambda"}}{
-				\caption[Convolutional Architecture - Multiple Output - ELU]{Convolutional Architecture - Multiple Output - ELU}
+				\caption[\acrshort{cnn} Architecture - Multiple Output - \acrshort{elu}]{\acrshort{cnn} Architecture - Multiple Output - \acrshort{elu}}
 				\label{fig:convolutional-architecture---multiple-output---elulambda}}
 			
 			\ffigbox{	\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Lambda"}}{
-				\caption[Fully Connected Architecture - Multiple Output - EL]{Fully Connected Architecture - Multiple Output - ELU}
+				\caption[Fully Connected Architecture - Multiple Output - EL]{Fully Connected Architecture - Multiple Output - \acrshort{elu}}
 				\label{fig:fully-connected-architecture---multiple-output---elulambda}}
 			
 			
@@ -818,7 +860,7 @@ First, the individual accuracy of the selected architectures were investigated. 
 	\ffigbox{
 		\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/ConvolutionalNN-SingleOutput/Convolutional Architecture - Single Output - ELU_Lambda"}
 	}{
-		\caption[Convolutional Architecture - Single Output - ELU]{Convolutional Architecture - Single Output - ELU}
+		\caption[\acrshort{cnn} Architecture - Single Output - \acrshort{elu}]{\acrshort{cnn} Architecture - Single Output - \acrshort{elu}}
 		\label{fig:convolutional-architecture---single-output---elulambda}}
 	
 	
@@ -834,12 +876,12 @@ First, the individual accuracy of the selected architectures were investigated. 
 			\ffigbox{
 				\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Jumps Mu"}
 			}{
-				\caption[Convolutional Architecture - Multiple Output - ELU]{Convolutional Architecture - Multiple Output - ELU}
+				\caption[\acrshort{cnn} Architecture - Multiple Output - \acrshort{elu}]{\acrshort{cnn} Architecture - Multiple Output - \acrshort{elu}}
 				\label{fig:convolutional-architecture---multiple-output---elujumps-mu}}
 			
 			\ffigbox{	\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Mu"}
 			}{
-				\caption[Fully Connected Architecture - Multiple Output - EL]{Fully Connected Architecture - Multiple Output - ELU}
+				\caption[Fully Connected Architecture - Multiple Output - EL]{Fully Connected Architecture - Multiple Output - \acrshort{elu}}
 				\label{fig:fully-connected-architecture---multiple-output---elujumps-mu}}
 	\end{subfloatrow}}{
 		\caption{Various model distributions of the predicted values of $\mu_{jumps}$ with true value $0,05$.}
@@ -853,13 +895,13 @@ First, the individual accuracy of the selected architectures were investigated. 
 			\ffigbox{
 				\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/ConvolutionalNN-MultipleOutput-ELU/Convolutional Architecture - Multiple Output - ELU_Jumps Sigma"}
 			}{
-				\caption[Convolutional Architecture - Multiple Output - ELU]{Convolutional Architecture - Multiple Output - ELU}
+				\caption[\acrshort{cnn} Architecture - Multiple Output - \acrshort{elu}]{\acrshort{cnn} Architecture - Multiple Output - \acrshort{elu}}
 				\label{fig:convolutional-architecture---multiple-output---elujumps-sigma}}
 			
 			\ffigbox{
 				\includegraphics[width=1\linewidth]{"Images/Parameter-Prediction-Results/FullyConnected-MultipleOutput-ELU/Fully Connected Architecture - Multiple Output - ELU_Jumps Sigma"}
 			}{
-				\caption[Fully Connected Architecture - Multiple Output - EL]{Fully Connected Architecture - Multiple Output - ELU}
+				\caption[Fully Connected Architecture - Multiple Output - EL]{Fully Connected Architecture - Multiple Output - \acrshort{elu}}
 				\label{fig:fully-connected-architecture---multiple-output---elujumps-sigma}}
 			
 			
@@ -871,25 +913,44 @@ First, the individual accuracy of the selected architectures were investigated. 
 
 
 
+\chapter{Conclusion and Further Research}
 
-
-
-\begin{tabular}[h]{|c|c|c|c|}
-
-	Architecture & No. Parameters & Activation Function & Accuracy \\ 
-	\hline
-	&  &  &  \\ 
-	 
-	&  &  &  \\ 
-	 
-	&  &  &  \\ 
-	 
-	&  &  &  \\ 
-	\hline 
-\end{tabular} 
+This project investigated the ability of \acrshort{ann}s to estimate the parameters of a sufficiently complex \acrshort{sde}. Chapter \ref{chapter:introduction} introduced the problem of calibrating \acrshort{sde}s, and discussed the limitations of existing approaches. Chapter \ref{chapter:literature_review} presented the literature on similar studies. The concepts used throughout the dissertation were explained in chapter \ref{chapter:methodology}, as was the methodology used in the simulation study. The simulation study itself, together with the proposed \acrshort{ann} architectures were presented in chapter \ref{chapter:simulation_study}. Chapter \ref{chapter:results} reported on the results of the study and compared them to those obtained using traditional parameter estimation techniques such as \acrshort{mlestimation}, \acrshort{mme}, \acrshort{em} and likelihood profiling.
 
 \bibliographystyle{ussagus}
 \bibliography{export}
+
+\printglossary[title=Nomenclature]
+
+\applyappendixstyling
+\appendix
+\chapter[Appendix A]{List of Software Used}
+\label{list_of_software_used}
+\def\arraystretch{2}
+\begin{tabular}[h]{l p{10cm} ll}
+	
+	\textbf{IPython} & A command shell for interactive computing. &\cite{ipython} \\ 
+	
+	\textbf{Keras} & A high-level neural networks API, written in Python running on top of TensorFlow. &\cite{chollet2015keras} \\ 
+	
+	\textbf{Matplotlib} & Python 2D plotting library. &\cite{matplotlib} \\ 
+	
+	\textbf{Numpy} & Package for scientific computing with Python. &\cite{numpy} \\ 
+	
+	\textbf{Python} & Programming language. & \cite{python} \\ 
+	
+	\textbf{Scipy} & Python-based open-source software for mathematics, science, and engineering. &\cite{scipy} \\ 
+	
+	\textbf{Seaborn} & Python visualization library based on matplotlib. &\cite{seaborn} \\ 
+	
+	\textbf{Statsmodels} & Python module that provides classes and functions for the estimation of many different statistical models. &\cite{statsmodels} \\ 
+	
+	\textbf{Tensorflow} & An open-source software library for Machine Intelligence. & \cite{tensorflow2015-whitepaper} \\ 
+	
+	\textbf{Turing Finance} & Python implementations of various stochastic processes. & \cite{reid} \\ 
+	 
+\end{tabular} 
+
 
 \end{document}
 
