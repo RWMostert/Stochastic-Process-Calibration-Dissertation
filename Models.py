@@ -1,7 +1,8 @@
 import tensorflow as tf
 import keras
 from keras.models import Model, Sequential
-from keras.layers import Input, Dense, Flatten, LSTM, Convolution2D, MaxPooling2D, Input
+from keras.layers import Input, Dense, Flatten, LSTM, MaxPooling2D, Input
+from keras.layers.convolutional import Conv2D
 from keras.optimizers import Adam
 from keras import backend as K
 
