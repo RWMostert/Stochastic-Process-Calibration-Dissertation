@@ -42,16 +42,16 @@ def covnet_multiple_ELUs_8_layers():
 
     input_1 = Input(shape = (40, 50, 1))
 
-    layer1 = Convolution2D(32, 12, 12, border_mode='same', activation='elu')(input_1)
-    layer2 = Convolution2D(32, 12, 12, border_mode='same', activation='elu')(layer1)
+    layer1 = Conv2D(32, (12, 12), padding='same', activation='elu')(input_1)
+    layer2 = Conv2D(32, (12, 12), padding='same', activation='elu')(layer1)
     layer3 = MaxPooling2D(pool_size=(2,2))(layer2)
 
-    layer4 = Convolution2D(64, 6, 6, border_mode='same', activation='elu')(layer3)
-    layer5 = Convolution2D(64, 6, 6, border_mode='same', activation='elu')(layer4)
+    layer4 = Conv2D(64, (6, 6), padding='same', activation='elu')(layer3)
+    layer5 = Conv2D(64, (6, 6), padding='same', activation='elu')(layer4)
     layer6 = MaxPooling2D(pool_size=(2,2))(layer5)
 
-    layer7 = Convolution2D(128, 3, 3, border_mode='same', activation='elu')(layer6)
-    layer8 = Convolution2D(128, 3, 3, border_mode='same', activation='elu')(layer7)
+    layer7 = Conv2D(128, (3, 3), padding='same', activation='elu')(layer6)
+    layer8 = Conv2D(128, (3, 3), padding='same', activation='elu')(layer7)
     layer9 = MaxPooling2D(pool_size=(2,2))(layer8)
 
     flatten = Flatten()(layer9)
