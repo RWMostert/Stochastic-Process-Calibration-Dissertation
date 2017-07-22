@@ -1,7 +1,7 @@
 import numpy as np
+from numpy import random as nrand
 import math
 import random
-from numpy import random as nrand
 
 class ModelParameters:
     """
@@ -66,7 +66,7 @@ def geometric_brownian_motion_log_returns(param):
     :return: returns the log returns of a geometric brownian motion process
     """
     assert isinstance(param, ModelParameters)
-    wiener_process = numpy.array(brownian_motion_log_returns(param))
+    wiener_process = np.array(brownian_motion_log_returns(param))
     sigma_pow_mu_delta = (param.gbm_mu - 0.5 * math.pow(param.all_sigma, 2.0)) * param.all_delta
     return wiener_process + sigma_pow_mu_delta
 
@@ -100,4 +100,4 @@ def geometric_brownian_motion_jump_diffusion_log_returns(param):
     assert isinstance(param, ModelParameters)
     jump_diffusion = jump_diffusion_process(param)
     geometric_brownian_motion = geometric_brownian_motion_log_returns(param)
-    return numpy.add(jump_diffusion, geometric_brownian_motion)
+    return np.add(jump_diffusion, geometric_brownian_motion)
