@@ -38,6 +38,33 @@ def fullyconnected_multiple_ELUs():
     
     return feedforward
 
+def fullyconnected_multiple_ReLUs():
+    input_1 = Input(batch_shape = (None, 60))
+
+    layer1 = Dense(2048, activation='relu')(input_1)
+    layer2 = Dense(1024, activation='relu')(layer1)
+
+    layer3 = Dense(512, activation='relu')(layer2)
+    layer4 = Dense(256, activation='relu')(layer3)
+
+    layer5 = Dense(128, activation='relu')(layer4)
+    layer6 = Dense(64, activation='relu')(layer5)
+
+    layer7 = Dense(32, activation='relu')(layer5)
+    last_layer = Dense(16, activation='relu')(layer7)
+
+    output1 = Dense(1, name="sigma")(last_layer)
+    output2 = Dense(1, name="mu")(last_layer)
+    output3 = Dense(1, name="jump_sigma")(last_layer)
+    output4 = Dense(1, name="jump_mu")(last_layer)
+    output5 = Dense(1, name="lambda")(last_layer)
+    
+    feedforward = Model(input = input_1, output=[output1, output2, output3, output4, output5])
+    
+    feedforward.compile(loss='mean_squared_error', optimizer='adam', metrics=[r2, 'mean_absolute_percentage_error'])
+    
+    return feedforward
+
 def covnet_multiple_ELUs_8_layers():
 
     input_1 = Input(shape = (40, 50, 1))
