@@ -98,11 +98,11 @@ def covnet_multiple_ELUs_8_layers():
 def covnet_single_ReLUs_6_layers():
     convnet_lambda = Sequential()
     convnet_lambda.add(Conv2D(32, (12, 12), input_shape=(40, 50, 1), padding='same', activation='relu'))
-    convnet_lambda.add(Conv2D(32, (12, 12), padding='same', activation='elu'))
+    convnet_lambda.add(Conv2D(32, (12, 12), padding='same', activation='relu'))
     convnet_lambda.add(MaxPooling2D(pool_size=(2,2)))
 
-    convnet_lambda.add(Conv2D(64, (6, 6), padding='same', activation='elu'))
-    convnet_lambda.add(Conv2D(64, (6, 6), padding='same', activation='elu'))
+    convnet_lambda.add(Conv2D(64, (6, 6), padding='same', activation='relu'))
+    convnet_lambda.add(Conv2D(64, (6, 6), padding='same', activation='relu'))
     convnet_lambda.add(MaxPooling2D(pool_size=(2,2)))
 
     convnet_lambda.add(Flatten())
