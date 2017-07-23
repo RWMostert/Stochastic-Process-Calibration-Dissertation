@@ -7,11 +7,25 @@ from keras.optimizers import Adam
 from keras import backend as K
 
 def r2(y_true, y_pred):
+    """
+    returns the correlation coefficient of y_pred against y_true.
+
+    :param y_true: the true values (independent variable)
+    :param y_pred: the predicted values (dependent variable)
+    """
+    
     SSE = K.sum(K.square(y_true-y_pred))
     SST = K.sum(K.square(y_true-K.mean(y_true)))
+    
     return 1-SSE/SST
     
 def fullyconnected_multiple_ELUs():
+    """
+    returns a 9-layer fully connected architecture (with ELU activation units) as a Keras Model, with outputs for all the parameters of the Merton Jump Diffusion stochastic process (sigma, mu, jump_sigma, jump_mu, lambda).
+    
+    .. note:: be sure to order the array of desired output parameters as follows: sigma, mu, jump_sigma, jump_mu, lambda.  Each their own array of desired values for every simulated sample path.
+    """
+    
     input_1 = Input(batch_shape = (None, 60))
 
     layer1 = Dense(2048, activation='elu')(input_1)
@@ -39,6 +53,12 @@ def fullyconnected_multiple_ELUs():
     return feedforward
 
 def fullyconnected_multiple_ReLUs():
+    """
+    returns a 9-layer fully connected architecture (with ReLU activation units) as a Keras Model, with outputs for all the parameters of the Merton Jump Diffusion stochastic process (sigma, mu, jump_sigma, jump_mu, lambda).
+    
+    .. note:: be sure to order the array of desired output parameters as follows: sigma, mu, jump_sigma, jump_mu, lambda.  Each their own array of desired values for every simulated sample path.
+    """
+    
     input_1 = Input(batch_shape = (None, 60))
 
     layer1 = Dense(2048, activation='relu')(input_1)
@@ -66,7 +86,12 @@ def fullyconnected_multiple_ReLUs():
     return feedforward
 
 def covnet_multiple_ELUs_8_layers():
-
+    """
+    returns an 8-layer convolutional architecture (with ELU activation units) as a Keras Model, with outputs for all the parameters of the Merton Jump Diffusion stochastic process (sigma, mu, jump_sigma, jump_mu, lambda).
+    
+    .. note:: be sure to order the array of desired output parameters as follows: sigma, mu, jump_sigma, jump_mu, lambda.  Each their own array of desired values for every simulated sample path.
+    """
+    
     input_1 = Input(shape = (40, 50, 1))
 
     layer1 = Conv2D(32, (12, 12), padding='same', activation='elu')(input_1)
@@ -96,6 +121,10 @@ def covnet_multiple_ELUs_8_layers():
     return convnet_mo_elu
 
 def covnet_single_ReLUs_6_layers():
+    """
+    returns a 6-layer convolutional architecture (with ReLU activation units) as a Keras Model, with outputs for only a single parameter.
+    """
+    
     convnet_lambda = Sequential()
     convnet_lambda.add(Conv2D(32, (12, 12), input_shape=(40, 50, 1), padding='same', activation='relu'))
     convnet_lambda.add(Conv2D(32, (12, 12), padding='same', activation='relu'))
