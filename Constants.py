@@ -17,3 +17,11 @@ H5_DIR_COVNET_LAMBDA = "covnet_lambda_running.h5"
 
 ## Ensembling Network
 H5_DIR_ENSEMBLING = "ff_ensembling_large.h5"
+
+
+# History Files
+HISTORY_DIR_FEEDFORWARD_RELU = "feedforward_relu_histories.npy"
+
+
+# Prediction History Files
+PREDICTIONS_DIR_FEEDFORWARD_RELU = "feedforward_relu_predictions.npy"
