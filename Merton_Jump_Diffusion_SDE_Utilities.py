@@ -1,3 +1,12 @@
+###############################################################################################
+#
+# CREDIT: THIS CODE WAS PROVIDED BY STUART G. REID, 2015 (BIBLIOGRAPHY).
+#
+# THE FULL VERSION CAN BE OBTAINED FROM:
+# http://www.turingfinance.com/random-walks-down-wall-street-stochastic-processes-in-python/
+#
+###############################################################################################
+
 import numpy as np
 from numpy import random as nrand
 import math
