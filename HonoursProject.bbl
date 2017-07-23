@@ -1,4 +1,4 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{30}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -23,6 +23,52 @@
 \newblock Cs231n convolutional neural networks for visual recognition.
 \newline\bblurlpre\url{http://cs231n.github.io/convolutional-networks/}
 
+\bibitem[{\citenamefont{Abadi} \textit{\bbletal{}}(2015)\citenamefont{Abadi},
+  \citenamefont{Agarwal}, \citenamefont{Barham}, \citenamefont{Brevdo},
+  \citenamefont{Chen}, \citenamefont{Citro}, \citenamefont{Corrado},
+  \citenamefont{Davis}, \citenamefont{Dean}, \citenamefont{Devin},
+  \citenamefont{Ghemawat}, \citenamefont{Goodfellow}, \citenamefont{Harp},
+  \citenamefont{Irving}, \citenamefont{Isard}, \citenamefont{Jia},
+  \citenamefont{Jozefowicz}, \citenamefont{Kaiser}, \citenamefont{Kudlur},
+  \citenamefont{Levenberg}, \citenamefont{Man\'{e}}, \citenamefont{Monga},
+  \citenamefont{Moore}, \citenamefont{Murray}, \citenamefont{Olah},
+  \citenamefont{Schuster}, \citenamefont{Shlens}, \citenamefont{Steiner},
+  \citenamefont{Sutskever}, \citenamefont{Talwar}, \citenamefont{Tucker},
+  \citenamefont{Vanhoucke}, \citenamefont{Vasudevan},
+  \citenamefont{Vi\'{e}gas}, \citenamefont{Vinyals}, \citenamefont{Warden},
+  \citenamefont{Wattenberg}, \citenamefont{Wicke}, \citenamefont{Yu}
+  \protect\BIBand{} \citenamefont{Zheng}}]{tensorflow2015-whitepaper}
+\bibnamefont{Abadi}, \bibfnamefont{M.}, \bibnamefont{Agarwal},
+  \bibfnamefont{A.}, \bibnamefont{Barham}, \bibfnamefont{P.},
+  \bibnamefont{Brevdo}, \bibfnamefont{E.}, \bibnamefont{Chen},
+  \bibfnamefont{Z.}, \bibnamefont{Citro}, \bibfnamefont{C.},
+  \bibnamefont{Corrado}, \bibfnamefont{G.S.}, \bibnamefont{Davis},
+  \bibfnamefont{A.}, \bibnamefont{Dean}, \bibfnamefont{J.},
+  \bibnamefont{Devin}, \bibfnamefont{M.}, \bibnamefont{Ghemawat},
+  \bibfnamefont{S.}, \bibnamefont{Goodfellow}, \bibfnamefont{I.},
+  \bibnamefont{Harp}, \bibfnamefont{A.}, \bibnamefont{Irving},
+  \bibfnamefont{G.}, \bibnamefont{Isard}, \bibfnamefont{M.}, \bibnamefont{Jia},
+  \bibfnamefont{Y.}, \bibnamefont{Jozefowicz}, \bibfnamefont{R.},
+  \bibnamefont{Kaiser}, \bibfnamefont{L.}, \bibnamefont{Kudlur},
+  \bibfnamefont{M.}, \bibnamefont{Levenberg}, \bibfnamefont{J.},
+  \bibnamefont{Man\'{e}}, \bibfnamefont{D.}, \bibnamefont{Monga},
+  \bibfnamefont{R.}, \bibnamefont{Moore}, \bibfnamefont{S.},
+  \bibnamefont{Murray}, \bibfnamefont{D.}, \bibnamefont{Olah},
+  \bibfnamefont{C.}, \bibnamefont{Schuster}, \bibfnamefont{M.},
+  \bibnamefont{Shlens}, \bibfnamefont{J.}, \bibnamefont{Steiner},
+  \bibfnamefont{B.}, \bibnamefont{Sutskever}, \bibfnamefont{I.},
+  \bibnamefont{Talwar}, \bibfnamefont{K.}, \bibnamefont{Tucker},
+  \bibfnamefont{P.}, \bibnamefont{Vanhoucke}, \bibfnamefont{V.},
+  \bibnamefont{Vasudevan}, \bibfnamefont{V.}, \bibnamefont{Vi\'{e}gas},
+  \bibfnamefont{F.}, \bibnamefont{Vinyals}, \bibfnamefont{O.},
+  \bibnamefont{Warden}, \bibfnamefont{P.}, \bibnamefont{Wattenberg},
+  \bibfnamefont{M.}, \bibnamefont{Wicke}, \bibfnamefont{M.}, \bibnamefont{Yu},
+  \bibfnamefont{Y.} \protect\BIBand{} \bibnamefont{Zheng}, \bibfnamefont{X.}
+  2015.
+\newblock {TensorFlow}: Large-scale machine learning on heterogeneous systems.
+\newblock Software available from tensorflow.org.
+\newline\bblurlpre\url{http://tensorflow.org/}
+
 \bibitem[{\citenamefont{Barone-Adesi}(2015)}]{Barone-Adesi}
 \bibnamefont{Barone-Adesi}, \bibfnamefont{G.} 2015.
 \newblock \textit{Stochastic Processes}.
@@ -39,6 +85,11 @@
   \bibnamefont{Willder}, \bibfnamefont{M.} 1998.
 \newblock Stochastic processes: learning the language.
 \newblock \textit{Faculty of Actuaries students' society}.
+
+\bibitem[{\citenamefont{Chollet} \textit{\bbletal{}}(2015)}]{chollet2015keras}
+\bibnamefont{Chollet}, \bibfnamefont{F.} \textit{\bbletal{}}. 2015.
+\newblock Keras.
+\newblock \url{https://github.com/fchollet/keras}.
 
 \bibitem[{\citenamefont{Clevert}
   \textit{\bbletal{}}(2015)\citenamefont{Clevert}, \citenamefont{Unterthiner}
@@ -84,6 +135,28 @@
 \newblock \textit{Neural Networks}, 2(5):359--366.
 \newline\bblurlpre\url{//www.sciencedirect.com/science/article/pii/0893608089900208}
 
+\bibitem[{\citenamefont{Hunter}(2007)}]{matplotlib}
+\bibnamefont{Hunter}, \bibfnamefont{J.D.} 2007.
+\newblock Matplotlib: A 2d graphics environment.
+\newblock \textit{Computing In Science \& Engineering}, 9(3):90--95.
+
+\bibitem[{\citenamefont{Jones} \textit{\bbletal{}}(2001--)\citenamefont{Jones},
+  \citenamefont{Oliphant}, \citenamefont{Peterson} \textit{\bbletal{}}}]{scipy}
+\bibnamefont{Jones}, \bibfnamefont{E.}, \bibnamefont{Oliphant},
+  \bibfnamefont{T.}, \bibnamefont{Peterson}, \bibfnamefont{P.}
+  \textit{\bbletal{}}. 2001--.
+\newblock {SciPy}: Open source scientific tools for {Python}.
+\newblock [Online; accessed <today>].
+\newline\bblurlpre\url{http://www.scipy.org/}
+
+\bibitem[{\citenamefont{Kingma} \protect\BIBand{}
+  \citenamefont{Ba}(2014)}]{adam}
+\bibnamefont{Kingma}, \bibfnamefont{D.P.} \protect\BIBand{} \bibnamefont{Ba},
+  \bibfnamefont{J.} 2014.
+\newblock Adam: {A} method for stochastic optimization.
+\newblock \textit{CoRR}, abs/1412.6980.
+\newline\bblurlpre\url{http://arxiv.org/abs/1412.6980}
+
 \bibitem[{\citenamefont{Merton}(1976)}]{Merton}
 \bibnamefont{Merton}, \bibfnamefont{R.C.} 1976.
 \newblock Option pricing when underlying stock returns are discontinuous.
@@ -116,6 +189,12 @@
 \newblock \textit{Ecological Modelling}, 154(1-2):135--150.
 \newline\bblurlpre\url{//www.sciencedirect.com/science/article/pii/S0304380002000649}
 
+\bibitem[{\citenamefont{Oliphant} \textit{\bbletal{}}(2001--)}]{numpy}
+\bibnamefont{Oliphant}, \bibfnamefont{T.} \textit{\bbletal{}}. 2001--.
+\newblock {Numpy}: Open source array tools for {Python}.
+\newblock [Online; accessed <today>].
+\newline\bblurlpre\url{http://www.numpy.org/}
+
 \bibitem[{\citenamefont{Oreskes}
   \textit{\bbletal{}}(1994)\citenamefont{Oreskes},
   \citenamefont{Shrader-Frechette} \protect\BIBand{}
@@ -127,6 +206,25 @@
   earth sciences.
 \newblock \textit{Science}, 263(5147):641--646.
 \newline\bblurlpre\url{http://www.jstor.org/stable/2883078}
+
+\bibitem[{\citenamefont{P\'erez} \protect\BIBand{}
+  \citenamefont{Granger}(2007)}]{ipython}
+\bibnamefont{P\'erez}, \bibfnamefont{F.} \protect\BIBand{}
+  \bibnamefont{Granger}, \bibfnamefont{B.E.} 2007.
+\newblock {IP}ython: a system for interactive scientific computing.
+\newblock \textit{Computing in Science and Engineering}, 9(3):21--29.
+\newblock ISSN 1521-9615.
+\newline\bblurlpre\url{http://ipython.org}
+
+\bibitem[{\citenamefont{Reid}(2015)}]{reid}
+\bibnamefont{Reid}, \bibfnamefont{S.G.} 2015.
+\newblock Random walks down wall street, stochastic processes in python.
+\newline\bblurlpre\url{http://www.turingfinance.com/random-walks-down-wall-street-stochastic-processes-in-python/}
+
+\bibitem[{\citenamefont{Rossum}(1995)}]{python}
+\bibnamefont{Rossum}, \bibfnamefont{G.} 1995.
+\newblock Python reference manual.
+\newblock \bbltechreport{}, Amsterdam, The Netherlands, The Netherlands.
 
 \bibitem[{\citenamefont{Samad} \protect\BIBand{}
   \citenamefont{Mathur}(1992)}]{Samad}
@@ -148,6 +246,13 @@
 \newblock ISBN 978-3-642-15825-4.
 \newline\bblurlpre\url{http://dx.doi.org/10.1007/978-3-642-15825-4_10}
 
+\bibitem[{\citenamefont{Seabold} \protect\BIBand{}
+  \citenamefont{Perktold}(2010)}]{statsmodels}
+\bibnamefont{Seabold}, \bibfnamefont{S.} \protect\BIBand{}
+  \bibnamefont{Perktold}, \bibfnamefont{J.} 2010.
+\newblock Statsmodels: Econometric and statistical modeling with python.
+\newblock \capitalize\bblin{} \textit{9th Python in Science Conference}.
+
 \bibitem[{\citenamefont{Teugels} \protect\BIBand{}
   \citenamefont{Sundt}(2004)}]{Teugels}
 \bibnamefont{Teugels}, \bibfnamefont{J.L.} \protect\BIBand{}
@@ -155,6 +260,40 @@
 \newblock \textit{Encyclopedia of actuarial science}.
 \newblock Hoboken, NJ: Hoboken, NJ : John Wiley and Sons.
 \newblock Includes bibliographical references and index.
+
+\bibitem[{\citenamefont{Waskom} \textit{\bbletal{}}(2016)\citenamefont{Waskom},
+  \citenamefont{Botvinnik}, \citenamefont{drewokane}, \citenamefont{Hobson},
+  \citenamefont{David}, \citenamefont{Halchenko}, \citenamefont{Lukauskas},
+  \citenamefont{Cole}, \citenamefont{Warmenhoven}, \citenamefont{de~Ruiter},
+  \citenamefont{Hoyer}, \citenamefont{Vanderplas}, \citenamefont{Villalba},
+  \citenamefont{Kunter}, \citenamefont{Quintero}, \citenamefont{Martin},
+  \citenamefont{Miles}, \citenamefont{Meyer}, \citenamefont{Augspurger},
+  \citenamefont{Yarkoni}, \citenamefont{Bachant}, \citenamefont{Williams},
+  \citenamefont{Evans}, \citenamefont{Fitzgerald}, \citenamefont{Brian},
+  \citenamefont{Wehner}, \citenamefont{Hitz}, \citenamefont{Ziegler},
+  \citenamefont{Qalieh} \protect\BIBand{} \citenamefont{Lee}}]{seaborn}
+\bibnamefont{Waskom}, \bibfnamefont{M.}, \bibnamefont{Botvinnik},
+  \bibfnamefont{O.}, \bibnamefont{drewokane}, \bibnamefont{Hobson},
+  \bibfnamefont{P.}, \bibnamefont{David}, \bibnamefont{Halchenko},
+  \bibfnamefont{Y.}, \bibnamefont{Lukauskas}, \bibfnamefont{S.},
+  \bibnamefont{Cole}, \bibfnamefont{J.B.}, \bibnamefont{Warmenhoven},
+  \bibfnamefont{J.}, \bibnamefont{de~Ruiter}, \bibfnamefont{J.},
+  \bibnamefont{Hoyer}, \bibfnamefont{S.}, \bibnamefont{Vanderplas},
+  \bibfnamefont{J.}, \bibnamefont{Villalba}, \bibfnamefont{S.},
+  \bibnamefont{Kunter}, \bibfnamefont{G.}, \bibnamefont{Quintero},
+  \bibfnamefont{E.}, \bibnamefont{Martin}, \bibfnamefont{M.},
+  \bibnamefont{Miles}, \bibfnamefont{A.}, \bibnamefont{Meyer},
+  \bibfnamefont{K.}, \bibnamefont{Augspurger}, \bibfnamefont{T.},
+  \bibnamefont{Yarkoni}, \bibfnamefont{T.}, \bibnamefont{Bachant},
+  \bibfnamefont{P.}, \bibnamefont{Williams}, \bibfnamefont{M.},
+  \bibnamefont{Evans}, \bibfnamefont{C.}, \bibnamefont{Fitzgerald},
+  \bibfnamefont{C.}, \bibnamefont{Brian}, \bibnamefont{Wehner},
+  \bibfnamefont{D.}, \bibnamefont{Hitz}, \bibfnamefont{G.},
+  \bibnamefont{Ziegler}, \bibfnamefont{E.}, \bibnamefont{Qalieh},
+  \bibfnamefont{A.} \protect\BIBand{} \bibnamefont{Lee}, \bibfnamefont{A.}
+  2016.
+\newblock seaborn: v0.7.1 (june 2016).
+\newline\bblurlpre\url{https://doi.org/10.5281/zenodo.54844}
 
 \bibitem[{\citenamefont{Werbos}(1990)}]{Werbos}
 \bibnamefont{Werbos}, \bibfnamefont{P.J.} 1990.

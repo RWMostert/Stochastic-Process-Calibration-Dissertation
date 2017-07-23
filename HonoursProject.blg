@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: HonoursProject.aux
 The style file: ussagus.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -16,46 +16,47 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty year in cs231n
 Warning--empty chapter and pages in Barone-Adesi
 Warning--empty journal in Honore
+Warning--missing institution in python
 Warning--can't use both author and editor fields in Scherer2010
-You've used 19 entries,
+You've used 30 entries,
             3343 wiz_defined-function locations,
-            806 strings with 9077 characters,
-and the built_in function-call counts, 13476 in all, are:
-= -- 1051
-> -- 380
-< -- 11
-+ -- 150
-- -- 129
-* -- 1286
-:= -- 1785
-add.period$ -- 78
-call.type$ -- 19
-change.case$ -- 140
-chr.to.int$ -- 19
-cite$ -- 26
-duplicate$ -- 1264
-empty$ -- 1215
-format.name$ -- 267
-if$ -- 2670
+            866 strings with 11815 characters,
+and the built_in function-call counts, 27159 in all, are:
+= -- 1975
+> -- 1098
+< -- 19
++ -- 422
+- -- 390
+* -- 3000
+:= -- 3513
+add.period$ -- 121
+call.type$ -- 30
+change.case$ -- 283
+chr.to.int$ -- 30
+cite$ -- 38
+duplicate$ -- 2536
+empty$ -- 2314
+format.name$ -- 737
+if$ -- 5265
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 173
-newline$ -- 130
-num.names$ -- 72
-pop$ -- 388
+missing$ -- 317
+newline$ -- 191
+num.names$ -- 116
+pop$ -- 700
 preamble$ -- 1
-purify$ -- 119
+purify$ -- 247
 quote$ -- 0
-skip$ -- 303
+skip$ -- 465
 stack$ -- 0
-substring$ -- 661
-swap$ -- 585
+substring$ -- 1186
+swap$ -- 1246
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 162
-warning$ -- 5
-while$ -- 110
+type$ -- 261
+warning$ -- 6
+while$ -- 234
 width$ -- 0
-write$ -- 273
+write$ -- 414
 (There was 1 error message)
