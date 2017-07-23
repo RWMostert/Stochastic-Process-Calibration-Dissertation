@@ -34,18 +34,27 @@ class ModelParameters:
         self.jumps_mu = jumps_mu
         
 
-def random_model_params():
+def random_model_params(constraint_all_sigma = (0.001,0.2), constraint_gbm_mu = (-1,1), constraint_jumps_lamda = (0.0001,0.025), constraint_jumps_sigma = (0.001, 0.2), constraint_jumps_mu = (-0.5,0.5)):
+    """
+    This method returns a random set of uniformly drawn ModelParameters, within certain constraints.
+    :param constraint_all_sigma: the lower and upper constraints on the uniformly drawn sigma parameter value
+    :param constraint_gbm_mu: the lower and upper constraints on the uniformly drawn mu parameter value
+    :param constraint_jumps_lamda: the lower and upper constraints on the uniformly drawn lambda parameter value
+    :param constraint_jumps_sigma: the lower and upper constraints on the uniformly drawn jumps_sigma parameter value
+    :param constraint_jumps_mu: the lower and upper constraints on the uniformly drawn jumps_mu parameter value
+    :return: random set of ModelParameters
+    """
     return ModelParameters(
         # Fixed Parameters
         all_time=2000,
         all_delta=0.00396825396,
         
         # Random Parameters
-        all_sigma = nrand.uniform(0.001,0.2),        
-        gbm_mu = nrand.uniform(-1,1),
-        jumps_lamda=nrand.uniform(0.0001,0.025),
-        jumps_sigma=nrand.uniform(0.001, 0.2),
-        jumps_mu=nrand.uniform(-0.5,0.5),
+        all_sigma = nrand.uniform(constraint_all_sigma[0], constraint_all_sigma[1]),        
+        gbm_mu = nrand.uniform(constraint_gbm_mu[0], constraint_gbm_mu[1]),
+        jumps_lamda=nrand.uniform(constraint_jumps_lamda[0], constraint_jumps_lamda[1]),
+        jumps_sigma=nrand.uniform(constraint_jumps_sigma[0], constraint_jumps_sigma[1]),
+        jumps_mu=nrand.uniform(constraint_jumps_mu[0], constraint_jumps_mu[1]),
     )
 
 def brownian_motion_log_returns(param):
