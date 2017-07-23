@@ -453,6 +453,27 @@ The dataset on which the Fully Connected \acrshort{ann} was trained, was created
 	\item For every parameter set, its corresponding set of moments and autocorrelations were fed into the input layer of the \acrshort{ann} described in subsection \ref{subsection:fully_connected_ff_nn:architecture} above. The \acrshort{ann} was then trained, using the process of backpropagation, to produce an estimate, $\mathbf{o}_i$, of the original set of parameters, $\mathbf{z}_i$. This was done by minimizing the mean squared error between the vectors $\mathbf{z}_i$ and $\mathbf{o}_i$ (see the diagram in figure \ref{fig:calibrationschemediagram}).
 \end{enumerate}
 
+\subsection{Training}
+\begin{figure}[h]
+	\ffigbox{
+		\begin{subfloatrow}
+			
+			\ffigbox{\includegraphics[width=1.06\linewidth]{Images/Prediction-Convergence/FullyConnectedNN-MultipleOutput-ELU/training_r2_values_mu_sigma}}{
+				\caption[]{$\sigma,  \mu$}
+				\label{fig:training:fully_connected_mu_and_sigma}}
+			
+			\ffigbox{\includegraphics[width=1\linewidth]{Images/Prediction-Convergence/FullyConnectedNN-MultipleOutput-ELU/training_r2_values_jumps}}{
+				\caption[]{$\lambda$, $\sigma_{jumps}$, $\mu_{jumps}$}
+				\label{fig:training:fully_connected_jumps}}
+			
+		\end{subfloatrow}
+	}{
+		
+		\caption{R-Squared values over the training process for the multiple parameter prediction fully connected architecture (\acrshort{elu} activation units).}}
+\end{figure}
+
+Figures \ref{fig:training:fully_connected_mu_and_sigma} and \ref{fig:training:fully_connected_jumps} illustrate the R-Squared values throughout the training process of the fully connected architecture.
+
 \section{Convolutional Neural Network}
 
 \subsection{Multiple Parameter Prediction Architecture}
