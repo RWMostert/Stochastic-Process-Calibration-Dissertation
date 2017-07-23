@@ -94,6 +94,7 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{chapter:methodology}{{3}{8}{Methodology}{chapter.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Artificial Neurons}{8}{section.3.1}}
+\newlabel{section:artificial_neurons}{{3.1}{8}{Artificial Neurons}{section.3.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Activation Functions}{8}{subsection.3.1.1}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Convolutional Layer}{8}{section.3.2}}
 \citation{Scherer2010}
@@ -109,10 +110,12 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Pooling}{10}{subsection.3.2.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces A $2x2$ maximum pooling operation.}}{10}{figure.caption.18}}
 \newlabel{fig:max-poolingoperation}{{3.5}{10}{A $2x2$ maximum pooling operation}{figure.caption.18}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Performance Measurement}{10}{section.3.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Coefficient of Determination}{10}{subsection.3.3.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Average Absolute Percentage Error}{11}{subsection.3.3.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Mean Squared Error}{11}{subsection.3.3.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Training Artificial Neural Networks}{10}{section.3.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Backpropagation}{10}{subsection.3.3.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Performance Measurement}{11}{section.3.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Coefficient of Determination}{11}{subsection.3.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Average Absolute Percentage Error}{11}{subsection.3.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Mean Squared Error}{11}{subsection.3.4.3}}
 \citation{Merton}
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}Simulation Study}{12}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -121,116 +124,122 @@
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}The Merton Jump Diffusion Stochastic Process}{12}{section.4.1}}
 \newlabel{equation:merton_log_returns}{{4.3}{12}{The Merton Jump Diffusion Stochastic Process}{equation.4.1.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Simulation}{12}{subsection.4.1.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Fully Connected Feed-forward Neural Network}{13}{section.4.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Fully Connected Neural Network}{13}{section.4.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Multiple Parameter Prediction Architecture}{13}{subsection.4.2.1}}
 \newlabel{subsection:fully_connected_ff_nn:architecture}{{4.2.1}{13}{Multiple Parameter Prediction Architecture}{subsection.4.2.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Multiple Output Prediction \acrshort {ann}}}{13}{figure.caption.19}}
 \newlabel{fig:multipleoutputcnn}{{4.1}{13}{Multiple Output Prediction \acrshort {ann}}{figure.caption.19}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}The Dataset}{13}{subsection.4.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Training}{13}{subsection.4.2.3}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.3}Convolutional Neural Network}{13}{section.4.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Multiple Parameter Prediction Architecture}{13}{subsection.4.3.1}}
 \newlabel{chap:ConvolutionalNeuralNetwork-section:MultipleParameterPredictionArchitecture}{{4.3.1}{13}{Multiple Parameter Prediction Architecture}{subsection.4.3.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Multiple Output Prediction \acrshort {cnn}}}{13}{figure.caption.20}}
-\newlabel{fig:multipleoutputcnn}{{4.2}{13}{Multiple Output Prediction \acrshort {cnn}}{figure.caption.20}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces MSE values over the training process for the 8-Layer \acrshort {cnn}}}{14}{figure.caption.21}}
-\newlabel{fig:covnetmomse}{{4.3}{14}{MSE values over the training process for the 8-Layer \acrshort {cnn}}{figure.caption.21}{}}
-\newlabel{fig:covnetmor2}{{4.4a}{14}{}{figure.caption.24}{}}
-\newlabel{fig:covnetmor22}{{4.4b}{14}{}{figure.caption.24}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces R-Squared values over the training process for the multiple parameter prediction convolutional architecture (\acrshort {elu} activation units).\relax }}{14}{figure.caption.22}}
+\newlabel{fig:training:fully_connected_mu_and_sigma}{{4.2a}{14}{}{figure.caption.22}{}}
+\newlabel{fig:training:fully_connected_jumps}{{4.2b}{14}{}{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces R-Squared values over the training process for the multiple parameter prediction fully connected architecture (\acrshort {elu} activation units).\relax }}{14}{figure.caption.20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Multiple Output Prediction \acrshort {cnn}}}{14}{figure.caption.23}}
+\newlabel{fig:multipleoutputcnn}{{4.3}{14}{Multiple Output Prediction \acrshort {cnn}}{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces MSE values over the training process for the 8-Layer \acrshort {cnn}}}{14}{figure.caption.24}}
+\newlabel{fig:covnetmomse}{{4.4}{14}{MSE values over the training process for the 8-Layer \acrshort {cnn}}{figure.caption.24}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Dedicated Single Parameter Prediction Architecture}{14}{subsection.4.3.2}}
 \newlabel{chap:ConvolutionalNeuralNetwork-section:SingleParameterPredictionArchitecture}{{4.3.2}{14}{Dedicated Single Parameter Prediction Architecture}{subsection.4.3.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Dedicated Single Parameter Prediction \acrshort {cnn}}}{15}{figure.caption.25}}
-\newlabel{fig:singleparameterdedicatedcnn}{{4.5}{15}{Dedicated Single Parameter Prediction \acrshort {cnn}}{figure.caption.25}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Lambda}{15}{subsubsection*.26}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces R-Squared values for the predictions of $\lambda $ over the training process for the single parameter prediction convolutional architecture (\acrshort {elu} activation units).}}{15}{figure.caption.27}}
-\newlabel{fig:lambda-rsquared}{{4.6}{15}{R-Squared values for the predictions of $\lambda $ over the training process for the single parameter prediction convolutional architecture (\acrshort {elu} activation units)}{figure.caption.27}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Parameter Interactions}{15}{section.4.4}}
-\@writefile{toc}{\contentsline {subsubsection}{Variations in $\mu $}{16}{subsubsection*.28}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_mu:lambda}{{4.7a}{16}{The $\lambda $ parameter estimate plotted against the actual parameter value, $\lambda = 0.02$, for different values of $\mu $.\relax }{figure.caption.31}{}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_mu:jumps_mu}{{4.7b}{16}{The $\hat {\mu }_{jumps}$ parameter estimate plotted against the actual parameter value, $\mu _{jumps} = 0.05$, for different values of $\mu $.\relax }{figure.caption.31}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces The parameter estimates (with $68\%$ confidence interval) of $\mathaccentV {hat}002{\sigma }$, $\mathaccentV {hat}002{\lambda }$, $\mathaccentV {hat}002{\mu }_{jumps}$ and $\mathaccentV {hat}002{\sigma }_{jumps}$, plotted against their actual values ($\sigma = 0.1$, $\lambda = 0.02$, $\mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$), while varying the $\mu $ parameter in the range $\left (-1.0, 1.0\right )$.\relax }}{16}{figure.caption.29}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces The $\lambda $ parameter estimate plotted against the actual parameter value, $\lambda = 0.02$, for different values of $\mu $.\relax }}{16}{figure.caption.31}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces The $\mathaccentV {hat}002{\mu }_{jumps}$ parameter estimate plotted against the actual parameter value, $\mu _{jumps} = 0.05$, for different values of $\mu $.\relax }}{16}{figure.caption.31}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_mu}{{4.7}{16}{The parameter estimates (with $68\%$ confidence interval) of $\hat {\sigma }$, $\hat {\lambda }$, $\hat {\mu }_{jumps}$ and $\hat {\sigma }_{jumps}$, plotted against their actual values ($\sigma = 0.1$, $\lambda = 0.02$, $\mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$), while varying the $\mu $ parameter in the range $\left (-1.0, 1.0\right )$.\relax }{figure.caption.29}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Variations in $\sigma $}{16}{subsubsection*.32}}
-\@writefile{toc}{\contentsline {subsubsection}{Variations in $\lambda $}{16}{subsubsection*.37}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces The deviation (with $68\%$ confidence interval) of the $\mathaccentV {hat}002{\sigma }$ parameter estimate from the actual parameter value, $\sigma $, for different values of $\sigma $. All the other parameters are kept constant as $\mu = 0.05, \lambda = 0.02, \mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$.\relax }}{17}{figure.caption.33}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_sigma:sigma}{{4.8}{17}{The deviation (with $68\%$ confidence interval) of the $\hat {\sigma }$ parameter estimate from the actual parameter value, $\sigma $, for different values of $\sigma $. All the other parameters are kept constant as $\mu = 0.05, \lambda = 0.02, \mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$.\relax }{figure.caption.33}{}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_sigma:mu}{{4.9a}{17}{The mean $\hat {\mu }$ parameter estimate plotted against the actual parameter value, $\mu = 0.05$, for different values of $\sigma $.\relax }{figure.caption.36}{}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_sigma:lambda}{{4.9b}{17}{The mean $\lambda $ parameter estimate plotted against the actual parameter value, $\lambda = 0.02$, for different values of $\sigma $.\relax }{figure.caption.36}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces The mean parameter estimates (with $68\%$ confidence interval) of $\mathaccentV {hat}002{\mu }$, $\mathaccentV {hat}002{\lambda }$, $\mathaccentV {hat}002{\mu }_{jumps}$ and $\mathaccentV {hat}002{\sigma }_{jumps}$, plotted against their actual values ($\mu = 0.05$, $\lambda = 0.02$, $\mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$), while varying the $\sigma $ parameter in the range $\left (0, 0.2\right )$.\relax }}{17}{figure.caption.34}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces The mean $\mathaccentV {hat}002{\mu }$ parameter estimate plotted against the actual parameter value, $\mu = 0.05$, for different values of $\sigma $.\relax }}{17}{figure.caption.36}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces The mean $\lambda $ parameter estimate plotted against the actual parameter value, $\lambda = 0.02$, for different values of $\sigma $.\relax }}{17}{figure.caption.36}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_sigma}{{4.9}{17}{The mean parameter estimates (with $68\%$ confidence interval) of $\hat {\mu }$, $\hat {\lambda }$, $\hat {\mu }_{jumps}$ and $\hat {\sigma }_{jumps}$, plotted against their actual values ($\mu = 0.05$, $\lambda = 0.02$, $\mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$), while varying the $\sigma $ parameter in the range $\left (0, 0.2\right )$.\relax }{figure.caption.34}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Variations in $\sigma _{jumps}$}{17}{subsubsection*.42}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces The mean deviation (with $68\%$ confidence interval) of the $\mathaccentV {hat}002{\lambda }$ parameter estimate from the actual parameter value, $\lambda $, for different values of $\lambda $. All the other parameters are kept constant as $\mu = 0.05, \sigma = 0.1, \mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$.\relax }}{18}{figure.caption.38}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_lambda:lambda}{{4.10}{18}{The mean deviation (with $68\%$ confidence interval) of the $\hat {\lambda }$ parameter estimate from the actual parameter value, $\lambda $, for different values of $\lambda $. All the other parameters are kept constant as $\mu = 0.05, \sigma = 0.1, \mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$.\relax }{figure.caption.38}{}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_lambda:jumps_sigma}{{4.11a}{18}{The mean $\hat {\sigma }_{jumps}$ parameter estimate plotted against the actual parameter value, $\sigma _{jumps} = 0.07$, for different values of $\lambda $.\relax }{figure.caption.41}{}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_lambda:jumps_mu}{{4.11b}{18}{The mean $\hat {\mu }_{jumps}$ parameter estimate plotted against the actual parameter value, $\mu _{jumps} = 0.05$, for different values of $\lambda $.\relax }{figure.caption.41}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces The mean parameter estimates (with $68\%$ confidence interval) of $\mathaccentV {hat}002{\mu }$, $\mathaccentV {hat}002{\sigma }$, $\mathaccentV {hat}002{\mu }_{jumps}$ and $\mathaccentV {hat}002{\sigma }_{jumps}$, plotted against their actual values ($\mu = 0.05$, $\sigma = 0.1$, $\mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$), while varying the $\lambda $ parameter in the range $\left (0, 0.025\right )$.\relax }}{18}{figure.caption.39}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces The mean $\mathaccentV {hat}002{\sigma }_{jumps}$ parameter estimate plotted against the actual parameter value, $\sigma _{jumps} = 0.07$, for different values of $\lambda $.\relax }}{18}{figure.caption.41}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces The mean $\mathaccentV {hat}002{\mu }_{jumps}$ parameter estimate plotted against the actual parameter value, $\mu _{jumps} = 0.05$, for different values of $\lambda $.\relax }}{18}{figure.caption.41}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_lambda}{{4.11}{18}{The mean parameter estimates (with $68\%$ confidence interval) of $\hat {\mu }$, $\hat {\sigma }$, $\hat {\mu }_{jumps}$ and $\hat {\sigma }_{jumps}$, plotted against their actual values ($\mu = 0.05$, $\sigma = 0.1$, $\mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$), while varying the $\lambda $ parameter in the range $\left (0, 0.025\right )$.\relax }{figure.caption.39}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Variations in $\mu _{jumps}$}{18}{subsubsection*.46}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_sigma:jumps_mu}{{4.12a}{19}{The mean $\hat {\mu }_{jumps}$ parameter estimate plotted against the actual parameter value, $\mu _{jumps} = 0.05$, for different values of $\mu _{jumps}$.\relax }{figure.caption.45}{}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_sigma:lambda}{{4.12b}{19}{The mean $\lambda $ parameter estimate plotted against the actual parameter value, $\lambda = 0.2$, for different values of $\sigma _{jumps}$.\relax }{figure.caption.45}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces The mean parameter estimates (with $68\%$ confidence interval) of $\mathaccentV {hat}002{\mu }$, $\mathaccentV {hat}002{\sigma }$, $\mathaccentV {hat}002{\mu }_{jumps}$ and $\lambda $, plotted against their actual values ($\mu = 0.05$, $\sigma = 0.1$, $\mu _{jumps} = 0.05$ and $\lambda = 0.02$), while varying the $\sigma _{jumps}$ parameter in the range $\left (0, 0.2\right )$.\relax }}{19}{figure.caption.43}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces The mean $\mathaccentV {hat}002{\mu }_{jumps}$ parameter estimate plotted against the actual parameter value, $\mu _{jumps} = 0.05$, for different values of $\mu _{jumps}$.\relax }}{19}{figure.caption.45}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces The mean $\lambda $ parameter estimate plotted against the actual parameter value, $\lambda = 0.2$, for different values of $\sigma _{jumps}$.\relax }}{19}{figure.caption.45}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_sigma}{{4.12}{19}{The mean parameter estimates (with $68\%$ confidence interval) of $\hat {\mu }$, $\hat {\sigma }$, $\hat {\mu }_{jumps}$ and $\lambda $, plotted against their actual values ($\mu = 0.05$, $\sigma = 0.1$, $\mu _{jumps} = 0.05$ and $\lambda = 0.02$), while varying the $\sigma _{jumps}$ parameter in the range $\left (0, 0.2\right )$.\relax }{figure.caption.43}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces The mean deviation (with $68\%$ confidence interval) of the $\mathaccentV {hat}002{\mu }_{jumps}$ parameter estimate from the actual parameter value, $\mu _{jumps}$, for different values of $\mu _{jumps}$. All the other parameters are kept constant as $\mu = 0.05, \sigma = 0.1, \lambda = 0.02$ and $\sigma _{jumps} = 0.07$.\relax }}{19}{figure.caption.47}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_mu:jumps_mu}{{4.13}{19}{The mean deviation (with $68\%$ confidence interval) of the $\hat {\mu }_{jumps}$ parameter estimate from the actual parameter value, $\mu _{jumps}$, for different values of $\mu _{jumps}$. All the other parameters are kept constant as $\mu = 0.05, \sigma = 0.1, \lambda = 0.02$ and $\sigma _{jumps} = 0.07$.\relax }{figure.caption.47}{}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_mu:mu}{{4.14a}{20}{The mean $\hat {\mu }$ parameter estimate plotted against the actual parameter value, $\mu = 0.05$, for different values of $\mu _{jumps}$.\relax }{figure.caption.51}{}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_mu:sigma}{{4.14b}{20}{The mean $\sigma $ parameter estimate plotted against the actual parameter value, $\sigma = 0.1$, for different values of $\mu _{jumps}$.\relax }{figure.caption.51}{}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_mu:jumps_sigma}{{4.14c}{20}{The mean $\hat {\sigma }_{jumps}$ parameter estimate plotted against the actual parameter value, $\sigma _{jumps} = 0.07$, for different values of $\mu _{jumps}$.\relax }{figure.caption.52}{}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_mu:lambda}{{4.14d}{20}{The mean $\lambda $ parameter estimate plotted against the actual parameter value, $\lambda = 0.2$, for different values of $\mu _{jumps}$.\relax }{figure.caption.52}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces The mean parameter estimates (with $68\%$ confidence interval) of $\mathaccentV {hat}002{\mu }$, $\mathaccentV {hat}002{\sigma }$, $\mathaccentV {hat}002{\sigma }_{jumps}$ and $\lambda $, plotted against their actual values ($\mu = 0.05$, $\sigma = 0.1$, $\lambda = 0.02$ and $\sigma _{jumps} = 0.07$), while varying the $\mu _{jumps}$ parameter in the range $\left (-0.5, 0.5\right )$.\relax }}{20}{figure.caption.48}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces The mean $\mathaccentV {hat}002{\mu }$ parameter estimate plotted against the actual parameter value, $\mu = 0.05$, for different values of $\mu _{jumps}$.\relax }}{20}{figure.caption.51}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces The mean $\sigma $ parameter estimate plotted against the actual parameter value, $\sigma = 0.1$, for different values of $\mu _{jumps}$.\relax }}{20}{figure.caption.51}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(c)}{\ignorespaces The mean $\mathaccentV {hat}002{\sigma }_{jumps}$ parameter estimate plotted against the actual parameter value, $\sigma _{jumps} = 0.07$, for different values of $\mu _{jumps}$.\relax }}{20}{figure.caption.52}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(d)}{\ignorespaces The mean $\lambda $ parameter estimate plotted against the actual parameter value, $\lambda = 0.2$, for different values of $\mu _{jumps}$.\relax }}{20}{figure.caption.52}}
-\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_mu}{{4.14}{20}{The mean parameter estimates (with $68\%$ confidence interval) of $\hat {\mu }$, $\hat {\sigma }$, $\hat {\sigma }_{jumps}$ and $\lambda $, plotted against their actual values ($\mu = 0.05$, $\sigma = 0.1$, $\lambda = 0.02$ and $\sigma _{jumps} = 0.07$), while varying the $\mu _{jumps}$ parameter in the range $\left (-0.5, 0.5\right )$.\relax }{figure.caption.48}{}}
+\newlabel{fig:covnetmor2}{{4.5a}{15}{}{figure.caption.27}{}}
+\newlabel{fig:covnetmor22}{{4.5b}{15}{}{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces R-Squared values over the training process for the multiple parameter prediction convolutional architecture (\acrshort {elu} activation units).\relax }}{15}{figure.caption.25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Dedicated Single Parameter Prediction \acrshort {cnn}}}{15}{figure.caption.28}}
+\newlabel{fig:singleparameterdedicatedcnn}{{4.6}{15}{Dedicated Single Parameter Prediction \acrshort {cnn}}{figure.caption.28}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Lambda}{15}{subsubsection*.29}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Sensitivity Tests}{15}{section.4.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces R-Squared values for the predictions of $\lambda $ over the training process for the single parameter prediction convolutional architecture (\acrshort {elu} activation units).}}{16}{figure.caption.30}}
+\newlabel{fig:lambda-rsquared}{{4.7}{16}{R-Squared values for the predictions of $\lambda $ over the training process for the single parameter prediction convolutional architecture (\acrshort {elu} activation units)}{figure.caption.30}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Variations in $\mu $}{16}{subsubsection*.31}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_mu:lambda}{{4.8a}{16}{The $\lambda $ parameter estimate plotted against the actual parameter value, $\lambda = 0.02$, for different values of $\mu $.\relax }{figure.caption.34}{}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_mu:jumps_mu}{{4.8b}{16}{The $\hat {\mu }_{jumps}$ parameter estimate plotted against the actual parameter value, $\mu _{jumps} = 0.05$, for different values of $\mu $.\relax }{figure.caption.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces The parameter estimates (with $68\%$ confidence interval) of $\mathaccentV {hat}002{\sigma }$, $\mathaccentV {hat}002{\lambda }$, $\mathaccentV {hat}002{\mu }_{jumps}$ and $\mathaccentV {hat}002{\sigma }_{jumps}$, plotted against their actual values ($\sigma = 0.1$, $\lambda = 0.02$, $\mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$), while varying the $\mu $ parameter in the range $\left (-1.0, 1.0\right )$.\relax }}{16}{figure.caption.32}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces The $\lambda $ parameter estimate plotted against the actual parameter value, $\lambda = 0.02$, for different values of $\mu $.\relax }}{16}{figure.caption.34}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces The $\mathaccentV {hat}002{\mu }_{jumps}$ parameter estimate plotted against the actual parameter value, $\mu _{jumps} = 0.05$, for different values of $\mu $.\relax }}{16}{figure.caption.34}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_mu}{{4.8}{16}{The parameter estimates (with $68\%$ confidence interval) of $\hat {\sigma }$, $\hat {\lambda }$, $\hat {\mu }_{jumps}$ and $\hat {\sigma }_{jumps}$, plotted against their actual values ($\sigma = 0.1$, $\lambda = 0.02$, $\mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$), while varying the $\mu $ parameter in the range $\left (-1.0, 1.0\right )$.\relax }{figure.caption.32}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Variations in $\sigma $}{17}{subsubsection*.35}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces The deviation (with $68\%$ confidence interval) of the $\mathaccentV {hat}002{\sigma }$ parameter estimate from the actual parameter value, $\sigma $, for different values of $\sigma $. All the other parameters are kept constant as $\mu = 0.05, \lambda = 0.02, \mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$.\relax }}{17}{figure.caption.36}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_sigma:sigma}{{4.9}{17}{The deviation (with $68\%$ confidence interval) of the $\hat {\sigma }$ parameter estimate from the actual parameter value, $\sigma $, for different values of $\sigma $. All the other parameters are kept constant as $\mu = 0.05, \lambda = 0.02, \mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$.\relax }{figure.caption.36}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Variations in $\lambda $}{17}{subsubsection*.40}}
+\@writefile{toc}{\contentsline {subsubsection}{Variations in $\sigma _{jumps}$}{17}{subsubsection*.45}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_sigma:mu}{{4.10a}{18}{The mean $\hat {\mu }$ parameter estimate plotted against the actual parameter value, $\mu = 0.05$, for different values of $\sigma $.\relax }{figure.caption.39}{}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_sigma:lambda}{{4.10b}{18}{The mean $\lambda $ parameter estimate plotted against the actual parameter value, $\lambda = 0.02$, for different values of $\sigma $.\relax }{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces The mean parameter estimates (with $68\%$ confidence interval) of $\mathaccentV {hat}002{\mu }$, $\mathaccentV {hat}002{\lambda }$, $\mathaccentV {hat}002{\mu }_{jumps}$ and $\mathaccentV {hat}002{\sigma }_{jumps}$, plotted against their actual values ($\mu = 0.05$, $\lambda = 0.02$, $\mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$), while varying the $\sigma $ parameter in the range $\left (0, 0.2\right )$.\relax }}{18}{figure.caption.37}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces The mean $\mathaccentV {hat}002{\mu }$ parameter estimate plotted against the actual parameter value, $\mu = 0.05$, for different values of $\sigma $.\relax }}{18}{figure.caption.39}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces The mean $\lambda $ parameter estimate plotted against the actual parameter value, $\lambda = 0.02$, for different values of $\sigma $.\relax }}{18}{figure.caption.39}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_sigma}{{4.10}{18}{The mean parameter estimates (with $68\%$ confidence interval) of $\hat {\mu }$, $\hat {\lambda }$, $\hat {\mu }_{jumps}$ and $\hat {\sigma }_{jumps}$, plotted against their actual values ($\mu = 0.05$, $\lambda = 0.02$, $\mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$), while varying the $\sigma $ parameter in the range $\left (0, 0.2\right )$.\relax }{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces The mean deviation (with $68\%$ confidence interval) of the $\mathaccentV {hat}002{\lambda }$ parameter estimate from the actual parameter value, $\lambda $, for different values of $\lambda $. All the other parameters are kept constant as $\mu = 0.05, \sigma = 0.1, \mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$.\relax }}{18}{figure.caption.41}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_lambda:lambda}{{4.11}{18}{The mean deviation (with $68\%$ confidence interval) of the $\hat {\lambda }$ parameter estimate from the actual parameter value, $\lambda $, for different values of $\lambda $. All the other parameters are kept constant as $\mu = 0.05, \sigma = 0.1, \mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$.\relax }{figure.caption.41}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Variations in $\mu _{jumps}$}{18}{subsubsection*.49}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_lambda:jumps_sigma}{{4.12a}{19}{The mean $\hat {\sigma }_{jumps}$ parameter estimate plotted against the actual parameter value, $\sigma _{jumps} = 0.07$, for different values of $\lambda $.\relax }{figure.caption.44}{}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_lambda:jumps_mu}{{4.12b}{19}{The mean $\hat {\mu }_{jumps}$ parameter estimate plotted against the actual parameter value, $\mu _{jumps} = 0.05$, for different values of $\lambda $.\relax }{figure.caption.44}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces The mean parameter estimates (with $68\%$ confidence interval) of $\mathaccentV {hat}002{\mu }$, $\mathaccentV {hat}002{\sigma }$, $\mathaccentV {hat}002{\mu }_{jumps}$ and $\mathaccentV {hat}002{\sigma }_{jumps}$, plotted against their actual values ($\mu = 0.05$, $\sigma = 0.1$, $\mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$), while varying the $\lambda $ parameter in the range $\left (0, 0.025\right )$.\relax }}{19}{figure.caption.42}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces The mean $\mathaccentV {hat}002{\sigma }_{jumps}$ parameter estimate plotted against the actual parameter value, $\sigma _{jumps} = 0.07$, for different values of $\lambda $.\relax }}{19}{figure.caption.44}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces The mean $\mathaccentV {hat}002{\mu }_{jumps}$ parameter estimate plotted against the actual parameter value, $\mu _{jumps} = 0.05$, for different values of $\lambda $.\relax }}{19}{figure.caption.44}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_lambda}{{4.12}{19}{The mean parameter estimates (with $68\%$ confidence interval) of $\hat {\mu }$, $\hat {\sigma }$, $\hat {\mu }_{jumps}$ and $\hat {\sigma }_{jumps}$, plotted against their actual values ($\mu = 0.05$, $\sigma = 0.1$, $\mu _{jumps} = 0.05$ and $\sigma _{jumps} = 0.07$), while varying the $\lambda $ parameter in the range $\left (0, 0.025\right )$.\relax }{figure.caption.42}{}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_sigma:jumps_mu}{{4.13a}{19}{The mean $\hat {\mu }_{jumps}$ parameter estimate plotted against the actual parameter value, $\mu _{jumps} = 0.05$, for different values of $\mu _{jumps}$.\relax }{figure.caption.48}{}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_sigma:lambda}{{4.13b}{19}{The mean $\lambda $ parameter estimate plotted against the actual parameter value, $\lambda = 0.2$, for different values of $\sigma _{jumps}$.\relax }{figure.caption.48}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces The mean parameter estimates (with $68\%$ confidence interval) of $\mathaccentV {hat}002{\mu }$, $\mathaccentV {hat}002{\sigma }$, $\mathaccentV {hat}002{\mu }_{jumps}$ and $\lambda $, plotted against their actual values ($\mu = 0.05$, $\sigma = 0.1$, $\mu _{jumps} = 0.05$ and $\lambda = 0.02$), while varying the $\sigma _{jumps}$ parameter in the range $\left (0, 0.2\right )$.\relax }}{19}{figure.caption.46}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces The mean $\mathaccentV {hat}002{\mu }_{jumps}$ parameter estimate plotted against the actual parameter value, $\mu _{jumps} = 0.05$, for different values of $\mu _{jumps}$.\relax }}{19}{figure.caption.48}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces The mean $\lambda $ parameter estimate plotted against the actual parameter value, $\lambda = 0.2$, for different values of $\sigma _{jumps}$.\relax }}{19}{figure.caption.48}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_sigma}{{4.13}{19}{The mean parameter estimates (with $68\%$ confidence interval) of $\hat {\mu }$, $\hat {\sigma }$, $\hat {\mu }_{jumps}$ and $\lambda $, plotted against their actual values ($\mu = 0.05$, $\sigma = 0.1$, $\mu _{jumps} = 0.05$ and $\lambda = 0.02$), while varying the $\sigma _{jumps}$ parameter in the range $\left (0, 0.2\right )$.\relax }{figure.caption.46}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Conclusion}{19}{section.4.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces The mean deviation (with $68\%$ confidence interval) of the $\mathaccentV {hat}002{\mu }_{jumps}$ parameter estimate from the actual parameter value, $\mu _{jumps}$, for different values of $\mu _{jumps}$. All the other parameters are kept constant as $\mu = 0.05, \sigma = 0.1, \lambda = 0.02$ and $\sigma _{jumps} = 0.07$.\relax }}{20}{figure.caption.50}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_mu:jumps_mu}{{4.14}{20}{The mean deviation (with $68\%$ confidence interval) of the $\hat {\mu }_{jumps}$ parameter estimate from the actual parameter value, $\mu _{jumps}$, for different values of $\mu _{jumps}$. All the other parameters are kept constant as $\mu = 0.05, \sigma = 0.1, \lambda = 0.02$ and $\sigma _{jumps} = 0.07$.\relax }{figure.caption.50}{}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_mu:mu}{{4.15a}{20}{The mean $\hat {\mu }$ parameter estimate plotted against the actual parameter value, $\mu = 0.05$, for different values of $\mu _{jumps}$.\relax }{figure.caption.54}{}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_mu:sigma}{{4.15b}{20}{The mean $\sigma $ parameter estimate plotted against the actual parameter value, $\sigma = 0.1$, for different values of $\mu _{jumps}$.\relax }{figure.caption.54}{}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_mu:jumps_sigma}{{4.15c}{20}{The mean $\hat {\sigma }_{jumps}$ parameter estimate plotted against the actual parameter value, $\sigma _{jumps} = 0.07$, for different values of $\mu _{jumps}$.\relax }{figure.caption.55}{}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_mu:lambda}{{4.15d}{20}{The mean $\lambda $ parameter estimate plotted against the actual parameter value, $\lambda = 0.2$, for different values of $\mu _{jumps}$.\relax }{figure.caption.55}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces The mean parameter estimates (with $68\%$ confidence interval) of $\mathaccentV {hat}002{\mu }$, $\mathaccentV {hat}002{\sigma }$, $\mathaccentV {hat}002{\sigma }_{jumps}$ and $\lambda $, plotted against their actual values ($\mu = 0.05$, $\sigma = 0.1$, $\lambda = 0.02$ and $\sigma _{jumps} = 0.07$), while varying the $\mu _{jumps}$ parameter in the range $\left (-0.5, 0.5\right )$.\relax }}{20}{figure.caption.51}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces The mean $\mathaccentV {hat}002{\mu }$ parameter estimate plotted against the actual parameter value, $\mu = 0.05$, for different values of $\mu _{jumps}$.\relax }}{20}{figure.caption.54}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces The mean $\sigma $ parameter estimate plotted against the actual parameter value, $\sigma = 0.1$, for different values of $\mu _{jumps}$.\relax }}{20}{figure.caption.54}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(c)}{\ignorespaces The mean $\mathaccentV {hat}002{\sigma }_{jumps}$ parameter estimate plotted against the actual parameter value, $\sigma _{jumps} = 0.07$, for different values of $\mu _{jumps}$.\relax }}{20}{figure.caption.55}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(d)}{\ignorespaces The mean $\lambda $ parameter estimate plotted against the actual parameter value, $\lambda = 0.2$, for different values of $\mu _{jumps}$.\relax }}{20}{figure.caption.55}}
+\newlabel{fig:sensitivity_test:multiple_output:varying_jumps_mu}{{4.15}{20}{The mean parameter estimates (with $68\%$ confidence interval) of $\hat {\mu }$, $\hat {\sigma }$, $\hat {\sigma }_{jumps}$ and $\lambda $, plotted against their actual values ($\mu = 0.05$, $\sigma = 0.1$, $\lambda = 0.02$ and $\sigma _{jumps} = 0.07$), while varying the $\mu _{jumps}$ parameter in the range $\left (-0.5, 0.5\right )$.\relax }{figure.caption.51}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}Results}{21}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{chapter:results}{{5}{21}{Results}{chapter.5}{}}
-\newlabel{fig:convolutional-architecture---multiple-output---elumu}{{5.1a}{21}{\acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}{figure.caption.55}{}}
-\newlabel{fig:fully-connected-architecture---multiple-output---elumu}{{5.1b}{21}{Fully Connected Architecture - Multiple Output - EL}{figure.caption.55}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Various model distributions of the predicted values of $\mu $ with true value $0,05$.\relax }}{21}{figure.caption.53}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}}{21}{figure.caption.55}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Fully Connected Architecture - Multiple Output - EL}}{21}{figure.caption.55}}
-\newlabel{fig:individual-parameter-estimation-results--mu}{{5.1}{21}{Various model distributions of the predicted values of $\mu $ with true value $0,05$.\relax }{figure.caption.53}{}}
-\newlabel{fig:convolutional-architecture---multiple-output---elusigma}{{5.2a}{21}{\acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}{figure.caption.58}{}}
-\newlabel{fig:fully-connected-architecture---multiple-output---elusigma}{{5.2b}{21}{Fully Connected Architecture - Multiple Output - EL}{figure.caption.58}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Various model distributions of the predicted values of $\sigma $ with true value $0,1$.\relax }}{21}{figure.caption.56}}
+\newlabel{fig:convolutional-architecture---multiple-output---elumu}{{5.1a}{21}{\acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}{figure.caption.58}{}}
+\newlabel{fig:fully-connected-architecture---multiple-output---elumu}{{5.1b}{21}{Fully Connected Architecture - Multiple Output - EL}{figure.caption.58}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Various model distributions of the predicted values of $\mu $ with true value $0,05$.\relax }}{21}{figure.caption.56}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}}{21}{figure.caption.58}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Fully Connected Architecture - Multiple Output - EL}}{21}{figure.caption.58}}
-\newlabel{fig:individual-parameter-estimation-results--sigma}{{5.2}{21}{Various model distributions of the predicted values of $\sigma $ with true value $0,1$.\relax }{figure.caption.56}{}}
-\newlabel{fig:convolutional-architecture---multiple-output---elulambda}{{5.3a}{22}{\acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}{figure.caption.62}{}}
-\newlabel{fig:fully-connected-architecture---multiple-output---elulambda}{{5.3b}{22}{Fully Connected Architecture - Multiple Output - EL}{figure.caption.62}{}}
-\newlabel{fig:convolutional-architecture---single-output---elulambda}{{5.3c}{22}{\acrshort {cnn} Architecture - Single Output - \acrshort {elu}}{figure.caption.63}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Various model distributions of the predicted values of $\lambda $ with true value $0,02$.\relax }}{22}{figure.caption.59}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}}{22}{figure.caption.62}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Fully Connected Architecture - Multiple Output - EL}}{22}{figure.caption.62}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(c)}{\ignorespaces \acrshort {cnn} Architecture - Single Output - \acrshort {elu}}}{22}{figure.caption.63}}
-\newlabel{fig:individual-parameter-estimation-results--lambda}{{5.3}{22}{Various model distributions of the predicted values of $\lambda $ with true value $0,02$.\relax }{figure.caption.59}{}}
-\newlabel{fig:convolutional-architecture---multiple-output---elujumps-mu}{{5.4a}{22}{\acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}{figure.caption.66}{}}
-\newlabel{fig:fully-connected-architecture---multiple-output---elujumps-mu}{{5.4b}{22}{Fully Connected Architecture - Multiple Output - EL}{figure.caption.66}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Various model distributions of the predicted values of $\mu _{jumps}$ with true value $0,05$.\relax }}{22}{figure.caption.64}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}}{22}{figure.caption.66}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Fully Connected Architecture - Multiple Output - EL}}{22}{figure.caption.66}}
-\newlabel{fig:individual-parameter-estimation-results--mu_jumps}{{5.4}{22}{Various model distributions of the predicted values of $\mu _{jumps}$ with true value $0,05$.\relax }{figure.caption.64}{}}
-\newlabel{fig:convolutional-architecture---multiple-output---elujumps-sigma}{{5.5a}{23}{\acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}{figure.caption.69}{}}
-\newlabel{fig:fully-connected-architecture---multiple-output---elujumps-sigma}{{5.5b}{23}{Fully Connected Architecture - Multiple Output - EL}{figure.caption.69}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Various model distributions of the predicted values of $\sigma _{jumps}$ with true value $0,07$.\relax }}{23}{figure.caption.67}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}}{23}{figure.caption.69}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Fully Connected Architecture - Multiple Output - EL}}{23}{figure.caption.69}}
-\newlabel{fig:individual-parameter-estimation-results--sigma_jumps}{{5.5}{23}{Various model distributions of the predicted values of $\sigma _{jumps}$ with true value $0,07$.\relax }{figure.caption.67}{}}
+\newlabel{fig:individual-parameter-estimation-results--mu}{{5.1}{21}{Various model distributions of the predicted values of $\mu $ with true value $0,05$.\relax }{figure.caption.56}{}}
+\newlabel{fig:convolutional-architecture---multiple-output---elusigma}{{5.2a}{21}{\acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}{figure.caption.61}{}}
+\newlabel{fig:fully-connected-architecture---multiple-output---elusigma}{{5.2b}{21}{Fully Connected Architecture - Multiple Output - EL}{figure.caption.61}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Various model distributions of the predicted values of $\sigma $ with true value $0,1$.\relax }}{21}{figure.caption.59}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}}{21}{figure.caption.61}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Fully Connected Architecture - Multiple Output - EL}}{21}{figure.caption.61}}
+\newlabel{fig:individual-parameter-estimation-results--sigma}{{5.2}{21}{Various model distributions of the predicted values of $\sigma $ with true value $0,1$.\relax }{figure.caption.59}{}}
+\newlabel{fig:convolutional-architecture---multiple-output---elulambda}{{5.3a}{22}{\acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}{figure.caption.65}{}}
+\newlabel{fig:fully-connected-architecture---multiple-output---elulambda}{{5.3b}{22}{Fully Connected Architecture - Multiple Output - EL}{figure.caption.65}{}}
+\newlabel{fig:convolutional-architecture---single-output---elulambda}{{5.3c}{22}{\acrshort {cnn} Architecture - Single Output - \acrshort {elu}}{figure.caption.66}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Various model distributions of the predicted values of $\lambda $ with true value $0,02$.\relax }}{22}{figure.caption.62}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}}{22}{figure.caption.65}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Fully Connected Architecture - Multiple Output - EL}}{22}{figure.caption.65}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(c)}{\ignorespaces \acrshort {cnn} Architecture - Single Output - \acrshort {elu}}}{22}{figure.caption.66}}
+\newlabel{fig:individual-parameter-estimation-results--lambda}{{5.3}{22}{Various model distributions of the predicted values of $\lambda $ with true value $0,02$.\relax }{figure.caption.62}{}}
+\newlabel{fig:convolutional-architecture---multiple-output---elujumps-mu}{{5.4a}{22}{\acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}{figure.caption.69}{}}
+\newlabel{fig:fully-connected-architecture---multiple-output---elujumps-mu}{{5.4b}{22}{Fully Connected Architecture - Multiple Output - EL}{figure.caption.69}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Various model distributions of the predicted values of $\mu _{jumps}$ with true value $0,05$.\relax }}{22}{figure.caption.67}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}}{22}{figure.caption.69}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Fully Connected Architecture - Multiple Output - EL}}{22}{figure.caption.69}}
+\newlabel{fig:individual-parameter-estimation-results--mu_jumps}{{5.4}{22}{Various model distributions of the predicted values of $\mu _{jumps}$ with true value $0,05$.\relax }{figure.caption.67}{}}
+\newlabel{fig:convolutional-architecture---multiple-output---elujumps-sigma}{{5.5a}{23}{\acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}{figure.caption.72}{}}
+\newlabel{fig:fully-connected-architecture---multiple-output---elujumps-sigma}{{5.5b}{23}{Fully Connected Architecture - Multiple Output - EL}{figure.caption.72}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Various model distributions of the predicted values of $\sigma _{jumps}$ with true value $0,07$.\relax }}{23}{figure.caption.70}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \acrshort {cnn} Architecture - Multiple Output - \acrshort {elu}}}{23}{figure.caption.72}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Fully Connected Architecture - Multiple Output - EL}}{23}{figure.caption.72}}
+\newlabel{fig:individual-parameter-estimation-results--sigma_jumps}{{5.5}{23}{Various model distributions of the predicted values of $\sigma _{jumps}$ with true value $0,07$.\relax }{figure.caption.70}{}}
 \bibstyle{ussagus}
 \bibdata{export}
 \@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion and Further Research}{24}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Practical Considerations}{24}{section.6.1}}
 \bibcite{cs231n}{{1}{}{{cs2}}{{}}}
 \bibcite{tensorflow2015-whitepaper}{{2}{2015}{{Abadi \textit  {et~al.{}}}}{{Abadi, Agarwal, Barham, Brevdo, Chen, Citro, Corrado, Davis, Dean, Devin, Ghemawat, Goodfellow, Harp, Irving, Isard, Jia, Jozefowicz, Kaiser, Kudlur, Levenberg, Man\'{e}, Monga, Moore, Murray, Olah, Schuster, Shlens, Steiner, Sutskever, Talwar, Tucker, Vanhoucke, Vasudevan, Vi\'{e}gas, Vinyals, Warden, Wattenberg, Wicke, Yu \BIBand {} Zheng}}}
 \bibcite{Barone-Adesi}{{3}{2015}{{Barone-Adesi}}{{}}}
@@ -245,7 +254,7 @@
 \bibcite{scipy}{{12}{2001--}{{Jones \textit  {et~al.{}}}}{{Jones, Oliphant, Peterson \textit  {et~al.{}}}}}
 \bibcite{adam}{{13}{2014}{{Kingma \BIBand {} Ba}}{{}}}
 \bibcite{Merton}{{14}{1976}{{Merton}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{25}{section*.71}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{25}{section*.74}}
 \bibcite{Mongwe}{{15}{2015}{{Mongwe}}{{}}}
 \bibcite{Nielsen}{{16}{2000}{{Nielsen \textit  {et~al.{}}}}{{Nielsen, Madsen \BIBand {} Young}}}
 \bibcite{Olden}{{17}{2002}{{Olden \BIBand {} Jackson}}{{}}}
@@ -276,3 +285,13 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{list_of_software_used}{{A}{28}{Appendix A}{appendix.A}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix B}{29}{appendix.B}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{appedix:source_code}{{B}{29}{Appendix B}{appendix.B}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B.1}Neural Network Models}{29}{section.B.1}}
+\@writefile{lol}{\contentsline {lstlisting}{Models.py}{29}{lstlisting.B.-1}}
+\citation{reid}
+\@writefile{toc}{\contentsline {section}{\numberline {B.2}Merton Jump Diffusion Stochastic Process Simulation}{32}{section.B.2}}
+\newlabel{appendix:source_code:merton_simulation}{{B.2}{32}{Merton Jump Diffusion Stochastic Process Simulation}{section.B.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{Merton\textunderscore Jump\textunderscore Diffusion\textunderscore SDE\textunderscore Utilities.py}{32}{lstlisting.B.-2}}

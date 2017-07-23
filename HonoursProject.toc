@@ -21,27 +21,35 @@
 \contentsline {subsection}{\numberline {3.1.1}Activation Functions}{8}{subsection.3.1.1}
 \contentsline {section}{\numberline {3.2}Convolutional Layer}{8}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Pooling}{10}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}Performance Measurement}{10}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Coefficient of Determination}{10}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Average Absolute Percentage Error}{11}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Mean Squared Error}{11}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.3}Training Artificial Neural Networks}{10}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Backpropagation}{10}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Performance Measurement}{11}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Coefficient of Determination}{11}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Average Absolute Percentage Error}{11}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Mean Squared Error}{11}{subsection.3.4.3}
 \contentsline {chapter}{\numberline {4}Simulation Study}{12}{chapter.4}
 \contentsline {section}{\numberline {4.1}The Merton Jump Diffusion Stochastic Process}{12}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Simulation}{12}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}Fully Connected Feed-forward Neural Network}{13}{section.4.2}
+\contentsline {section}{\numberline {4.2}Fully Connected Neural Network}{13}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Multiple Parameter Prediction Architecture}{13}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}The Dataset}{13}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Training}{13}{subsection.4.2.3}
 \contentsline {section}{\numberline {4.3}Convolutional Neural Network}{13}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Multiple Parameter Prediction Architecture}{13}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Dedicated Single Parameter Prediction Architecture}{14}{subsection.4.3.2}
-\contentsline {subsubsection}{Lambda}{15}{subsubsection*.26}
-\contentsline {section}{\numberline {4.4}Parameter Interactions}{15}{section.4.4}
-\contentsline {subsubsection}{Variations in $\mu $}{16}{subsubsection*.28}
-\contentsline {subsubsection}{Variations in $\sigma $}{16}{subsubsection*.32}
-\contentsline {subsubsection}{Variations in $\lambda $}{16}{subsubsection*.37}
-\contentsline {subsubsection}{Variations in $\sigma _{jumps}$}{17}{subsubsection*.42}
-\contentsline {subsubsection}{Variations in $\mu _{jumps}$}{18}{subsubsection*.46}
+\contentsline {subsubsection}{Lambda}{15}{subsubsection*.29}
+\contentsline {section}{\numberline {4.4}Sensitivity Tests}{15}{section.4.4}
+\contentsline {subsubsection}{Variations in $\mu $}{16}{subsubsection*.31}
+\contentsline {subsubsection}{Variations in $\sigma $}{17}{subsubsection*.35}
+\contentsline {subsubsection}{Variations in $\lambda $}{17}{subsubsection*.40}
+\contentsline {subsubsection}{Variations in $\sigma _{jumps}$}{17}{subsubsection*.45}
+\contentsline {subsubsection}{Variations in $\mu _{jumps}$}{18}{subsubsection*.49}
+\contentsline {section}{\numberline {4.5}Conclusion}{19}{section.4.5}
 \contentsline {chapter}{\numberline {5}Results}{21}{chapter.5}
 \contentsline {chapter}{\numberline {6}Conclusion and Further Research}{24}{chapter.6}
-\contentsline {chapter}{Bibliography}{25}{section*.71}
+\contentsline {section}{\numberline {6.1}Practical Considerations}{24}{section.6.1}
+\contentsline {chapter}{Bibliography}{25}{section*.74}
 \contentsline {chapter}{\numberline {A}Appendix A}{28}{appendix.A}
+\contentsline {chapter}{\numberline {B}Appendix B}{29}{appendix.B}
+\contentsline {section}{\numberline {B.1}Neural Network Models}{29}{section.B.1}
+\contentsline {section}{\numberline {B.2}Merton Jump Diffusion Stochastic Process Simulation}{32}{section.B.2}

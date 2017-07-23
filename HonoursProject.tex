@@ -27,6 +27,33 @@
 \usepackage[shortlabels]{enumitem}
 \usepackage[acronym,toc]{glossaries}
 \usepackage{xspace}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	%backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+\lstset{style=mystyle}
 
 \titleformat
 {\chapter} % command
@@ -169,7 +196,7 @@ C:f \left( D \right) \rightarrow Z
 An \acrshort{ann} is a collection of interconnected processing units \citep{Teugels}, which realises a nonlinear mapping from inputs, $ R^X $ to outputs, $ R^Y $.
 
 \begin{equation}
-NN: R^X \rightarrow R^Y
+\acrshort{ann}: R^X \rightarrow R^Y
 \end{equation}
 
 This mapping is achieved by chaining a sequence of nonlinear multiple regression functions, f, (called activation functions) together in layers (see 1.5.1 below).
@@ -310,6 +337,7 @@ On the topic of this paper, \citet{Xie} did an investigation into the feasibilit
 \label{chapter:methodology}
 
 \section{Artificial Neurons}
+\label{section:artificial_neurons}
 
 In Chapter 1, \acrshort{ann}s were introduced. Figure~\ref{fig:neuralnetwork} introduces 3 types of trainable neurons: weights (denoted by $w$), biases ($u$), and activation functions ($f$). Hence, every individual neuron multiplies the set of inputs, $x_i$ by their corresponding weights $w_i$ and adds some bias, $u$ - the sum of which is then fed through an activation function $f$. The result is propagated forward in the network to the next set of neurons. Mathematically, the output of the $k$th neuron is given by:
 \begin{equation}
@@ -317,11 +345,15 @@ In Chapter 1, \acrshort{ann}s were introduced. Figure~\ref{fig:neuralnetwork} in
 \end{equation}
 
 \subsection{Activation Functions}
-The activation function $f$ is used to add non-linearity to the architecture. Without it the model would be little more than a multivariate linear model. There are a number of choices for this activation function. The most popular being \acrlong{relu}s (\acrshort{relu}s), \acrlong{elu}s (\acrshort{elu}s), logistic sigmoid- and hyperbolic tangent functions.
+The activation function $f$ is used to add non-linearity to the architecture. Without it, the model would be little more than a multivariate linear model. There are a number of choices for this activation function. The most popular being \acrlong{relu}s (\acrshort{relu}s), \acrlong{elu}s (\acrshort{elu}s), logistic sigmoid- and hyperbolic tangent functions.
 
-Prior to the work of \citefullauthor{glorot2011deep} (\citeyear{glorot2011deep}), logistic sigmoid and hyperbolic tangent functions were the commonest activation functions in neural network architectures. \citet{glorot2011deep} however showed that \acrshort{relu}s yield better performance. \acrshort{relu}s employ the activation function $f\left(x\right) = max\left(0, x\right)$.
+Prior to the work of \citefullauthor{glorot2011deep} (\citeyear{glorot2011deep}), logistic sigmoid and hyperbolic tangent functions were the commonest activation functions in neural network architectures.However, \citet{glorot2011deep} showed that \acrshort{relu}s yield better performance. \acrshort{relu}s employ the activation function:
 
-\citefullauthor{DBLP:journals/corr/ClevertUH15} (\citeyear{DBLP:journals/corr/ClevertUH15}) introduced the "exponential linear unit", which provided even better performance than \acrshort{relu}s, both in terms of learning speed as well as generalisation potential. An \acrshort{elu} with parameter $\alpha > 0$ has activation function.
+\begin{equation}
+f\left(x\right) = \max\left(0, x\right)
+\end{equation}
+
+\citefullauthor{DBLP:journals/corr/ClevertUH15} (\citeyear{DBLP:journals/corr/ClevertUH15}) introduced the "exponential linear unit", which provide even better performance than \acrshort{relu}s, both in terms of learning speed as well as generalisation potential. An \acrshort{elu} with parameter $\alpha > 0$ has activation function:
 
 \begin{equation}
 f\left(x\right)=\left\{\begin{matrix}
@@ -333,7 +365,7 @@ x & if\ \ x > 0\\
 \begin{figure}[h]
 	\begin{floatrow}
 		
-		 \ffigbox{\includegraphics[width=1\linewidth]{Images/Results/relu}}{\caption[Rectifier Activation Function, f(x)]{Rectifier Activation Function, $f(x)$.}\label{fig:relu}}
+		 \ffigbox{\includegraphics[width=1\linewidth]{Images/Results/relu}}{\caption[Rectifier Activation Function, f(x)]{Rectifier Activation Function (\acrshort{relu}), $f(x)$.}\label{fig:relu}}
 		 
 		\ffigbox{\includegraphics[width=1\linewidth]{Images/Results/elu}}{	\caption[Exponential Linear Unit (\acrshort{elu})]{Exponential Linear Unit (\acrshort{elu}) Activation Function, with $\alpha = 0.5$.}
 			\label{fig:elu}}
@@ -343,9 +375,9 @@ x & if\ \ x > 0\\
 
 \section{Convolutional Layer}
 
-\acrlong{cnn}s (\acrshort{cnn}'s) are a variation of the traditional multi-layer perceptron architecture. Like ordinary feed-forward networks, they consist of neurons with trainable weights and biases. Unlike feed-forward networks, these neurons are grouped into sets of small filters. With every forward pass, the filters are sequentially convolved across the extend of the input volume. This produces an activation map containing the result of the "filtration" at every point of the input volume.
+Convolutional Neural Networks (\acrshort{cnn}'s) are a variation of the traditional multi-layer perceptron architecture. Like ordinary fully connected networks, they consist of neurons with trainable weights and biases. Unlike fully connected networks, these neurons are grouped into sets of small filters. With every forward pass, the filters are sequentially convolved across the extend of the input volume. This produces an activation map containing the result of the "filtration" at every point of the input volume.
 
-In an image-recognition setting, the network will typically train filters that activate on the detection of visual features such as edges or a blotch of colour \citep{cs231n}. However, in this study, there is no certain way to ascertain what they might detect.
+In an image-recognition setting, the network will typically train filters that activate on the detection of visual features such as edges or a blotch of colour \citep{cs231n}. However, in this study, there is no definite way to ascertain what they might detect.
 
 \begin{figure}[h]
 	\centering
@@ -371,6 +403,17 @@ In an image-recognition setting, the network will typically train filters that a
 	\label{fig:max-poolingoperation}
 \end{figure}
 
+\section{Training Artificial Neural Networks}
+Before any supervised learning approach can be utilised for inference, it needs to undergo an optimisation process known as "training". Training involves adjusting the appropriate parameters of the network (often referred to as the trainable parameters), in order to minimise the error between the output of the model, and the desired output. 
+The error is defined by some selected loss function, $L$.
+The artificial neurons introduced in section \ref{section:artificial_neurons} are "trained" using a technique known as backpropagation. 
+
+\subsection{Backpropagation}
+Backpropagation consists of two main steps: a propagation step and a parameter adjustment step. In turn, the propagation step consists of both forward- and backward passes. 
+
+In the forward propagation step, the inputs are fed through the model to produce a set of output activations, $\mathbf{o'}$. These outputs are then compared to the desired outputs $\mathbf{y'}$, and an error value $\mathbf{\epsilon'}$ is obtained using some loss function $L$. That is, $\mathbf{\epsilon'} = L\left(\mathbf{o'}, \mathbf{y'}\right)$. These errors are then propagated backwards through the network to generate a set of gradients for each artificial neuron. What follows is the process of gradient descent: the gradient defines a direction (increase or decrease) as well as a magnitude in which to adjust the individual parameter (usually a weight or bias) in order to minimise the error, $\mathbf{\epsilon'}$ . In the parameter adjustment step, the trainable parameters of the model are each adjusted in the opposite direction of the gradient defined for that parameter, so as to minimise this error.
+
+These steps are repeated until some stopping criteria is reached.
 
 \section{Performance Measurement}
 \subsection{Coefficient of Determination}
@@ -428,7 +471,7 @@ The neural network models will be trained on the log-returns of the simulated pr
 
 The simulated parameters, $\mu$, $\sigma$, $\lambda$, $\mu_{jumps}$ and $\sigma_{jumps}$ will be constrained to the following bounds: $\mu \in [-1, 1]$, $\sigma \in [0.001, 0.2]$, $\lambda\in [0.0001, 0.025]$, $\sigma_{jumps} \in [0.001, 0.2]$, and $\mu_{jumps}\in [-0.5, 0.5]$.
 
-\section{Fully Connected Feed-forward Neural Network}
+\section{Fully Connected Neural Network}
 
 \subsection{Multiple Parameter Prediction Architecture} \label{subsection:fully_connected_ff_nn:architecture}
 The first study was done on a standard 9-layer fully connected multi-perceptron architecture, trained to predict all five parameters of the Merton Jump Diffusion process at once.
@@ -544,7 +587,7 @@ The most obvious parameter estimation issue in the multiple output model of \ref
 
 The result is a much quicker and smoother convergence to an acceptable level of accuracy, as visible in figure \ref{fig:lambda-rsquared}. Compare this to the very rough convergence of $\lambda$ in figure \ref{fig:covnetmor22}. Quicker convergence leads to less training time and ultimately easier use of the model.
 
-\section{Parameter Interactions}
+\section{Sensitivity Tests}
 Due to the nature of the parameters involved in the Merton Jump Diffusion process, one could expect interactions between parameter estimates. For example, increasing the $\mu_{jumps}$ parameter might cause "confusion", since a model could "interpret" larger jumps as a higher rate of volatility from the Geometric Brownian Motion $\sigma$ component, and hence produce higher values of $\sigma$. What follows is an investigation into how sensitive the individual parameter estimates are with respect to changes in the magnitudes of the other parameters. 
 
 This investigation was performed using $1000$ simulated sample paths from a Merton Jump Diffusion process with parameters $\mu, \sigma, \lambda, \mu_{jumps}$ and $\sigma_{jumps}$. With each test, a single parameter was selected to be varied during the training process. The effect of this parameter change on the \acrshort{ann} performance was then monitored by reading the estimates of each of the other parameters and comparing them to their actual values.
@@ -812,6 +855,11 @@ Variations in $\mu_{jumps}$ notably affect almost all of the parameter estimates
 		\label{fig:sensitivity_test:multiple_output:varying_jumps_mu}}
 \end{figure}
 
+\section{Conclusion}
+While a multiple output model might be more convenient to build and use, it was illustrated that single output models are quicker to train and more robust. The author's study also found that, while a fully connected architecture based on the moments and autocorrelations of the process performed well for the simpler parameters such as $\mu$ and $\sigma$, its estimates of $\lambda$ were less consistent. Figure \ref{fig:training:fully_connected_jumps} demonstrates the difficulty of training the fully connected model to estimate the $\lambda$ parameter.
+
+In particular for the $\lambda$ parameter, a single-output convolutional model was quicker to train than either of the multiple output models (figure \ref{fig:lambda-rsquared}).
+
 \chapter{Results}
 \label{chapter:results}
 
@@ -821,7 +869,7 @@ First, the individual accuracy of the selected architectures were investigated. 
 \begin{enumerate}[a)]
 	\itemsep0em 
 	\item  a multiple output convolutional \acrshort{ann} model as defined in section \ref{chap:ConvolutionalNeuralNetwork-section:MultipleParameterPredictionArchitecture} above,
-	\item  a fully connected NN as DEFINED IN SECTION INSERT HERE, and
+	\item  a fully connected NN as defined in section \ref{subsection:fully_connected_ff_nn:architecture}, and
 	\item  a dedicated single output convolutional \acrshort{ann} model as defined in section \ref{chap:ConvolutionalNeuralNetwork-section:SingleParameterPredictionArchitecture} above.
 \end{enumerate}
 
@@ -938,6 +986,9 @@ First, the individual accuracy of the selected architectures were investigated. 
 
 This project investigated the ability of \acrshort{ann}s to estimate the parameters of a sufficiently complex \acrshort{sde}. Chapter \ref{chapter:introduction} introduced the problem of calibrating \acrshort{sde}s, and discussed the limitations of existing approaches. Chapter \ref{chapter:literature_review} presented the literature on similar studies. The concepts used throughout the dissertation were explained in chapter \ref{chapter:methodology}, as was the methodology used in the simulation study. The simulation study itself, together with the proposed \acrshort{ann} architectures were presented in chapter \ref{chapter:simulation_study}. Chapter \ref{chapter:results} reported on the results of the study and compared them to those obtained using traditional parameter estimation techniques such as \acrshort{mlestimation}, \acrshort{mme}, \acrshort{em} and likelihood profiling.
 
+\section{Practical Considerations}
+It must be noted that - at the time of writing - building and training \acrshort{ann}s is a time consuming and computationally intensive process. Overall, the author spent more than 300 GPU-hours on NVIDIA\textregistered \xspace Tesla\textregistered \xspace K80 devices implementing, training and testing the architectures presented in this dissertation. However, the progress made in the last year alone indicate that building and training \acrshort{ann}s are becoming more widely adopted, and - with that - come improvements in hardware and software tools.
+
 \bibliographystyle{ussagus}
 \bibliography{export}
 
@@ -972,6 +1023,17 @@ This project investigated the ability of \acrshort{ann}s to estimate the paramet
 	 
 \end{tabular} 
 
+\chapter[Appendix B]{Source Code}
+\label{appedix:source_code}
+
+\section{Neural Network Models}
+\lstinputlisting[language=Python]{Models.py}
+
+\newpage
+\section{Merton Jump Diffusion Stochastic Process Simulation}
+\label{appendix:source_code:merton_simulation}
+The source code in this section (\ref{appendix:source_code:merton_simulation}) was provided by \cite{reid}.
+\lstinputlisting[language=Python]{Merton_Jump_Diffusion_SDE_Utilities.py}
 
 \end{document}
 
