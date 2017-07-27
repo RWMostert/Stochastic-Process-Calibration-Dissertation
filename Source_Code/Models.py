@@ -85,7 +85,7 @@ def fullyconnected_multiple_ReLUs():
     
     return feedforward
 
-def covnet_multiple_ELUs_8_layers():
+def covnet_multiple_ELUs_8_layers(r_squared = True):
     """
     returns an 8-layer convolutional architecture (with ELU activation units) as a Keras Model, with outputs for all the parameters of the Merton Jump Diffusion stochastic process (sigma, mu, jump_sigma, jump_mu, lambda).
     
@@ -116,7 +116,10 @@ def covnet_multiple_ELUs_8_layers():
 
     convnet_mo_elu = Model(input = input_1, output=[output1, output2, output3, output4, output5])
 
-    convnet_mo_elu.compile('adam', 'mean_squared_error', metrics=['mean_absolute_percentage_error', r2])
+    if r_squared:
+        convnet_mo_elu.compile('adam', 'mean_squared_error', metrics=['mean_absolute_percentage_error', r2])
+    else:
+        convnet_mo_elu.compile('adam', 'mean_squared_error', metrics=['mean_absolute_percentage_error'])
     
     return convnet_mo_elu
 
