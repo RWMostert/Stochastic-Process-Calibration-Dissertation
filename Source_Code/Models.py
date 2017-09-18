@@ -132,12 +132,12 @@ def covnet_multiple_ELUs_10_layers(r_squared = True):
     
     input_1 = Input(shape = (40, 50, 1))
 
-    layer1 = Conv2D(32, (10, 10), activation='elu')(input_1)
-    layer2 = Conv2D(32, (10, 10), activation='elu')(layer1)
+    layer1 = Conv2D(32, (12, 12), activation='elu')(input_1)
+    layer2 = Conv2D(32, (12, 12), activation='elu')(layer1)
     layer3 = MaxPooling2D(pool_size=(2,2))(layer2)
 
-    layer4 = Conv2D(64, (5, 5), activation='elu')(layer3)
-    layer5 = Conv2D(64, (5, 5), activation='elu')(layer4)
+    layer4 = Conv2D(64, (6, 6), activation='elu')(layer3)
+    layer5 = Conv2D(64, (6, 6), activation='elu')(layer4)
     layer6 = MaxPooling2D(pool_size=(2,2))(layer5)
 
     layer7 = Conv2D(128, (3, 3), activation='elu')(layer6)
